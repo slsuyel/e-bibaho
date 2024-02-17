@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import Multistep from "react-multistep";
 import StepOne from "./regiSteps/StepOne";
 import StepTwo from "./regiSteps/StepTwo";
 import StepThree from "./regiSteps/StepThree";
@@ -6,43 +7,107 @@ import StepFour from "./regiSteps/StepFour";
 import StepFive from "./regiSteps/StepFive";
 
 const Register = () => {
-  // State variables to manage form inputs
+  // State variables to manage form inputs and current step index
   const [formData, setFormData] = useState({
     mobileNumber: "",
     email: "",
     password: "",
     profileCreatedBy: "self",
+    gender: "",
+    candidateName: "",
+    parentName: "",
+    day: "",
+    month: "",
+    year: "",
+    maritalStatus: "",
+    religion: "",
+    nationality: "",
+    highestQualification: "",
+    educationDetails: "",
+    workingSector: "",
+    profession: "",
+    professionDetails: "",
+    monthlyIncome: "",
+    fatherStatus: "",
+    fatherOccupation: "",
+    motherStatus: "",
+    motherOccupation: "",
+    siblingsNotMarried: 0,
+    siblingsMarried: 0,
+    homeDivision: "",
+    currentlyLivingIn: "",
+    cityLivingIn: "",
+    familyDetails: "",
+    height: "",
+    weight: "",
+    bodyType: "",
+    complexion: "",
+    bloodGroup: "",
+    physicalAttributeDetails: "",
   });
 
+  const [last, setLast] = useState(false);
+
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
   };
 
+  const steps = [
+    {
+      name: "StepOne",
+      component: (
+        <StepOne formData={formData} handleInputChange={handleInputChange} />
+      ),
+    },
+    {
+      name: "StepTwo",
+      component: (
+        <StepTwo formData={formData} handleInputChange={handleInputChange} />
+      ),
+    },
+    {
+      name: "StepThree",
+      component: (
+        <StepThree formData={formData} handleInputChange={handleInputChange} />
+      ),
+    },
+    {
+      name: "StepFour",
+      component: (
+        <StepFour formData={formData} handleInputChange={handleInputChange} />
+      ),
+    },
+    {
+      name: "StepFive",
+      component: (
+        <StepFive
+          setLast={setLast}
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
+    },
+  ];
+
   return (
     <div className="row mx-auto font-maven">
-      <div className="card col-md-4 mx-auto my-5 shadow-lg text-info-emphasis">
+      <div className="card col-md-8 mx-auto my-5 shadow-lg text-info-emphasis">
         <div className="p-3 w-100 mx-auto">
-          <StepOne formData={formData} handleInputChange={handleInputChange} />
-          <StepTwo formData={formData} handleInputChange={handleInputChange} />
-          <StepThree
-            formData={formData}
-            handleInputChange={handleInputChange}
-          />
-          <StepFour formData={formData} handleInputChange={handleInputChange} />
-          <StepFive formData={formData} handleInputChange={handleInputChange} />
-
-          <button onClick={handleSubmit}>Submit</button>
+          <form onSubmit={handleSubmit}>
+            <Multistep steps={steps} />
+            {last && <button type="submit">Submit</button>}
+          </form>
         </div>
       </div>
     </div>

@@ -1,4 +1,24 @@
-const StepTwo = ({ formData, handleInputChange }) => {
+import { ChangeEvent } from "react";
+
+interface StepTwoProps {
+  formData: {
+    gender: string;
+    candidateName: string;
+    profileCreatedBy: string;
+    parentName: string;
+    day: string;
+    month: string;
+    year: string;
+    maritalStatus: string;
+    religion: string;
+    nationality: string;
+  };
+  handleInputChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => void;
+}
+
+const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
   return (
     <div>
       <form>
@@ -141,7 +161,9 @@ const StepTwo = ({ formData, handleInputChange }) => {
             value={formData.maritalStatus}
             onChange={handleInputChange}
           >
-            <option value="">--- Please Select ---</option>
+            <option value="" disabled>
+              --- Please Select ---
+            </option>
             <option value="single">Single</option>
             <option value="married">Married</option>
             <option value="divorced">Divorced</option>

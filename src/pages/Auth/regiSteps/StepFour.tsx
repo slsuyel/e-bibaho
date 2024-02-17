@@ -1,4 +1,28 @@
-const StepFour = ({ formData, handleInputChange }) => {
+import React from "react";
+
+interface FormData {
+  fatherStatus: string;
+  fatherOccupation: string;
+  motherStatus: string;
+  motherOccupation: string;
+  siblingsNotMarried: number;
+  siblingsMarried: number;
+  homeDivision: string;
+  currentlyLivingIn: string;
+  cityLivingIn: string;
+  familyDetails: string;
+}
+
+interface StepFourProps {
+  formData: FormData;
+  handleInputChange: (
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => void;
+}
+
+const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
   const divisions = [
     "Dhaka",
     "Chittagong",
@@ -88,7 +112,7 @@ const StepFour = ({ formData, handleInputChange }) => {
                 type="number"
                 min="0"
                 className="form-control rounded-0"
-                value={formData.notMarried}
+                value={formData.siblingsNotMarried}
                 onChange={handleInputChange}
               />
             </div>
@@ -100,7 +124,7 @@ const StepFour = ({ formData, handleInputChange }) => {
                 type="number"
                 min="0"
                 className="form-control rounded-0"
-                value={formData.married}
+                value={formData.siblingsMarried}
                 onChange={handleInputChange}
               />
             </div>

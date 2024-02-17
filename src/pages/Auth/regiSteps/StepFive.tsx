@@ -1,4 +1,26 @@
-const StepFive = ({ formData, handleInputChange }) => {
+import React, { useEffect, ChangeEvent } from "react";
+
+interface FormData {
+  height: string;
+  weight: string;
+  bodyType: string;
+  complexion: string;
+  bloodGroup: string;
+  physicalAttributeDetails: string;
+}
+
+interface StepFiveProps {
+  formData: FormData;
+  handleInputChange: (
+    event: ChangeEvent<HTMLSelectElement | HTMLTextAreaElement>
+  ) => void;
+  setLast: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
+  useEffect(() => {
+    setLast(true);
+  });
+
   return (
     <div>
       <form>

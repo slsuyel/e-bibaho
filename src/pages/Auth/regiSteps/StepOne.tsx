@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 interface StepOneProps {
   formData: {
     mobileNumber: string;
@@ -6,10 +8,11 @@ interface StepOneProps {
     profileCreatedBy: string;
   };
   handleInputChange: (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
   ) => void;
 }
-const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
+
+const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
   return (
     <div>
       <form>

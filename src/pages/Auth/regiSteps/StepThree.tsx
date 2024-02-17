@@ -1,4 +1,20 @@
-const StepThree = ({ formData, handleInputChange }) => {
+import { ChangeEvent } from "react";
+
+interface StepThreeProps {
+  formData: {
+    highestQualification: string;
+    educationDetails: string;
+    workingSector: string;
+    profession: string;
+    professionDetails: string;
+    monthlyIncome: string;
+  };
+  handleInputChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => void;
+}
+
+const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
   return (
     <div>
       <form>
@@ -26,11 +42,10 @@ const StepThree = ({ formData, handleInputChange }) => {
           <label htmlFor="educationDetails" className="my-1">
             Education Details
           </label>
-          <input
+          <textarea
             id="educationDetails"
             name="educationDetails"
             placeholder="Please enter education details"
-            type="text"
             className="form-control rounded-0"
             value={formData.educationDetails}
             onChange={handleInputChange}
@@ -85,7 +100,7 @@ const StepThree = ({ formData, handleInputChange }) => {
             placeholder="Enter your profession details"
             className="form-control rounded-0"
             value={formData.professionDetails}
-            onChange={handleInputChange}
+            onChange={handleInputChange} // This should work now
           ></textarea>
         </div>
         <div className="form-group mb-2">
