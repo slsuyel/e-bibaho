@@ -1,0 +1,40 @@
+.btn-new {
+
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(211deg, #d62828 14%, #ff1660 100%);
+    padding: 10px 26px;
+    border: solid #85a3ff 2px;
+    box-shadow: none;
+    border-radius: 4px;
+    transition: 1142ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-new:hover {
+
+    transition: 1142ms;
+    padding: 10px 45px;
+    transform: translateY(-0px);
+    background: linear-gradient(211deg, #d62828 14%, #ff1660 100%);
+    color: #f2f2f2;
+    border: solid 2px #398bde;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: #86b7fe00;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.1rem rgb(5 81 96); */
+    box-shadow: 0 0 0 0.1rem rgba(254, 255, 255, 0);
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: #055160;
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-maven {
+  font-family: "Maven Pro", sans-serif;
+}
+
+.hero-section {
+  background: url("https://images.unsplash.com/photo-1542042161784-26ab9e041e89?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+}
+
+
+
+.search-box {
+  position: absolute;
+  width: 100%;
+  top: 180px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  color: rgb(0, 0, 0);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgb(55 4 255 / 38%);
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #dfe0e3 !important;
+}
+
+.nav-link:hover {
+  color: #dcdcdc;
+  border-bottom: 2px solid #dcdcdc;
+}
