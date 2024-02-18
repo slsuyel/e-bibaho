@@ -10,6 +10,7 @@ import OutSideLayout from "../components/layouts/OutSideLayout";
 
 import Register from "../pages/Auth/Register";
 import { userPaths } from "./userRoute";
+import SearchPage from "../pages/Search/SearchPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/search-res",
+        element: <SearchPage />,
       },
     ],
   },

@@ -8,6 +8,10 @@
 
 }
 
+a.nav-link.active {
+  color: #dfd19b;
+}
+
 a {
   text-decoration: none;
 }

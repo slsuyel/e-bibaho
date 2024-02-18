@@ -81,3 +81,42 @@ export interface StepFiveProps {
   ) => void;
   setLast: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export type TRegiForm = {
+  [key: string]: string | number;
+  mobileNumber: string;
+  email: string;
+  password: string;
+  profileCreatedBy: string;
+  gender: string;
+  candidateName: string;
+  parentName: string;
+  day: string;
+  month: string;
+  year: string;
+  maritalStatus: string;
+  religion: string;
+  nationality: string;
+  highestQualification: string;
+  educationDetails: string;
+  workingSector: string;
+  profession: string;
+  professionDetails: string;
+  monthlyIncome: string;
+  fatherStatus: string;
+  fatherOccupation: string;
+  motherStatus: string;
+  motherOccupation: string;
+  siblingsNotMarried: number;
+  siblingsMarried: number;
+  homeDivision: string;
+  currentlyLivingIn: string;
+  cityLivingIn: string;
+  familyDetails: string;
+  height: string;
+  weight: string;
+  bodyType: string;
+  complexion: string;
+  bloodGroup: string;
+  physicalAttributeDetails: string;
+};

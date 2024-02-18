@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="row mx-auto font-maven">
-      <div className="border-0 card col-md-4 mx-auto my-5 shadow-lg text-info-emphasis">
-        <div className="p-3 w-100 mx-auto">
+    <div className="row mx-auto font-maven regi-page">
+      <div className="col-md-4 mx-auto my-5">
+        <div className="p-3 w-100 mx-auto border-0 card  shadow-lg text-info-emphasis">
           <div className="text-center">
             <img
               style={{ height: 80 }}

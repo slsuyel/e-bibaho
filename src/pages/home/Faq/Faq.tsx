@@ -1,6 +1,8 @@
-import { Accordion } from "react-bootstrap";
+import { Collapse } from "antd";
 
 function Faq() {
+  const { Panel } = Collapse;
+
   const faqs = [
     {
       question: "Is It FREE to create profile in E - Bibaho?",
@@ -29,20 +31,13 @@ function Faq() {
       <h3 className="text-center mb-3">
         Frequently <span className="text-info-emphasis">Asked Questions</span>
       </h3>
-      <Accordion defaultActiveKey="0">
+      <Collapse accordion>
         {faqs.map((faq, index) => (
-          <Accordion.Item
-            key={index}
-            eventKey={index.toString()}
-            className="border mb-2"
-          >
-            <Accordion.Header>{faq.question}</Accordion.Header>
-            <Accordion.Body className="font-monospace">
-              {faq.answer}
-            </Accordion.Body>
-          </Accordion.Item>
+          <Panel header={faq.question} style={{ fontSize: "15px" }} key={index}>
+            <p className="font-monospace">{faq.answer}</p>
+          </Panel>
         ))}
-      </Accordion>
+      </Collapse>
     </div>
   );
 }

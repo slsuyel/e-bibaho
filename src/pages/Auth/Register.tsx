@@ -6,9 +6,10 @@ import StepTwo from "./regiSteps/StepTwo";
 import StepThree from "./regiSteps/StepThree";
 import StepFour from "./regiSteps/StepFour";
 import StepFive from "./regiSteps/StepFive";
+import { TRegiForm } from "../../types";
 
 const Register = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<TRegiForm>({
     mobileNumber: "",
     email: "",
     password: "",
@@ -54,12 +55,18 @@ const Register = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name as keyof TRegiForm]: value,
     }));
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const requiredFields = ["mobileNumber", "email", "password"];
+    const missingFields = requiredFields.filter((field) => !formData[field]);
+    if (missingFields.length > 0) {
+      alert(`Please fill out all required fields: ${missingFields.join(", ")}`);
+      return;
+    }
     console.log(formData);
   };
 
@@ -101,22 +108,24 @@ const Register = () => {
   ];
 
   return (
-    <div className="row mx-auto font-maven">
-      <div className="card col-md-8 mx-auto my-5 shadow-lg text-info-emphasis">
-        <div className="p-3 w-100 mx-auto">
-          <form onSubmit={handleSubmit} className="multistep-form">
-            <Multistep steps={steps} />
-            <div className="d-flex justify-content-end my-3">
-              {last && (
-                <button
-                  className=" btn-default btn-primary  rounded-1"
-                  type="submit"
-                >
-                  Submit
-                </button>
-              )}
-            </div>
-          </form>
+    <div className="row mx-auto font-maven regi-page">
+      <div className="col-md-9 mx-auto">
+        <div className="card  my-5 shadow-lg text-info-emphasis">
+          <div className="p-3 w-100 mx-auto">
+            <form onSubmit={handleSubmit} className="multistep-form">
+              <Multistep steps={steps} />
+              <div className="d-flex justify-content-end my-3">
+                {last && (
+                  <button
+                    className=" btn-default btn-primary  rounded-1"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                )}
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
