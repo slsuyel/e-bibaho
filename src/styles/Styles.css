@@ -34,6 +34,10 @@
     box-shadow: 0 0 0 0.1rem rgba(254, 255, 255, 0);
 }
 
+.accordion-header {
+    padding-right: 6px;
+}
+
 .accordion-button {
     font-weight: 600;
     color: #055160;
@@ -41,4 +45,5 @@
 
 .go2392553372 {
     justify-content: center;
+    flex-wrap: wrap;
 }

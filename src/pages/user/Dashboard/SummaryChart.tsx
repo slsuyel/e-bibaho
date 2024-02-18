@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
+import Chart, { ChartType } from "chart.js/auto";
 
 const SummaryChart = () => {
-  const chartRef = useRef(null);
-  const chartInstance = useRef(null);
+  const chartRef = useRef<HTMLCanvasElement | null>(null); // Explicitly define the type of chartRef
+  const chartInstance = useRef<Chart<ChartType, number[], string> | null>(null); // Explicitly define the type of chartInstance
 
   useEffect(() => {
     if (!chartRef.current) return;
@@ -15,7 +15,8 @@ const SummaryChart = () => {
       chartInstance.current.destroy();
     }
 
-    chartInstance.current = new Chart(ctx, {
+    chartInstance.current = new Chart<ChartType, number[], string>(ctx!, {
+      // Ensure ctx is not null before using it
       type: "bar",
       data: {
         labels: [

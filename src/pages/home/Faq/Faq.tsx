@@ -37,7 +37,9 @@ function Faq() {
             className="border mb-2"
           >
             <Accordion.Header>{faq.question}</Accordion.Header>
-            <Accordion.Body>{faq.answer}</Accordion.Body>
+            <Accordion.Body className="font-monospace">
+              {faq.answer}
+            </Accordion.Body>
           </Accordion.Item>
         ))}
       </Accordion>

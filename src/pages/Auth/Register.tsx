@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import "../../styles/MultySteps.css";
 import Multistep from "react-multistep";
 import StepOne from "./regiSteps/StepOne";
 import StepTwo from "./regiSteps/StepTwo";
@@ -7,7 +8,6 @@ import StepFour from "./regiSteps/StepFour";
 import StepFive from "./regiSteps/StepFive";
 
 const Register = () => {
-  // State variables to manage form inputs and current step index
   const [formData, setFormData] = useState({
     mobileNumber: "",
     email: "",
@@ -104,9 +104,15 @@ const Register = () => {
     <div className="row mx-auto font-maven">
       <div className="card col-md-8 mx-auto my-5 shadow-lg text-info-emphasis">
         <div className="p-3 w-100 mx-auto">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="multistep-form">
             <Multistep steps={steps} />
-            {last && <button type="submit">Submit</button>}
+            <div className="d-flex justify-content-end my-3">
+              {last && (
+                <button className="btn-primary btn rounded-0" type="submit">
+                  Submit
+                </button>
+              )}
+            </div>
           </form>
         </div>
       </div>

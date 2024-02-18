@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
+import Chart, { ChartType } from "chart.js/auto";
+
 const MonthlyEarn = () => {
-  const chartRef = useRef(null);
-  const chartInstance = useRef(null);
+  const chartRef = useRef<HTMLCanvasElement>(null); // Define the type of chartRef
+  const chartInstance = useRef<Chart<ChartType, number[], string> | null>(null); // Define the type of chartInstance
+
   useEffect(() => {
     const monthlyEarningsData = {
       labels: [
@@ -37,11 +39,14 @@ const MonthlyEarn = () => {
 
     const ctx = chartRef.current.getContext("2d");
 
+    if (!ctx) return; // Added null check for ctx
+
     if (chartInstance.current) {
       chartInstance.current.destroy();
     }
 
-    chartInstance.current = new Chart(ctx, {
+    chartInstance.current = new Chart<ChartType, number[], string>(ctx, {
+      // Explicitly define Chart generic types
       type: "line",
       data: monthlyEarningsData,
       options: {
@@ -59,6 +64,7 @@ const MonthlyEarn = () => {
       }
     };
   }, []);
+
   return (
     <div className="col-md-5 mx-auto my-2">
       <div className="card p-2">

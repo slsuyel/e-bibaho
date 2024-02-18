@@ -39,13 +39,13 @@ const Header = () => {
 
   return (
     <Navbar
-      style={{ backgroundColor: "#dc3545" }}
+      style={{ backgroundColor: "#101a19" }}
       expand="lg"
       fixed={isFixed ? "top" : undefined}
-      className=" p-0 font-maven"
+      className={`border-bottom p-0 font-maven ${isFixed ? "" : ""}`}
     >
       <Container>
-        <Navbar.Brand href="/" className="p-0">
+        <Navbar.Brand href="/" className="p-0 bg-primary-subtle">
           <img src={logo} alt="" width={95} height={60} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -54,11 +54,9 @@ const Header = () => {
           className="justify-content-end fs-5 text-white fw-semibold gap-3"
         >
           {menuItems.map((item) => (
-            <>
-              <NavLink key={item.id} to={item.link} className="nav-link ">
-                {item.label}
-              </NavLink>
-            </>
+            <NavLink key={item.id} to={item.link} className="nav-link ">
+              {item.label}
+            </NavLink>
           ))}
         </Navbar.Collapse>
       </Container>

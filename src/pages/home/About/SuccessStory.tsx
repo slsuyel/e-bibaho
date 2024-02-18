@@ -69,8 +69,8 @@ const SuccessStory = () => {
         <div className="col-md-8 mx-auto">
           <div className="slider-container">
             <Slider {...settings}>
-              {arr.map(() => (
-                <div className="d-flex justify-content-center p-3">
+              {arr.map((index) => (
+                <div key={index} className="d-flex justify-content-center p-3">
                   <Card
                     hoverable
                     style={{ width: 340 }}

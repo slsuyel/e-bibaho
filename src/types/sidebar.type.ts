@@ -1,11 +1,3 @@
-export type TUser = {
-  userName: string;
-  email: string;
-  password: string;
-};
-
-/* sidebar */
-
 import { ReactNode } from "react";
 
 export type TRoute = {

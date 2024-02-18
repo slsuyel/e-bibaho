@@ -19,6 +19,7 @@ const authSlice = createSlice({
       state.token = null;
     },
     regiUser: (state, action) => {
+      console.log(state);
       const { name, email, password } = action.payload;
       console.log("Registration Data:", { name, email, password });
     },
