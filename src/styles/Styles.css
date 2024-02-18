@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/tiro-bangla');
+
+.font-bangla {
+    font-family: 'Tiro Bangla', sans-serif;
+
+}
+
 .btn-new {
     font-weight: 500;
     font-size: 14px;

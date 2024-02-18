@@ -1,6 +1,9 @@
 import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="row search-box mx-auto font-maven fw-medium">
       <div className=" mt-5">
@@ -84,6 +87,7 @@ const SearchBox = () => {
           <div className="col-md-2">
             <br />
             <Button
+              onClick={() => navigate("/search-res")}
               style={{ height: "40px" }}
               className="d-flex py-3 text-white align-items-center  bg-danger text-white"
             >

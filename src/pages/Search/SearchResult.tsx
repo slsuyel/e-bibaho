@@ -1,7 +1,19 @@
+import ResultCard from "./ResultCard";
+
 const SearchResult = () => {
   return (
     <div>
-      <h1>This is SearchResult page</h1>
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
+      <ResultCard />
     </div>
   );
 };

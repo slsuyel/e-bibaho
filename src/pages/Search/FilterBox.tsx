@@ -3,8 +3,8 @@ import { Accordion, Form } from "react-bootstrap";
 
 const FilterBox = () => {
   const [gender, setGender] = useState<string>("male");
-  const [age, setAge] = useState<number>(0);
-  const [height, setHeight] = useState<number>(0);
+  const [age, setAge] = useState<number>(18);
+  const [height, setHeight] = useState<string>("");
   const [division, setDivision] = useState<string>("All Division");
   const [education, setEducation] = useState<{ [key: string]: boolean }>({
     all: false,
@@ -28,8 +28,16 @@ const FilterBox = () => {
     setAge(parseInt(event.target.value, 10));
   };
   const handleHeightChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setHeight(parseInt(event.target.value, 10));
+    const valueInCentimeters = parseInt(event.target.value, 10);
+    console.log(valueInCentimeters); /* value received in centimeters */
+    const totalInches = valueInCentimeters / 2.54; // 1 inch = 2.54 centimeters
+    const feet = Math.floor(totalInches / 12);
+    const inches = Math.round(totalInches % 12);
+
+    console.log(`${feet}'${inches}"`);
+    setHeight(`${feet}'${inches}"`);
   };
+
   const handleDivisionChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setDivision(event.target.value);
   };
@@ -64,9 +72,9 @@ const FilterBox = () => {
   ]);
 
   return (
-    <>
+    <div>
       <Accordion className="mb-1" defaultActiveKey="1">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="1">
           <Accordion.Header className="pe-1">Gender</Accordion.Header>
           <Accordion.Body>
             <div className="d-flex justify-content-around">
@@ -100,25 +108,27 @@ const FilterBox = () => {
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="2">
-        <Accordion.Item eventKey="0">
-          <Accordion.Header className="pe-1">Age</Accordion.Header>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header className="pe-1">Age </Accordion.Header>
           <Accordion.Body>
+            <span>{age}</span>
             <Form.Range min={18} max={80} onChange={handleAgeChange} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="3">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="3">
           <Accordion.Header className="pe-1">Height</Accordion.Header>
           <Accordion.Body>
-            <Form.Range onChange={handleHeightChange} />
+            <span>{height}</span>
+            <Form.Range min={123} max={250} onChange={handleHeightChange} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="4">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="4">
           <Accordion.Header className="pe-1">Home Division</Accordion.Header>
           <Accordion.Body>
             <Form.Select
@@ -136,7 +146,7 @@ const FilterBox = () => {
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="5">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="5">
           <Accordion.Header className="pe-1">Education</Accordion.Header>
           <Accordion.Body>
             <Form>
@@ -170,7 +180,7 @@ const FilterBox = () => {
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="6">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="6">
           <Accordion.Header className="pe-1">
             Professional Area
           </Accordion.Header>
@@ -206,7 +216,7 @@ const FilterBox = () => {
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="7">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="7">
           <Accordion.Header className="pe-1">Working Sector</Accordion.Header>
           <Accordion.Body>
             <Form>
@@ -240,7 +250,7 @@ const FilterBox = () => {
       </Accordion>
 
       <Accordion className="mb-1" defaultActiveKey="8">
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey="8">
           <Accordion.Header className="pe-1">Living Country</Accordion.Header>
           <Accordion.Body>
             <Form>
@@ -272,7 +282,7 @@ const FilterBox = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-    </>
+    </div>
   );
 };
 

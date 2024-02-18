@@ -36,8 +36,8 @@ const Header = () => {
       link: "/help",
     },
     {
-      id: 3,
-      label: "S",
+      id: 4,
+      label: "Search result",
       link: "/search-res",
     },
   ];

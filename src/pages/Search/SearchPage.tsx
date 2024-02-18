@@ -8,7 +8,7 @@ const SearchPage = () => {
         <div className="col-md-4">
           <FilterBox />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8 ">
           <SearchResult />
         </div>
       </div>

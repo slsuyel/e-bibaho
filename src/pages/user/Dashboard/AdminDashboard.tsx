@@ -1,6 +1,8 @@
+import BarsikProtibedon from "./BarsikProtibedon";
 import MonthlyEarn from "./MonthlyEarn";
 import Summary from "./Summary";
 import SummaryChart from "./SummaryChart";
+import TotalStudents from "./TotalStudents";
 
 const AdminDashboard = () => {
   return (
@@ -10,6 +12,8 @@ const AdminDashboard = () => {
         <MonthlyEarn />
       </div>
       <Summary />
+      <TotalStudents />
+      <BarsikProtibedon />
     </div>
   );
 };
