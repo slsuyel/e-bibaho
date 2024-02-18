@@ -1,16 +1,4 @@
-import { ChangeEvent } from "react";
-
-interface StepOneProps {
-  formData: {
-    mobileNumber: string;
-    email: string;
-    password: string;
-    profileCreatedBy: string;
-  };
-  handleInputChange: (
-    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
-  ) => void;
-}
+import { StepOneProps } from "../../../types";
 
 const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
   return (
@@ -18,13 +6,14 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
       <form>
         <div className="form-group mb-2">
           <label htmlFor="mobileNumber" className="my-1">
-            Mobile Number
+            Mobile Number <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="mobileNumber"
             name="mobileNumber"
             placeholder="Mobile Number"
             type="tel"
+            required
             className="form-control rounded-0"
             value={formData.mobileNumber}
             onChange={handleInputChange}
@@ -32,7 +21,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="email" className="my-1">
-            Your Email
+            Your Email <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="email"
@@ -42,13 +31,15 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             className="form-control rounded-0"
             value={formData.email}
             onChange={handleInputChange}
+            required
           />
         </div>
         <div className="form-group mb-2">
           <label htmlFor="password" className="my-1">
-            Create Password
+            Create Password <span className="text-danger fs-5">*</span>
           </label>
           <input
+            required
             id="password"
             name="password"
             placeholder="Create Password"

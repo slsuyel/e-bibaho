@@ -1,26 +1,4 @@
-import React from "react";
-
-interface FormData {
-  fatherStatus: string;
-  fatherOccupation: string;
-  motherStatus: string;
-  motherOccupation: string;
-  siblingsNotMarried: number;
-  siblingsMarried: number;
-  homeDivision: string;
-  currentlyLivingIn: string;
-  cityLivingIn: string;
-  familyDetails: string;
-}
-
-interface StepFourProps {
-  formData: FormData;
-  handleInputChange: (
-    event: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => void;
-}
+import { StepFourProps } from "../../../types";
 
 const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
   const divisions = [
@@ -39,7 +17,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
       <form>
         <div className="form-group mb-2">
           <label htmlFor="fatherStatus" className="my-1">
-            Father Status*
+            Father Status <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="fatherStatus"
@@ -48,7 +26,9 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             value={formData.fatherStatus}
             onChange={handleInputChange}
           >
-            <option value="">--- Please Select ---</option>
+            <option value="" disabled>
+              --- Please Select ---
+            </option>
             <option value="employed">Employed</option>
             <option value="business">Business</option>
             <option value="retired">Retired</option>
@@ -70,7 +50,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="motherStatus" className="my-1">
-            Mother Status*
+            Mother Status <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="motherStatus"
@@ -79,7 +59,9 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             value={formData.motherStatus}
             onChange={handleInputChange}
           >
-            <option value="">--- Please Select ---</option>
+            <option value="" disabled>
+              --- Please Select ---
+            </option>
             <option value="employed">Employed</option>
             <option value="business">Business</option>
             <option value="retired">Retired</option>
@@ -132,7 +114,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="homeDivision" className="my-1">
-            Home Division*
+            Home Division <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="homeDivision"
@@ -141,7 +123,9 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             value={formData.homeDivision}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Home Division ---</option>
+            <option value="" disabled>
+              --- Select Home Division ---
+            </option>
             {divisions.map((division) => (
               <option key={division} value={division}>
                 {division}

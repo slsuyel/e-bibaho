@@ -108,7 +108,10 @@ const Register = () => {
             <Multistep steps={steps} />
             <div className="d-flex justify-content-end my-3">
               {last && (
-                <button className="btn-primary btn rounded-0" type="submit">
+                <button
+                  className=" btn-default btn-primary  rounded-1"
+                  type="submit"
+                >
                   Submit
                 </button>
               )}

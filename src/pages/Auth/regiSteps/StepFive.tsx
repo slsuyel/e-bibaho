@@ -1,21 +1,6 @@
-import React, { useEffect, ChangeEvent } from "react";
+import { useEffect } from "react";
+import { StepFiveProps } from "../../../types";
 
-interface FormData {
-  height: string;
-  weight: string;
-  bodyType: string;
-  complexion: string;
-  bloodGroup: string;
-  physicalAttributeDetails: string;
-}
-
-interface StepFiveProps {
-  formData: FormData;
-  handleInputChange: (
-    event: ChangeEvent<HTMLSelectElement | HTMLTextAreaElement>
-  ) => void;
-  setLast: React.Dispatch<React.SetStateAction<boolean>>;
-}
 const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
   useEffect(() => {
     setLast(true);
@@ -26,7 +11,7 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
       <form>
         <div className="form-group mb-2">
           <label htmlFor="height" className="my-1">
-            Height*
+            Height <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="height"
@@ -35,17 +20,18 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             value={formData.height}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Your Height ---</option>
+            <option value="" disabled>
+              --- Select Your Height ---
+            </option>
             <option value="below5ft">Below 5ft</option>
             <option value="5ft">5ft</option>
             <option value="5ft1in">5ft 1in</option>
             <option value="5ft2in">5ft 2in</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
           <label htmlFor="weight" className="my-1">
-            Weight*
+            Weight <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="weight"
@@ -54,17 +40,18 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             value={formData.weight}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Your Weight ---</option>
+            <option value="" disabled>
+              --- Select Your Weight ---
+            </option>
             <option value="below50kg">Below 50kg</option>
             <option value="50-60kg">50 - 60kg</option>
             <option value="61-70kg">61 - 70kg</option>
             <option value="71-80kg">71 - 80kg</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
           <label htmlFor="bodyType" className="my-1">
-            Body Type*
+            Body Type <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="bodyType"
@@ -73,17 +60,18 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             value={formData.bodyType}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Body Type ---</option>
+            <option value="" disabled>
+              --- Select Body Type ---
+            </option>
             <option value="average">Average</option>
             <option value="slim">Slim</option>
             <option value="athletic">Athletic</option>
             <option value="heavy">Heavy</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
           <label htmlFor="complexion" className="my-1">
-            Complexion*
+            Complexion <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="complexion"
@@ -92,12 +80,13 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             value={formData.complexion}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Complexion ---</option>
+            <option value="" disabled>
+              --- Select Complexion ---
+            </option>
             <option value="veryFair">Very Fair</option>
             <option value="fair">Fair</option>
             <option value="wheatish">Wheatish</option>
             <option value="dark">Dark</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
@@ -111,7 +100,9 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             value={formData.bloodGroup}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Blood Group ---</option>
+            <option value="" disabled>
+              --- Select Blood Group ---
+            </option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
             <option value="B+">B+</option>
@@ -120,7 +111,6 @@ const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
             <option value="AB-">AB-</option>
             <option value="O+">O+</option>
             <option value="O-">O-</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">

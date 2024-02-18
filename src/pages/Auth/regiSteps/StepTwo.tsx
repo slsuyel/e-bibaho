@@ -1,22 +1,4 @@
-import { ChangeEvent } from "react";
-
-interface StepTwoProps {
-  formData: {
-    gender: string;
-    candidateName: string;
-    profileCreatedBy: string;
-    parentName: string;
-    day: string;
-    month: string;
-    year: string;
-    maritalStatus: string;
-    religion: string;
-    nationality: string;
-  };
-  handleInputChange: (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => void;
-}
+import { StepTwoProps } from "../../../types";
 
 const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
   return (
@@ -24,7 +6,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
       <form>
         <div className="form-group mb-2">
           <label htmlFor="gender" className="my-1">
-            Gender*
+            Gender <span className="text-danger fs-5">*</span>
           </label>
           <div>
             <input
@@ -53,7 +35,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="candidateName" className="my-1">
-            Candidate Name*
+            Candidate Name <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="candidateName"
@@ -67,7 +49,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="profileCreatedBy" className="my-1">
-            Profile Created By*
+            Profile Created By <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="profileCreatedBy"
@@ -85,7 +67,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="parentName" className="my-1">
-            Father / Mother Name*
+            Father / Mother Name <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="parentName"
@@ -99,7 +81,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="dateOfBirth" className="my-1">
-            Candidate Date of Birth*
+            Candidate Date of Birth <span className="text-danger fs-5">*</span>
           </label>
           <div className="row">
             <div className="col">
@@ -152,7 +134,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="maritalStatus" className="my-1">
-            Marital Status*
+            Marital Status <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="maritalStatus"
@@ -172,7 +154,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="religion" className="my-1">
-            Religion*
+            Religion <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="religion"

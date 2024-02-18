@@ -57,3 +57,19 @@ a {
   color: #dcdcdc;
   border-bottom: 2px solid #dcdcdc;
 }
+
+.btn-default {
+
+  height: 38px;
+  padding: 0 30px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-left: 2px;
+  background: #055160;
+}

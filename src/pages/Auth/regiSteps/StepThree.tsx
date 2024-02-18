@@ -1,18 +1,4 @@
-import { ChangeEvent } from "react";
-
-interface StepThreeProps {
-  formData: {
-    highestQualification: string;
-    educationDetails: string;
-    workingSector: string;
-    profession: string;
-    professionDetails: string;
-    monthlyIncome: string;
-  };
-  handleInputChange: (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => void;
-}
+import { StepThreeProps } from "../../../types";
 
 const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
   return (
@@ -20,7 +6,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
       <form>
         <div className="form-group mb-2">
           <label htmlFor="highestQualification" className="my-1">
-            Highest Qualification*
+            Highest Qualification <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="highestQualification"
@@ -29,13 +15,14 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             value={formData.highestQualification}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Qualification ---</option>
+            <option value="" disabled>
+              --- Select Qualification ---
+            </option>
             <option value="bachelor">Bachelor's Degree</option>
             <option value="master">Master's Degree</option>
             <option value="phd">PhD</option>
             <option value="diploma">Diploma</option>
             <option value="certificate">Certificate</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
@@ -53,7 +40,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
         </div>
         <div className="form-group mb-2">
           <label htmlFor="workingSector" className="my-1">
-            Working Sector*
+            Working Sector <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="workingSector"
@@ -62,18 +49,19 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             value={formData.workingSector}
             onChange={handleInputChange}
           >
-            <option value="">--- Please Select ---</option>
+            <option value="" disabled>
+              --- Please Select ---
+            </option>
             <option value="private">Private Sector</option>
             <option value="public">Public Sector</option>
             <option value="selfEmployed">Self Employed</option>
             <option value="freelancer">Freelancer</option>
             <option value="unemployed">Unemployed</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
           <label htmlFor="profession" className="my-1">
-            Profession*
+            Profession <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="profession"
@@ -82,12 +70,13 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             value={formData.profession}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Occupation ---</option>
+            <option value="" disabled>
+              --- Select Occupation ---
+            </option>
             <option value="engineer">Engineer</option>
             <option value="doctor">Doctor</option>
             <option value="teacher">Teacher</option>
             <option value="manager">Manager</option>
-            {/* Add more options as needed */}
           </select>
         </div>
         <div className="form-group mb-2">
@@ -114,14 +103,15 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             value={formData.monthlyIncome}
             onChange={handleInputChange}
           >
-            <option value="">--- Select Your Monthly Income ---</option>
+            <option value="" disabled>
+              --- Select Your Monthly Income ---
+            </option>
             <option value="private">Keep it private</option>
             <option value="0-500">0 - 500</option>
             <option value="501-1000">501 - 1000</option>
             <option value="1001-2000">1001 - 2000</option>
             <option value="2001-5000">2001 - 5000</option>
             <option value="5001+">5001+</option>
-            {/* Add more options as needed */}
           </select>
         </div>
       </form>
