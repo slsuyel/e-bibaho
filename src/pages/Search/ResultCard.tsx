@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 
 const ResultCard = () => {
   return (
@@ -47,7 +48,10 @@ const ResultCard = () => {
                         </span>
                       </td>
                       <td>
-                        <button className="m-0 bg-black">More</button>
+                        <Link to={"/search-res/1"}>
+                          {" "}
+                          <button className="m-0 bg-black">More</button>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>

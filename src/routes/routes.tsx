@@ -11,6 +11,7 @@ import OutSideLayout from "../components/layouts/OutSideLayout";
 import Register from "../pages/Auth/Register";
 import { userPaths } from "./userRoute";
 import SearchPage from "../pages/Search/SearchPage";
+import SingleProfile from "../pages/SingleProfile/SingleProfile";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/search-res",
         element: <SearchPage />,
+      },
+      {
+        path: "/search-res/:id",
+        element: <SingleProfile />,
       },
     ],
   },
