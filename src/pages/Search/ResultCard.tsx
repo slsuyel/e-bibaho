@@ -48,7 +48,7 @@ const ResultCard = () => {
                         </span>
                       </td>
                       <td>
-                        <Link to={"/search-res/1"}>
+                        <Link to={"/user/search-res/1"}>
                           <button className="m-0 bg-black">More</button>
                         </Link>
                       </td>

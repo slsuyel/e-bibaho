@@ -4,7 +4,7 @@ import { Card } from "antd";
 
 const UserDashboard = () => {
   return (
-    <div className="container-fluid  my-4 font-maven">
+    <div className="container  my-4 font-maven">
       <div className="row mx-auto">
         <div className="col-md-3">
           <div className="shadow p-3">

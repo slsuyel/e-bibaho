@@ -1,6 +1,20 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [username, setUsername] = useState("defaultUsername");
+  const [password, setPassword] = useState("defaultPassword");
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Log values after submission
+    console.log("Username:", username);
+    console.log("Password:", password);
+    // Reset form fields
+    setUsername("");
+    setPassword("");
+  };
+
   return (
     <div className="row mx-auto font-maven regi-page">
       <div className="col-md-4 mx-auto my-5">
@@ -13,7 +27,7 @@ const Login = () => {
             />
             <h3 className="control-label mt-3">Member Login</h3>
           </div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group mb-2">
               <label className="my-1" htmlFor="loginUsername">
                 Mobile Or Email
@@ -24,6 +38,8 @@ const Login = () => {
                 style={{ height: 45 }}
                 type="text"
                 className="form-control"
+                value={username} // Bind value to state
+                onChange={(e) => setUsername(e.target.value)} // Update state on change
               />
             </div>
             <div className="form-group mb-2">
@@ -36,6 +52,8 @@ const Login = () => {
                 style={{ height: 45 }}
                 type="password"
                 className="form-control"
+                value={password} // Bind value to state
+                onChange={(e) => setPassword(e.target.value)} // Update state on change
               />
             </div>
             <div className="d-flex justify-content-between mb-3">

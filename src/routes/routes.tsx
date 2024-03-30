@@ -18,6 +18,7 @@ import UserDashboard from "../pages/user/Profile/UserDashboard";
 import UserLoggedLayout from "../components/layouts/UserLoggedLayout";
 import UserPhoto from "../pages/user/Profile/UserPhoto";
 import PartnerPre from "../pages/user/Profile/PartnerPreferences/PartnerPre";
+import UserPrivate from "./privateRoute/userPrivate";
 
 const router = createBrowserRouter([
   {
@@ -42,10 +43,7 @@ const router = createBrowserRouter([
         path: "/search-res",
         element: <SearchPage />,
       },
-      {
-        path: "/search-res/:id",
-        element: <SingleProfile />,
-      },
+
       // {
       //   path: "/profile",
       //   element: <LoggedProfile />,
@@ -59,7 +57,11 @@ const router = createBrowserRouter([
 
   {
     path: "user",
-    element: <UserLoggedLayout />,
+    element: (
+      <UserPrivate>
+        <UserLoggedLayout />
+      </UserPrivate>
+    ),
     errorElement: <Errorpage />,
     children: [
       {
@@ -81,6 +83,14 @@ const router = createBrowserRouter([
       {
         path: "partner-preferences",
         element: <PartnerPre />,
+      },
+      {
+        path: "search-res",
+        element: <SearchPage />,
+      },
+      {
+        path: "search-res/:id",
+        element: <SingleProfile />,
       },
     ],
   },
