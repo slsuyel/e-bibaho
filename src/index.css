@@ -28,12 +28,21 @@ a {
 }
 
 
-
 .search-box {
   position: absolute;
   width: 100%;
   top: 180px;
+  /* Default position for larger screens */
 }
+
+@media only screen and (max-width: 600px) {
+  .search-box {
+    top: 20px;
+    /* Adjusted position for smaller screens */
+  }
+}
+
+
 
 .form-control,
 .form-select {
@@ -72,4 +81,65 @@ a {
   margin-right: 2px;
   margin-left: 2px;
   background: #055160;
+}
+
+
+.CardForUser .ant-card-body {
+  padding: 0;
+}
+
+.activity-summary--list {
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #8286912e;
+}
+
+
+.count-card--number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2px;
+  line-height: 25px;
+  color: #51505d;
+  font-size: 22px;
+  font-weight: 700;
+  gap: 5px;
+}
+
+.count-card--flag {
+  display: inline-block;
+  padding: 2px 5px;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  background-color: #00bcd5;
+
+}
+
+.count-card--label {
+  color: #51505d;
+  font-size: 13px;
+  line-height: 12px;
+  font-weight: 300;
+}
+
+.count-card--text {
+  font-style: italic;
+  color: #72727d;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.delete-icon {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  opacity: 0.8;
 }

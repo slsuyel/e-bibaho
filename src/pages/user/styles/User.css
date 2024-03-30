@@ -1,0 +1,18 @@
+.logged-profile .profile-setting ul li {
+    list-style: square;
+    color: cornflowerblue;
+}
+
+.basic-info table td {
+    padding: 3px 0px;
+    border: 0;
+}
+
+
+.user-d-border {
+    border-top: 1px solid #d59ca2
+}
+
+.bg-red-500 {
+    background-color: #fa050517;
+}

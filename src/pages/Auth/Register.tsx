@@ -7,7 +7,7 @@ import StepThree from "./regiSteps/StepThree";
 import StepFour from "./regiSteps/StepFour";
 import StepFive from "./regiSteps/StepFive";
 import { TRegiForm } from "../../types";
-
+/* react-stepzilla */
 const Register = () => {
   const [formData, setFormData] = useState<TRegiForm>({
     mobileNumber: "",

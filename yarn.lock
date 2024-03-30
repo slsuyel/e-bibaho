@@ -1490,6 +1490,14 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
+go-to-top-react@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/go-to-top-react/-/go-to-top-react-1.0.7.tgz#4bc82e5636ca15a2f922478b76d79f2038b235c9"
+  integrity sha512-/W7BHC95kpcxhSNGmY5x4D3lUWcNepXhf0qR/2lprpkTZ616xEAXe6Lftm5jJj4JfSk9WNSXASokiZ5fmq/2wA==
+  dependencies:
+    react "^18.2.0"
+    react-dom "^18.2.0"
+
 goober@2.1.13:
   version "2.1.13"
   resolved "https://registry.npmjs.org/goober/-/goober-2.1.13.tgz#e3c06d5578486212a76c9eba860cbc3232ff6d7c"

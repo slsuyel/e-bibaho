@@ -49,7 +49,6 @@ const ResultCard = () => {
                       </td>
                       <td>
                         <Link to={"/search-res/1"}>
-                          {" "}
                           <button className="m-0 bg-black">More</button>
                         </Link>
                       </td>
@@ -58,19 +57,19 @@ const ResultCard = () => {
                 </table>
               </div>
               <div className="col-md-2 p-0">
-                <button className="m-0 mb-3">
+                <button className="m-0 mb-3 btn-icon">
                   <i className="fa-solid fa-user-plus fs-6"></i>
                 </button>
-                <button className="m-0 mb-3">
+                <button className="m-0 mb-3 btn-icon">
                   <i className="fa-solid fs-5 fa-phone"></i>
                 </button>
-                <button className="m-0 mb-3">
+                <button className="m-0 mb-3 btn-icon">
                   <i className="fa-solid fs-5 fa-envelope"></i>
                 </button>
-                <button className="m-0 mb-3">
+                <button className="m-0 mb-3 btn-icon">
                   <i className="fa-brands fs-4 fa-whatsapp"></i>
                 </button>
-                <button className="m-0 mb-3">
+                <button className="m-0 mb-3 btn-icon">
                   <i className="fa-solid fs-5 fa-thumbs-up"></i>
                 </button>
               </div>

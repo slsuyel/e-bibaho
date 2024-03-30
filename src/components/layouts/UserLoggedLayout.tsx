@@ -1,13 +1,15 @@
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "../../utils/ScrollToTop";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
-import ScrollToTop from "../../utils/ScrollToTop";
 import { GoToTop } from "go-to-top-react";
+import UserNavbar from "./userLayouts/UserNavbar";
 
-const OutSideLayout = () => {
+const UserLoggedLayout = () => {
   return (
     <ScrollToTop>
       <Header />
+      <UserNavbar />
       <Outlet />
       <Footer />
       <GoToTop />
@@ -15,4 +17,4 @@ const OutSideLayout = () => {
   );
 };
 
-export default OutSideLayout;
+export default UserLoggedLayout;

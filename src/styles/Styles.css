@@ -112,3 +112,16 @@
     border-left: 2px solid rgb(145, 145, 145);
     height: 80px;
 }
+
+.btn-icon {
+    background-color: #055160;
+
+}
+
+.btn-icon:hover {
+    background-color: #29484f !important;
+}
+
+.bg-black:hover {
+    background-color: #055160ab !important;
+}

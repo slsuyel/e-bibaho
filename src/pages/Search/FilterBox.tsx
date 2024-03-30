@@ -1,10 +1,12 @@
+import { Slider } from "antd";
 import { useState, useEffect, ChangeEvent } from "react";
 import { Accordion, Form } from "react-bootstrap";
 
 const FilterBox = () => {
   const [gender, setGender] = useState<string>("male");
   const [age, setAge] = useState<number>(18);
-  const [height, setHeight] = useState<string>("");
+  const [height, setHeight] = useState("4'0\"");
+
   const [division, setDivision] = useState<string>("All Division");
   const [education, setEducation] = useState<{ [key: string]: boolean }>({
     all: false,
@@ -24,18 +26,15 @@ const FilterBox = () => {
   const handleGenderChange = (event: ChangeEvent<HTMLInputElement>) => {
     setGender(event.target.value);
   };
-  const handleAgeChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setAge(parseInt(event.target.value, 10));
+  const handleAgeChange = (value: number) => {
+    setAge(value); // Update the age state with the new value
   };
-  const handleHeightChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const valueInCentimeters = parseInt(event.target.value, 10);
-    console.log(valueInCentimeters); /* value received in centimeters */
-    const totalInches = valueInCentimeters / 2.54; // 1 inch = 2.54 centimeters
+
+  const handleHeightChange = (value: number) => {
+    const totalInches = value / 2.54; // Convert centimeters to inches (1 inch = 2.54 centimeters)
     const feet = Math.floor(totalInches / 12);
     const inches = Math.round(totalInches % 12);
-
-    console.log(`${feet}'${inches}"`);
-    setHeight(`${feet}'${inches}"`);
+    setHeight(`${feet}'${inches}"`); // Update the height state with the formatted string
   };
 
   const handleDivisionChange = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -107,12 +106,22 @@ const FilterBox = () => {
         </Accordion.Item>
       </Accordion>
 
-      <Accordion className="mb-1" defaultActiveKey="2">
+      {/* <Accordion className="mb-1" defaultActiveKey="2">
         <Accordion.Item eventKey="2">
           <Accordion.Header className="pe-1">Age </Accordion.Header>
           <Accordion.Body>
             <span>{age}</span>
             <Form.Range min={18} max={80} onChange={handleAgeChange} />
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion> */}
+
+      <Accordion className="mb-1" defaultActiveKey="2">
+        <Accordion.Item eventKey="2">
+          <Accordion.Header className="pe-1">Age </Accordion.Header>
+          <Accordion.Body>
+            <span>{age}</span>
+            <Slider min={18} max={80} onChange={handleAgeChange} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -122,7 +131,7 @@ const FilterBox = () => {
           <Accordion.Header className="pe-1">Height</Accordion.Header>
           <Accordion.Body>
             <span>{height}</span>
-            <Form.Range min={123} max={250} onChange={handleHeightChange} />
+            <Slider min={123} max={250} onChange={handleHeightChange} />
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

@@ -5,26 +5,29 @@ import { routeGenerator } from "../utils/routesGenerator";
 import Login from "../pages/Auth/Login";
 
 import Home from "../pages/home/Home/Home";
-import AllSupplies from "../pages/home/AllSupplies/AllSupplies";
+
 import OutSideLayout from "../components/layouts/OutSideLayout";
 
 import Register from "../pages/Auth/Register";
 import { userPaths } from "./userRoute";
 import SearchPage from "../pages/Search/SearchPage";
 import SingleProfile from "../pages/SingleProfile/SingleProfile";
+import Errorpage from "../components/ui/Errorpage";
+import LoggedProfile from "../pages/user/Profile/LoggedProfile";
+import UserDashboard from "../pages/user/Profile/UserDashboard";
+import UserLoggedLayout from "../components/layouts/UserLoggedLayout";
+import UserPhoto from "../pages/user/Profile/UserPhoto";
+import PartnerPre from "../pages/user/Profile/PartnerPreferences/PartnerPre";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <OutSideLayout />,
+    errorElement: <Errorpage />,
     children: [
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/supplies",
-        element: <AllSupplies />,
       },
 
       {
@@ -42,6 +45,42 @@ const router = createBrowserRouter([
       {
         path: "/search-res/:id",
         element: <SingleProfile />,
+      },
+      // {
+      //   path: "/profile",
+      //   element: <LoggedProfile />,
+      // },
+      // {
+      //   path: "/profile/dashboard",
+      //   element: <UserDashboard />,
+      // },
+    ],
+  },
+
+  {
+    path: "user",
+    element: <UserLoggedLayout />,
+    errorElement: <Errorpage />,
+    children: [
+      {
+        path: "",
+        element: <UserDashboard />,
+      },
+      {
+        path: "profile",
+        element: <LoggedProfile />,
+      },
+      {
+        path: "dashboard",
+        element: <UserDashboard />,
+      },
+      {
+        path: "photos",
+        element: <UserPhoto />,
+      },
+      {
+        path: "partner-preferences",
+        element: <PartnerPre />,
       },
     ],
   },
