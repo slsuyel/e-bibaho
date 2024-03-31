@@ -16,7 +16,7 @@ const CardForUser = () => {
       <Card title="" className="mt-2 rounded-0 shadow-lg">
         <div className="d-flex justify-content-between gap-4 p-3">
           <Menu className="shadow-none" style={{ flex: 1 }}>
-            <Link to="/user/dashboard">
+            <Link to="/user/profile/dashboard">
               <Menu.Item
                 icon={<DashboardOutlined />}
                 className="text-nowrap border-bottom"
@@ -24,7 +24,7 @@ const CardForUser = () => {
                 Dashboard
               </Menu.Item>
             </Link>
-            <Link to="/user/profile">
+            <Link to="/user/profile/my-profile">
               <Menu.Item
                 icon={<UserOutlined />}
                 className="text-nowrap border-bottom"

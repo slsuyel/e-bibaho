@@ -31,10 +31,10 @@ const FilterBox = () => {
   };
 
   const handleHeightChange = (value: number) => {
-    const totalInches = value / 2.54; // Convert centimeters to inches (1 inch = 2.54 centimeters)
+    const totalInches = value / 2.54;
     const feet = Math.floor(totalInches / 12);
     const inches = Math.round(totalInches % 12);
-    setHeight(`${feet}'${inches}"`); // Update the height state with the formatted string
+    setHeight(`${feet}'${inches}"`);
   };
 
   const handleDivisionChange = (event: ChangeEvent<HTMLSelectElement>) => {

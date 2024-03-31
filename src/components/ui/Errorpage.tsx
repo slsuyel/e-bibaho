@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Errorpage = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1); // This will navigate back in the history stack
+  };
+
   const styles = {
     page_404: {
       padding: "40px 0",
@@ -42,10 +48,9 @@ const Errorpage = () => {
               <div style={styles.content_box_404}>
                 <h3 className="h2">Looks like you're lost</h3>
                 <p>The page you are looking for is not available!</p>
-                {/* <a href="/" className="link_404" style={styles.link_404}>
-                  Go to Home
-                </a> */}
 
+                <button onClick={handleGoBack}>Back</button>
+                <br />
                 <Link to={"/"} className="link_404" style={styles.link_404}>
                   Go to Home
                 </Link>

@@ -3,9 +3,10 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Button, Drawer, Dropdown, Space } from "antd";
-import { DownOutlined, MenuOutlined } from "@ant-design/icons";
-import CardForUser from "./CardForUser";
+import { Button, Drawer } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+
+import UserDropdownMenu from "../reusable/UserDropdownMenu";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -100,22 +101,7 @@ const Header = () => {
               Upgrade Now
             </Button>
 
-            <Dropdown overlay={CardForUser} trigger={["click"]}>
-              <a
-                onClick={(e) => e.preventDefault()}
-                style={{ cursor: "pointer" }}
-              >
-                <Space className="text-white gap-0">
-                  <img
-                    width={40}
-                    src="https://banner2.cleanpng.com/20181231/fta/kisspng-computer-icons-user-profile-portable-network-graph-circle-svg-png-icon-free-download-5-4714-onli-5c2a3809d6e8e6.1821006915462707298803.jpg"
-                    alt=""
-                    className="border rounded-circle"
-                  />
-                  <DownOutlined className="fs-6" />
-                </Space>
-              </a>
-            </Dropdown>
+            <UserDropdownMenu />
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -152,22 +138,7 @@ const Header = () => {
               Upgrade Now
             </Button>
             <br />
-            <Dropdown overlay={CardForUser} trigger={["click"]}>
-              <a
-                onClick={(e) => e.preventDefault()}
-                style={{ cursor: "pointer" }}
-              >
-                <Space className="text-white gap-0">
-                  <img
-                    width={40}
-                    src="https://banner2.cleanpng.com/20181231/fta/kisspng-computer-icons-user-profile-portable-network-graph-circle-svg-png-icon-free-download-5-4714-onli-5c2a3809d6e8e6.1821006915462707298803.jpg"
-                    alt=""
-                    className="border rounded-circle"
-                  />
-                  <DownOutlined className="fs-6" />
-                </Space>
-              </a>
-            </Dropdown>
+            <UserDropdownMenu />
           </Drawer>
         </>
       )}

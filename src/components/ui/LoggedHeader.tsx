@@ -20,7 +20,7 @@ const LoggedHeader = () => {
         </NavLink>
       </Menu.Item>
       <Menu.Item key="2">
-        <NavLink to="/matches" className="nav-link">
+        <NavLink to="/user/matches/todays-matches" className="nav-link">
           Matches
         </NavLink>
       </Menu.Item>
@@ -32,7 +32,7 @@ const LoggedHeader = () => {
 
       <SubMenu key="sub1" title="Inbox">
         <Menu.Item key="4">
-          <NavLink to="/messages" className="nav-link">
+          <NavLink to="/user/messages" className="nav-link">
             Messages
           </NavLink>
         </Menu.Item>

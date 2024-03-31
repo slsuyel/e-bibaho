@@ -20,6 +20,14 @@ import UserPhoto from "../pages/user/Profile/UserPhoto";
 import PartnerPre from "../pages/user/Profile/PartnerPreferences/PartnerPre";
 import UserPrivate from "./privateRoute/userPrivate";
 
+import NewMatches from "../pages/Matches/NewMatches";
+import TodayMatches from "../pages/Matches/TodayMatches";
+import MyMatches from "../pages/Matches/MyMatches";
+import NearMe from "../pages/Matches/NearMe";
+import MoreMatches from "../pages/Matches/MoreMatches";
+import RecentlyViewed from "../pages/Matches/RecentlyViewed";
+import MessageLayout from "../pages/Message/MessageLayout";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -65,32 +73,63 @@ const router = createBrowserRouter([
     errorElement: <Errorpage />,
     children: [
       {
-        path: "",
+        path: "profile",
         element: <UserDashboard />,
       },
       {
-        path: "profile",
+        path: "profile/my-profile",
         element: <LoggedProfile />,
       },
       {
-        path: "dashboard",
+        path: "profile/dashboard",
         element: <UserDashboard />,
       },
       {
-        path: "photos",
+        path: "profile/photos",
         element: <UserPhoto />,
       },
       {
-        path: "partner-preferences",
+        path: "profile/partner-preferences",
         element: <PartnerPre />,
       },
       {
         path: "search-res",
         element: <SearchPage />,
       },
+
       {
         path: "search-res/:id",
         element: <SingleProfile />,
+      },
+
+      {
+        path: "matches/new-matches",
+        element: <NewMatches />,
+      },
+      {
+        path: "matches/todays-matches",
+        element: <TodayMatches />,
+      },
+
+      {
+        path: "matches/my-matches",
+        element: <MyMatches />,
+      },
+      {
+        path: "matches/near-me",
+        element: <NearMe />,
+      },
+      {
+        path: "matches/recently-viewed",
+        element: <RecentlyViewed />,
+      },
+      {
+        path: "matches/more-matches",
+        element: <MoreMatches />,
+      },
+      {
+        path: "messages",
+        element: <MessageLayout />,
       },
     ],
   },
