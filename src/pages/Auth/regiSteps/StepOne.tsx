@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { StepOneProps } from "../../../types";
 
 const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <form>

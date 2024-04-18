@@ -40,7 +40,7 @@ const CardForUser = () => {
                 Email / SMS Alerts
               </Menu.Item>
             </Link>
-            <Link to="/account-settings">
+            <Link to="/user/profile/acc-settings">
               <Menu.Item
                 icon={<SettingOutlined />}
                 className="text-nowrap border-bottom"

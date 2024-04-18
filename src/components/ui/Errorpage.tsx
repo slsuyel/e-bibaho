@@ -49,7 +49,9 @@ const Errorpage = () => {
                 <h3 className="h2">Looks like you're lost</h3>
                 <p>The page you are looking for is not available!</p>
 
-                <button onClick={handleGoBack}>Back</button>
+                <button className="btn-default" onClick={handleGoBack}>
+                  Back
+                </button>
                 <br />
                 <Link to={"/"} className="link_404" style={styles.link_404}>
                   Go to Home

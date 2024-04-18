@@ -37,7 +37,11 @@ const Footer = () => {
       </div>
       <div className="container text-center">
         <span className="text-muted">
-          Developed by Suyel Haque &copy; {new Date().getFullYear()}
+          Developed by{" "}
+          <a target="_blank" href="https://zsi.ai/">
+            ZSI.Ai
+          </a>{" "}
+          &copy; {new Date().getFullYear()}
         </span>
       </div>
     </footer>

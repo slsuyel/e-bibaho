@@ -13,7 +13,11 @@ const menuItems = [
         label: "Partner Preferences",
         link: "/user/profile/partner-preferences",
       },
-      { key: "settings", label: "Settings", link: "" },
+      {
+        key: "settings",
+        label: "Settings",
+        link: "/user/profile/acc-settings",
+      },
       { key: "more", label: "More", link: "" },
     ],
   },

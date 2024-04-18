@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { StepTwoProps } from "../../../types";
 
 const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <form>

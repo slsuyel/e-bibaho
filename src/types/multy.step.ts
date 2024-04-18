@@ -79,7 +79,6 @@ export interface StepFiveProps {
   handleInputChange: (
     event: ChangeEvent<HTMLSelectElement | HTMLTextAreaElement>
   ) => void;
-  setLast: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export type TRegiForm = {

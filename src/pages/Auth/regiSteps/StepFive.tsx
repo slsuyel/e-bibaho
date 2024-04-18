@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { StepFiveProps } from "../../../types";
 
-const StepFive = ({ formData, handleInputChange, setLast }: StepFiveProps) => {
+const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
   useEffect(() => {
-    setLast(true);
-  });
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

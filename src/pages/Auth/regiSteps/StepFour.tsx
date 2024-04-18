@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { StepFourProps } from "../../../types";
 
 const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const divisions = [
     "Dhaka",
     "Chittagong",

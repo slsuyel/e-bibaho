@@ -1,14 +1,12 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import "../../styles/MultySteps.css";
-import Multistep from "react-multistep";
 import StepOne from "./regiSteps/StepOne";
 import StepTwo from "./regiSteps/StepTwo";
 import StepThree from "./regiSteps/StepThree";
 import StepFour from "./regiSteps/StepFour";
 import StepFive from "./regiSteps/StepFive";
 import { TRegiForm } from "../../types";
-/* react-stepzilla */
-const Register = () => {
+
+const NewRegi = () => {
   const [formData, setFormData] = useState<TRegiForm>({
     mobileNumber: "",
     email: "",
@@ -47,7 +45,7 @@ const Register = () => {
     physicalAttributeDetails: "",
   });
 
-  const [last, setLast] = useState(false);
+  const [step, setStep] = useState(1);
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -61,48 +59,42 @@ const Register = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const requiredFields = ["mobileNumber", "email", "password"];
-    const missingFields = requiredFields.filter((field) => !formData[field]);
-    if (missingFields.length > 0) {
-      alert(`Please fill out all required fields: ${missingFields.join(", ")}`);
-      return;
-    }
+    // Your form submission logic here
     console.log(formData);
+  };
+
+  const handleNext = () => {
+    setStep(step + 1);
+  };
+
+  const handleBack = () => {
+    setStep(step - 1);
   };
 
   const steps = [
     {
-      name: "StepOne",
       component: (
         <StepOne formData={formData} handleInputChange={handleInputChange} />
       ),
     },
     {
-      name: "StepTwo",
       component: (
         <StepTwo formData={formData} handleInputChange={handleInputChange} />
       ),
     },
     {
-      name: "StepThree",
       component: (
         <StepThree formData={formData} handleInputChange={handleInputChange} />
       ),
     },
     {
-      name: "StepFour",
       component: (
         <StepFour formData={formData} handleInputChange={handleInputChange} />
       ),
     },
     {
-      name: "StepFive",
       component: (
-        <StepFive
-          setLast={setLast}
-          formData={formData}
-          handleInputChange={handleInputChange}
-        />
+        <StepFive formData={formData} handleInputChange={handleInputChange} />
       ),
     },
   ];
@@ -110,14 +102,31 @@ const Register = () => {
   return (
     <div className="row mx-auto font-maven regi-page">
       <div className="col-md-9 mx-auto">
-        <div className="card  my-5 shadow-lg text-info-emphasis">
+        <div className="card my-5 shadow-lg text-info-emphasis">
           <div className="p-3 w-100 mx-auto">
             <form onSubmit={handleSubmit} className="multistep-form">
-              <Multistep steps={steps} />
-              <div className="d-flex justify-content-end my-3">
-                {last && (
+              {steps[step - 1].component}
+              <div className="d-flex justify-content-between my-3">
+                {step !== 1 && (
                   <button
-                    className=" btn-default btn-primary  rounded-1"
+                    className="btn btn-default btn-primary rounded-1"
+                    onClick={handleBack}
+                  >
+                    Previous
+                  </button>
+                )}
+                {step !== steps.length && (
+                  <button
+                    className="btn btn-default btn-primary rounded-1"
+                    type="button"
+                    onClick={handleNext}
+                  >
+                    Next
+                  </button>
+                )}
+                {step === steps.length && (
+                  <button
+                    className="btn btn-default btn-primary rounded-1"
                     type="submit"
                   >
                     Submit
@@ -132,4 +141,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default NewRegi;

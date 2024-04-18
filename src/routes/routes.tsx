@@ -27,6 +27,7 @@ import NearMe from "../pages/Matches/NearMe";
 import MoreMatches from "../pages/Matches/MoreMatches";
 import RecentlyViewed from "../pages/Matches/RecentlyViewed";
 import MessageLayout from "../pages/Message/MessageLayout";
+import AccountSetting from "../pages/user/Settings/AccountSetting";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "profile/photos",
         element: <UserPhoto />,
+      },
+      {
+        path: "profile/acc-settings",
+        element: <AccountSetting />,
       },
       {
         path: "profile/partner-preferences",

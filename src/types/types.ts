@@ -24,3 +24,15 @@ export type TUserPath = {
   element?: ReactNode;
   children?: TUserPath[];
 };
+
+export type FieldType = {
+  email?: string;
+};
+
+export type MessageModel = {
+  message: string;
+  sentTime: string;
+  sender: string;
+  direction: string; // Add direction property
+  position: number; // Add position property
+};

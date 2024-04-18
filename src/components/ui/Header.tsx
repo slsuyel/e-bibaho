@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/newlogo2.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
@@ -79,7 +79,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href="/" className="p-0 ">
-            <img src={logo} alt="" width={95} height={60} />
+            <img src={logo} alt="" width={200} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
@@ -108,9 +108,9 @@ const Header = () => {
 
       {isMobile && (
         <>
-          <div className="align-items-center d-flex justify-content-between px-2">
+          <div className="align-items-center d-flex justify-content-between p-2 bg-dark">
             <Navbar.Brand href="/" className="p-1 ">
-              <img src={logo} alt="" width={70} />
+              <img src={logo} alt="" width={120} />
             </Navbar.Brand>
             <Button type="primary" className="rounded-0 " onClick={showDrawer}>
               <MenuOutlined />
