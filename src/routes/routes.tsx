@@ -31,6 +31,7 @@ import AccountSetting from "../pages/user/Settings/AccountSetting";
 import Notification from "../pages/user/Notification/Notification";
 import Pricing from "../pages/Pricing/Pricing";
 import Cart from "../pages/Pricing/Cart";
+import Help from "../pages/Help/Help";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/search-res",
         element: <SearchPage />,
+      },
+      {
+        path: "/help",
+        element: <Help />,
       },
       {
         path: "/pricing",

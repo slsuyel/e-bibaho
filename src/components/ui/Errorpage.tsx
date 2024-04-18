@@ -15,8 +15,11 @@ const Errorpage = () => {
     },
     four_zero_four_bg: {
       backgroundImage:
-        "url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)",
-      height: "400px",
+        "url(https://cdn.pixabay.com/animation/2022/12/26/19/45/19-45-46-138_512.gif)",
+      // "url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif)",
+      height: "500px",
+      backgroundRepeat: "no-repeat",
+
       backgroundPosition: "center",
     },
     four_zero_four_heading: { fontSize: "80px" },
@@ -46,8 +49,11 @@ const Errorpage = () => {
               </div>
 
               <div style={styles.content_box_404}>
-                <h3 className="h2">Looks like you're lost</h3>
-                <p>The page you are looking for is not available!</p>
+                <h3 className="h2">
+                  The page you are looking for is not available!
+                </h3>
+                {/* <h3 className="h2">Looks like you're lost</h3> */}
+                {/* <p>The page you are looking for is not available!</p> */}
 
                 <button className="btn-default" onClick={handleGoBack}>
                   Back
