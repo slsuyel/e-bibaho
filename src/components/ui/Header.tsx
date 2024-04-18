@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/images/newlogo2.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
@@ -9,6 +9,7 @@ import { MenuOutlined } from "@ant-design/icons";
 import UserDropdownMenu from "../reusable/UserDropdownMenu";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isFixed, setIsFixed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -93,6 +94,7 @@ const Header = () => {
             ))}
 
             <Button
+              onClick={() => navigate("/pricing")}
               className="my-1 rounded-1 fw-medium"
               type="primary"
               icon={<i className="fa-solid fa-crown"></i>}
@@ -130,6 +132,7 @@ const Header = () => {
             ))}
 
             <Button
+              onClick={() => navigate("/pricing")}
               className="mb-3 ms-0 my-2 rounded-1 fw-medium"
               type="primary"
               icon={<i className="fa-solid fa-crown"></i>}

@@ -8,9 +8,10 @@ import {
   LogoutOutlined,
   DashboardOutlined,
 } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CardForUser = () => {
+  const navigate = useNavigate();
   return (
     <div className="CardForUser">
       <Card title="" className="mt-2 rounded-0 shadow-lg">
@@ -80,6 +81,7 @@ const CardForUser = () => {
           <h6>Account Type: Free</h6>
 
           <Button
+            onClick={() => navigate("/pricing")}
             className="my-1 rounded-1 fw-medium "
             type="primary"
             icon={<i className="fa-solid fa-crown"></i>}

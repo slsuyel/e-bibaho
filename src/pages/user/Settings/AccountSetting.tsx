@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Form, Input, Slider, Collapse, Button } from "antd";
+import { Form, Input, Slider, Collapse, Button, Select } from "antd";
+const { Option } = Select;
 
 const { Panel } = Collapse;
 
@@ -16,18 +17,18 @@ const AccountSetting = () => {
   };
 
   const handleEmailSubmit = (values: string) => {
-    // Handle email submission logic here
     console.log("Email submitted:", values);
   };
 
   const handleAgeSubmit = (values: number[]) => {
-    // Handle age submission logic here
     console.log("Age submitted:", values);
   };
 
   const handleHeightSubmit = (values: number[]) => {
-    // Handle height submission logic here
     console.log("Height submitted:", values);
+  };
+  const handleReligionSubmit = (values: string) => {
+    console.log("Email submitted:", values);
   };
 
   return (
@@ -86,6 +87,35 @@ const AccountSetting = () => {
               <Button htmlType="submit">Submit</Button>
             </Form>
             <hr />
+            <Form
+              name="religionForm"
+              className="row"
+              onFinish={handleReligionSubmit}
+            >
+              <Form.Item
+                className="col-md-8"
+                label="Select Religion"
+                name="religion"
+                rules={[
+                  { required: true, message: "Please select your religion!" },
+                ]}
+              >
+                <Select placeholder="Please select your religion">
+                  <Option value="christianity">Christianity</Option>
+                  <Option value="islam">Islam</Option>
+                  <Option value="hinduism">Hinduism</Option>
+                  <Option value="buddhism">Buddhism</Option>
+                  <Option value="judaism">Judaism</Option>
+                  <Option value="sikhism">Sikhism</Option>
+                  <Option value="other">Other</Option>
+                </Select>
+              </Form.Item>
+              <Form.Item className="col-md-4 text-end">
+                <Button type="primary" htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
           </Panel>
         </Collapse>
       </div>

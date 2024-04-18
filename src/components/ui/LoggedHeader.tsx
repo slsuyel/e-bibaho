@@ -1,11 +1,13 @@
 import { Menu, Button, Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import CardForUser from "./CardForUser";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const { SubMenu } = Menu;
 
 const LoggedHeader = () => {
+  const navigate = useNavigate();
+
   return (
     <Menu
       theme="dark"
@@ -32,12 +34,12 @@ const LoggedHeader = () => {
 
       <SubMenu key="sub1" title="Inbox">
         <Menu.Item key="4">
-          <NavLink to="/user/messages" className="nav-link">
+          <NavLink to="/user/profile/messages" className="nav-link">
             Messages
           </NavLink>
         </Menu.Item>
         <Menu.Item key="5">
-          <NavLink to="/notifications" className="nav-link">
+          <NavLink to="/user/profile/notifications" className="nav-link">
             Notifications
           </NavLink>
         </Menu.Item>
@@ -45,6 +47,7 @@ const LoggedHeader = () => {
 
       <Menu.Item key="6">
         <Button
+          onClick={() => navigate("/pricing")}
           className="mb-3 ms-0 my-2 rounded-1 fw-medium"
           type="primary"
           icon={<i className="fa-solid fa-crown"></i>}

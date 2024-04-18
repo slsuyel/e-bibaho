@@ -125,3 +125,66 @@
 .bg-black:hover {
     background-color: #055160ab !important;
 }
+
+.notifications-container {
+    background-color: white;
+    border-radius: 13px;
+    padding: 30px;
+    max-width: 731px;
+}
+
+.notifications-container .header .title {
+    font-weight: 800;
+    font-size: 19px;
+}
+
+.notifications-container .header .title .unread-notifications-number {
+    color: white;
+    background-color: #0a317b;
+    padding: 2px 13px;
+    border-radius: 5px;
+    margin-left: 12px;
+}
+
+.notifications-container .header .mark-as-read .mark-as-read-button {
+    color: #5e6778;
+    text-decoration: none;
+    -webkit-transition: all ease-in-out 200ms;
+    transition: all ease-in-out 200ms;
+}
+
+.notifications-container .notifications .single-notification-box {
+    padding: 17px;
+    border-radius: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.notifications-container .notifications .single-notification-box .profile-picture {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+}
+
+.notifications-container .notifications .single-notification-box .notification-text {
+    padding: 0 0 0 14px;
+}
+
+.notifications-container .notifications .single-notification-box .notification-text .name {
+    color: #000000;
+}
+
+.notifications-container .notifications .single-notification-box .notification-text .description {
+    color: #5e6778;
+    margin-right: 5px;
+}
+
+.notifications-container .notifications .single-notification-box .notification-text .link {
+    text-decoration: none;
+    font-weight: 800;
+    color: #5e6778;
+    -webkit-transition: all ease-in-out 200ms;
+    transition: all ease-in-out 200ms;
+    margin-right: 5px;
+}

@@ -28,6 +28,9 @@ import MoreMatches from "../pages/Matches/MoreMatches";
 import RecentlyViewed from "../pages/Matches/RecentlyViewed";
 import MessageLayout from "../pages/Message/MessageLayout";
 import AccountSetting from "../pages/user/Settings/AccountSetting";
+import Notification from "../pages/user/Notification/Notification";
+import Pricing from "../pages/Pricing/Pricing";
+import Cart from "../pages/Pricing/Cart";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/search-res",
         element: <SearchPage />,
+      },
+      {
+        path: "/pricing",
+        element: <Pricing />,
       },
 
       // {
@@ -76,6 +83,18 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <UserDashboard />,
+      },
+      {
+        path: "cart/:id",
+        element: <Cart />,
+      },
+      {
+        path: "profile/messages",
+        element: <MessageLayout />,
+      },
+      {
+        path: "profile/notifications",
+        element: <Notification />,
       },
       {
         path: "profile/my-profile",
@@ -131,10 +150,6 @@ const router = createBrowserRouter([
       {
         path: "matches/more-matches",
         element: <MoreMatches />,
-      },
-      {
-        path: "messages",
-        element: <MessageLayout />,
       },
     ],
   },
