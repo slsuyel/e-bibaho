@@ -33,6 +33,8 @@ import Pricing from "../pages/Pricing/Pricing";
 import Cart from "../pages/Pricing/Cart";
 import Help from "../pages/Help/Help";
 
+import EditProfileInfo from "../pages/user/Profile/Edit/EditProfileInfo";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -104,6 +106,10 @@ const router = createBrowserRouter([
       {
         path: "profile/my-profile",
         element: <LoggedProfile />,
+      },
+      {
+        path: "profile/edit/",
+        element: <EditProfileInfo />,
       },
       {
         path: "profile/dashboard",

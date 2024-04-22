@@ -30,7 +30,7 @@ const UserDashboard = () => {
                 <p className="mb-0">SH62269192</p>
               </div>
 
-              <Link to="">Edit</Link>
+              <Link to="/user/profile/acc-settings">Edit</Link>
             </div>
 
             <div className="align-items-center my-1 mt-2 d-flex justify-content-between mb-3 ">
@@ -38,7 +38,7 @@ const UserDashboard = () => {
                 <h6>Account Type</h6>
                 <p className="mb-0">Free Membership</p>
               </div>
-              <Link to="">Upgrade</Link>
+              <Link to="/pricing">Upgrade</Link>
             </div>
 
             <div className="align-items-center my-1 mt-2 d-flex justify-content-between mb-3 ">

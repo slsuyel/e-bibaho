@@ -95,7 +95,7 @@ const Pricing = () => {
   console.log(setPackages);
 
   return (
-    <div className="price_table" style={{ width: "95%", margin: "auto" }}>
+    <div className="price_table" style={{ width: "90%", margin: "auto" }}>
       <Slider {...settings}>
         {packages.map((pack, index) => (
           <Card key={index}>

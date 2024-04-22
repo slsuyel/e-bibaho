@@ -1,4 +1,5 @@
-import { Button, Card, Menu } from "antd";
+import { Link } from "react-router-dom";
+import { Card, Menu } from "antd";
 import {
   UserOutlined,
   MailOutlined,
@@ -8,10 +9,9 @@ import {
   LogoutOutlined,
   DashboardOutlined,
 } from "@ant-design/icons";
-import { Link, useNavigate } from "react-router-dom";
+import UpgrateBtn from "../reusable/UpgrateBtn";
 
 const CardForUser = () => {
-  const navigate = useNavigate();
   return (
     <div className="CardForUser">
       <Card title="" className="mt-2 rounded-0 shadow-lg">
@@ -80,15 +80,7 @@ const CardForUser = () => {
         <div className="border-top pt-3 text-center">
           <h6>Account Type: Free</h6>
 
-          <Button
-            onClick={() => navigate("/pricing")}
-            className="my-1 rounded-1 fw-medium "
-            type="primary"
-            icon={<i className="fa-solid fa-crown"></i>}
-            size="middle"
-          >
-            Upgrade Now
-          </Button>
+          <UpgrateBtn />
 
           <p className="text-primary-emphasis">Compare memberships</p>
         </div>

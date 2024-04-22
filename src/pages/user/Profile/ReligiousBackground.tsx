@@ -4,8 +4,8 @@ const ReligiousBackground = () => {
   return (
     <>
       <div className="align-items-center my-1 mt-2  d-flex justify-content-between ">
-        <h6 className="">Basics & Lifestyle</h6>
-        <Link to="">Edit</Link>
+        <h6 className="">Religious Background</h6>
+        <Link to="/user/profile/edit?sec=religious">Edit</Link>
       </div>
       <div className="user-d-border"></div>
       <div className="row mx-auto basic-info">

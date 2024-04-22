@@ -23,7 +23,7 @@ const LoggedProfile = () => {
         <div className="row font-maven">
           <div className="col-md-3 text-center">
             <div className="my-2">
-              <Link to="">
+              <Link to="/user/profile/photos">
                 <i className="fas fa-camera"></i> View Album
               </Link>
             </div>
