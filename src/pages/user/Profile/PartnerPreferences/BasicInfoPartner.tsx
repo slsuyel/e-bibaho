@@ -5,7 +5,7 @@ const BasicInfoPartner = () => {
     <>
       <div className="align-items-center my-1 mt-2  d-flex justify-content-between ">
         <h6 className="">Basics & Lifestyle</h6>
-        <Link to="">Edit</Link>
+        <Link to="/user/profile/edit?sec=partner-basic">Edit</Link>
       </div>
       <div className="user-d-border"></div>
       <div className="row mx-auto basic-info">

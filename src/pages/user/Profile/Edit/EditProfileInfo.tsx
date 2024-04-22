@@ -3,6 +3,8 @@ import BasicInfoEdit from "./BasicInfoEdit";
 import BackBtn from "../../../../components/reusable/BackBtn";
 import ReligiousEdit from "./ReligiousEdit";
 import FamilyEdit from "./FamilyEdit";
+import EditPartnerInfo from "../PartnerPreferences/EditPartner/EditPartnerInfo";
+import EditPartnerLocation from "../PartnerPreferences/EditPartner/EditPartnerLocation";
 
 const EditProfileInfo = () => {
   const location = useLocation();
@@ -18,6 +20,10 @@ const EditProfileInfo = () => {
         <ReligiousEdit />
       ) : section == "family" ? (
         <FamilyEdit />
+      ) : section == "partner-basic" ? (
+        <EditPartnerInfo />
+      ) : section == "partner-location" ? (
+        <EditPartnerLocation />
       ) : (
         "Others"
       )}
