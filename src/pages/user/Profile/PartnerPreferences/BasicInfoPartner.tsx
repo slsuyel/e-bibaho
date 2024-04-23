@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 const BasicInfoPartner = () => {
   return (
     <>
-      <div className="align-items-center my-1 mt-2  d-flex justify-content-between ">
+      <div className="align-items-center my-1 mt-2  d-flex justify-content-between font-maven">
         <h6 className="">Basics & Lifestyle</h6>
         <Link to="/user/profile/edit?sec=partner-basic">Edit</Link>
       </div>
       <div className="user-d-border"></div>
       <div className="row mx-auto basic-info">
         <div className="col-md-6">
-          <table className="table ">
+          <table className="table font-maven">
             <tbody>
               <tr>
                 <td className="text-secondary ">Age</td>

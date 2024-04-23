@@ -11,6 +11,7 @@ import LocationDetails from "./PartnerPreferences/LocationDetails";
 import MyContact from "./MyContact";
 import EducationCareer from "./EducationCareer";
 import PersonalityText from "./PersonalityText";
+import OthersPreferences from "./PartnerPreferences/OthersPreferences";
 
 const LoggedProfile = () => {
   return (
@@ -36,7 +37,7 @@ const LoggedProfile = () => {
             />
           </div>
 
-          <div className="col-md-9 row mt-3">
+          <div className="col-md-9 row mt-3 ">
             <div className="col-md-6">
               <p className="mb-0">Age: 32</p>
               <p className="mb-0">Height: 5' 6"</p>
@@ -98,11 +99,11 @@ const LoggedProfile = () => {
         {/*  */}
 
         <div className="row my-2 mx-auto ">
-          <div className="user-d-border  m-0 p-0">
+          <div className="user-d-border font-maven m-0 p-0">
             <Button
               size="middle"
               type="primary"
-              className="bg-danger rounded-0 fw-medium ms-0"
+              className="bg-danger rounded-0 fw-medium ms-0 me-1  font-maven"
             >
               About Myself
             </Button>
@@ -142,12 +143,15 @@ const LoggedProfile = () => {
 
           <div className="user-d-border p-0" id="partner-preferences">
             <div className="bg-red-500 py-2 ">
-              <h5 className="m-0 ps-2 text-secondary"> Partner Preferences</h5>
+              <h5 className="m-0 ps-2 text-secondary font-maven">
+                {" "}
+                Partner Preferences
+              </h5>
             </div>
           </div>
           <BasicInfoPartner />
           <LocationDetails />
-
+          <OthersPreferences />
           {/* My Contact detail*/}
           <MyContact />
         </div>

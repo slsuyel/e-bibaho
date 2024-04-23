@@ -78,7 +78,7 @@ const EditPartnerInfo = () => {
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 14 }}
       >
-        <Form.Item label="Date of Birth" name="age">
+        <Form.Item label="Age" name="age">
           <Input />
         </Form.Item>
 

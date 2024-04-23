@@ -6,8 +6,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Maven Pro';
+}
+
 .font-maven {
   font-family: 'Maven Pro';
+}
+
+.ant-form-item-label {
+  font-family: 'Maven Pro' !important;
 }
 
 a.nav-link.active {

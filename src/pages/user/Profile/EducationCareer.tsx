@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const EducationCareer = () => {
   return (
     <>
-      <div className="align-items-center my-1 mt-2  d-flex justify-content-between ">
+      <div className="align-items-center my-1 mt-2  d-flex justify-content-between font-maven">
         <h6 className="">Education & Career</h6>
         <Link to="/user/profile/edit?sec=edu-career">Edit</Link>
       </div>
@@ -24,7 +24,7 @@ const EducationCareer = () => {
           </table>
         </div>
         <div className="col-md-6">
-          <table className="table ">
+          <table className="table font-maven">
             <tbody>
               <tr>
                 <td className="text-secondary">Working Sector</td>

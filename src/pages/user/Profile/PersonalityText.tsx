@@ -32,7 +32,7 @@ const PersonalityText = () => {
 
   return (
     <div>
-      <div className="align-items-center my-1 mt-2 d-flex justify-content-between">
+      <div className="align-items-center my-1 mt-2 d-flex justify-content-between font-maven">
         <h6 className="">
           Personality, Family Details, Career, Partner Expectations etc.
         </h6>
@@ -64,7 +64,7 @@ const PersonalityText = () => {
       <div className="user-d-border"></div>
 
       {!editing ? (
-        <p>{profileText}</p>
+        <p className="font-maven">{profileText}</p>
       ) : (
         <Input.TextArea
           rows={6}

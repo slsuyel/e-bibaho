@@ -47,14 +47,14 @@ const UserPhoto: React.FC = () => {
 
   return (
     <div className="container mt-3 ">
-      <div className="border-bottom m-0 my-4 text-center ">
-        <Button className="fw-bold rounded-0 text-danger border-bottom-0">
+      <div className="border-bottom m-0 my-4 text-center font-maven">
+        <Button className="fw-bold rounded-0 text-danger border-bottom-0 font-maven">
           My Photos
         </Button>
         <Button
           size="middle"
           type="primary"
-          className="bg-danger rounded-0 fw-medium ms-0 border-bottom-0"
+          className="bg-danger rounded-0 fw-medium ms-0 border-bottom-0 font-maven"
           onClick={showModal}
         >
           Add Photos

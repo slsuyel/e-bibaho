@@ -4,13 +4,13 @@ const MyContact = () => {
   return (
     <>
       <div className="user-d-border p-0" id="partner-preferences">
-        <div className="align-items-baseline bg-red-500 d-flex justify-content-between pe-1 py-2">
+        <div className="align-items-baseline bg-red-500 d-flex justify-content-between pe-1 py-2 font-maven">
           <h5 className="m-0 ps-2 text-secondary"> My Contact detail</h5>
           <Link to="/user/profile/edit?sec=my-contact">Edit</Link>
         </div>
 
         <div className="col-md-6">
-          <table className="table ">
+          <table className="table font-maven">
             <tbody>
               <tr>
                 <td className="text-secondary ">Mobile</td>

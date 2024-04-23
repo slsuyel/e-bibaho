@@ -23,7 +23,7 @@ const BasicInfoEdit: React.FC = () => {
   };
 
   return (
-    <div className="col-md-8 mx-auto border p-3">
+    <div className="col-md-8 mx-auto border p-3 font-maven">
       <Form
         form={form}
         onFinish={onFinish}

@@ -64,7 +64,7 @@ const Hobbies = () => {
 
   return (
     <>
-      <div className="align-items-center my-1 mt-2 d-flex justify-content-between">
+      <div className="align-items-center my-1 mt-2 d-flex justify-content-between font-maven">
         <h6 className="">Hobbies and Interests</h6>
         <button className="border-0 text-primary" onClick={handleEditClick}>
           Edit
@@ -76,7 +76,7 @@ const Hobbies = () => {
         {selectedHobbies.map((hobby, index) => (
           <div
             key={index}
-            className="p-2 px-3 rounded-4 shadow-sm text-dark-emphasis my-1 border"
+            className="p-2 px-3 rounded-4 shadow-sm text-dark-emphasis my-1 border font-maven"
           >
             <i className={hobby}></i>{" "}
             {hobbies.find((item) => item.icon === hobby)?.label}
