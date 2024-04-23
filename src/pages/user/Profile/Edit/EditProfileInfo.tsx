@@ -5,6 +5,8 @@ import ReligiousEdit from "./ReligiousEdit";
 import FamilyEdit from "./FamilyEdit";
 import EditPartnerInfo from "../PartnerPreferences/EditPartner/EditPartnerInfo";
 import EditPartnerLocation from "../PartnerPreferences/EditPartner/EditPartnerLocation";
+import ContactEdit from "./ContactEdit";
+import EducationEdit from "./EducationEdit";
 
 const EditProfileInfo = () => {
   const location = useLocation();
@@ -18,12 +20,16 @@ const EditProfileInfo = () => {
         <BasicInfoEdit />
       ) : section == "religious" ? (
         <ReligiousEdit />
+      ) : section == "edu-career" ? (
+        <EducationEdit />
       ) : section == "family" ? (
         <FamilyEdit />
       ) : section == "partner-basic" ? (
         <EditPartnerInfo />
       ) : section == "partner-location" ? (
         <EditPartnerLocation />
+      ) : section == "my-contact" ? (
+        <ContactEdit />
       ) : (
         "Others"
       )}

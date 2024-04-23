@@ -32,7 +32,7 @@ export interface StepTwoProps {
 export interface StepThreeProps {
   formData: {
     highestQualification: string;
-    educationDetails: string;
+    collegeName: string;
     workingSector: string;
     profession: string;
     professionDetails: string;
@@ -97,7 +97,7 @@ export type TRegiForm = {
   religion: string;
   nationality: string;
   highestQualification: string;
-  educationDetails: string;
+  collegeName: string;
   workingSector: string;
   profession: string;
   professionDetails: string;

@@ -1,21 +1,16 @@
-import { Form, Input, Button, DatePicker, Select } from "antd";
+import { Form, Button, DatePicker, Select, Switch, Input } from "antd";
 
 const { Option } = Select;
 
 interface BasicInfoFormData {
   dateOfBirth?: Date;
-  maritalStatus: MaritalStatus;
-  religion: string;
-  height: number;
-  grewUpIn: string;
-  diet: string;
-  location: string;
-  motherTongue: string;
-  personalValues: string;
-  sunSign: string;
-  bloodGroup: string;
-  healthInfo: string;
-  disability: string;
+  maritalStatus?: MaritalStatus;
+  height?: number;
+  bloodGroup?: string;
+  disability?: boolean;
+  country?: string;
+  state?: string;
+  city?: string;
 }
 
 type MaritalStatus = "single" | "married" | "divorced" | "widowed";
@@ -35,26 +30,26 @@ const BasicInfoEdit: React.FC = () => {
         labelCol={{ span: 6 }}
         wrapperCol={{ span: 14 }}
       >
+        <Form.Item label="Profile created by" name="profileCreateBy">
+          <Select placeholder="Profile created by">
+            <Option value="Self">Self</Option>
+            <Option value="Parent / Guardian">Parent / Guardian</Option>
+            <Option value="Sibling">Sibling</Option>
+            <Option value="Friend">Friend</Option>
+            <Option value="Others">Others</Option>
+          </Select>
+        </Form.Item>
+
         <Form.Item label="Date of Birth" name="dateOfBirth">
           <DatePicker />
         </Form.Item>
+
         <Form.Item label="Marital Status" name="maritalStatus">
           <Select placeholder="Marital Status">
             <Option value="single">Single</Option>
             <Option value="married">Married</Option>
             <Option value="divorced">Divorced</Option>
             <Option value="widowed">Widowed</Option>
-          </Select>
-        </Form.Item>
-
-        <Form.Item label="Religion / Community" name="religion">
-          <Select placeholder="Religion / Community">
-            <Option value="islam">Islam</Option>
-            <Option value="christianity">Christianity</Option>
-            <Option value="hinduism">Hinduism</Option>
-            <Option value="buddhism">Buddhism</Option>
-            <Option value="judaism">Judaism</Option>
-            <Option value="sikhism">Sikhism</Option>
           </Select>
         </Form.Item>
 
@@ -69,24 +64,7 @@ const BasicInfoEdit: React.FC = () => {
             ))}
           </Select>
         </Form.Item>
-        <Form.Item label="Grew up in" name="grewUpIn">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Diet" name="diet">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Location" name="location">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Mother Tongue" name="motherTongue">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Personal Values" name="personalValues">
-          <Input.TextArea />
-        </Form.Item>
-        <Form.Item label="Sun Sign" name="sunSign">
-          <Input />
-        </Form.Item>
+
         <Form.Item label="Blood Group" name="bloodGroup">
           <Select placeholder="Select Blood Group">
             <Option value="A+">A+</Option>
@@ -100,12 +78,33 @@ const BasicInfoEdit: React.FC = () => {
           </Select>
         </Form.Item>
 
-        <Form.Item label="Health Information" name="healthInfo">
-          <Input.TextArea />
+        {/* Replaced Input with Switch */}
+        <Form.Item label="Disability" name="disability" valuePropName="checked">
+          <Switch />
         </Form.Item>
-        <Form.Item label="Disability" name="disability">
+        <Form.Item label="Birth Place" name="birthPlace">
           <Input />
         </Form.Item>
+
+        <Form.Item label="Country" name="country">
+          <Select placeholder="Country">
+            <Option value="Bangladesh">Bangladesh</Option>
+            {/* Add more countries here */}
+          </Select>
+        </Form.Item>
+        <Form.Item label="State" name="state">
+          <Select placeholder="State">
+            <Option value="Doesn't Matter">Doesn't Matter</Option>
+            {/* Add more states here */}
+          </Select>
+        </Form.Item>
+
+        <Form.Item label="City/District" name="city">
+          <Select placeholder="City/District">
+            <Option value="Doesn't Matter">Doesn't Matter</Option>
+          </Select>
+        </Form.Item>
+
         <Form.Item>
           <Button type="primary" htmlType="submit">
             Submit

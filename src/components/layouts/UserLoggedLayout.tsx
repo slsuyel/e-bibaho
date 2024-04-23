@@ -10,7 +10,9 @@ const UserLoggedLayout = () => {
     <ScrollToTop>
       <LoggedHeader />
       <UserNavbar />
-      <Outlet />
+      <div style={{ background: "#F1F1F2" }}>
+        <Outlet />
+      </div>
       <Footer />
       <GoToTop />
     </ScrollToTop>

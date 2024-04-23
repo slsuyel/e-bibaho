@@ -22,7 +22,7 @@ const NewRegi = () => {
     religion: "",
     nationality: "",
     highestQualification: "",
-    educationDetails: "",
+    collegeName: "",
     workingSector: "",
     profession: "",
     professionDetails: "",

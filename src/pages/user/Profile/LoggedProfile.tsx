@@ -9,6 +9,8 @@ import Hobbies from "./Hobbies";
 import BasicInfoPartner from "./PartnerPreferences/BasicInfoPartner";
 import LocationDetails from "./PartnerPreferences/LocationDetails";
 import MyContact from "./MyContact";
+import EducationCareer from "./EducationCareer";
+import PersonalityText from "./PersonalityText";
 
 const LoggedProfile = () => {
   return (
@@ -57,7 +59,9 @@ const LoggedProfile = () => {
               <div className="d-flex flex-wrap justify-content-between">
                 <ul>
                   <li>
-                    <Link to={""}>Edit Personal Profile</Link>
+                    <Link to={"/user/profile/edit?sec=basic"}>
+                      Edit Personal Profile
+                    </Link>
                   </li>
                   <li>
                     <Link to={""}>View Profile Stats</Link>
@@ -68,10 +72,12 @@ const LoggedProfile = () => {
                 </ul>
                 <ul>
                   <li>
-                    <Link to={""}>Edit Partner Profile</Link>
+                    <Link to={"/user/profile/edit?sec=partner-basic"}>
+                      Edit Partner Profile
+                    </Link>
                   </li>
                   <li>
-                    <Link to={""}>Add Photos</Link>
+                    <Link to={"/user/profile/photos"}>Add Photos</Link>
                   </li>
                 </ul>
                 <ul>
@@ -79,7 +85,9 @@ const LoggedProfile = () => {
                     <Link to={""}>Hide / Delete Profile</Link>
                   </li>
                   <li>
-                    <Link to={""}>Edit Contact Details</Link>
+                    <Link to={"/user/profile/edit?sec=my-contact"}>
+                      Edit Contact Details
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -107,23 +115,8 @@ const LoggedProfile = () => {
             </a>
           </div>
 
-          <div>
-            <div className="align-items-center my-1 mt-2  d-flex justify-content-between ">
-              <h6 className="">
-                Personality, Family Details, Career, Partner Expectations etc.
-              </h6>
-              <Link to="">Edit</Link>
-            </div>
-
-            <div className="user-d-border "></div>
-            <p>
-              Allow me to introduce myself. Modern yet traditional, I am deeply
-              inclined in our values, ethics and culture. I am looking forward
-              to settling down with a partner who shares my values and
-              interests, someone with whom I can always be myself. If you find
-              yourself having mutual thoughts, feel free to contact me.
-            </p>
-          </div>
+          {/* Personality, Family Details, Career, Partner Expectations etc */}
+          <PersonalityText />
 
           {/* BasicInfoProfile */}
           <div className="user-d-border "></div>
@@ -132,6 +125,11 @@ const LoggedProfile = () => {
           {/* Religious Background*/}
           <div className="user-d-border "></div>
           <ReligiousBackground />
+
+          {/* Education & Career
+           */}
+          <div className="user-d-border "></div>
+          <EducationCareer />
 
           {/* FamilyDetails */}
           <div className="user-d-border "></div>
@@ -151,7 +149,6 @@ const LoggedProfile = () => {
           <LocationDetails />
 
           {/* My Contact detail*/}
-
           <MyContact />
         </div>
       </Card>

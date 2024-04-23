@@ -33,13 +33,13 @@ const BasicInfoProfile = () => {
                 <td>: 5' 6" (167cm)</td>
               </tr>
               <tr>
-                <td className="text-secondary ">Grew up in</td>
+                <td className="text-secondary ">Birth Place</td>
                 <td>: Bangladesh</td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td className="text-secondary ">Diet</td>
                 <td>: Veg</td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
         </div>
@@ -50,26 +50,17 @@ const BasicInfoProfile = () => {
                 <td className="text-secondary ">Location</td>
                 <td>: Dhaka</td>
               </tr>
-              <tr>
-                <td className="text-secondary ">Mother Tongue</td>
-                <td>: Bengali</td>
-              </tr>
+
               <tr>
                 <td className="text-secondary ">Personal Values</td>
                 <td>: Will tell you later</td>
               </tr>
-              <tr>
-                <td className="text-secondary ">Sun Sign</td>
-                <td>: Leo</td>
-              </tr>
+
               <tr>
                 <td className="text-secondary ">Blood Group</td>
                 <td>: Enter Now</td>
               </tr>
-              <tr>
-                <td className="text-secondary ">Health Information</td>
-                <td>: Not Specified</td>
-              </tr>
+
               <tr>
                 <td className="text-secondary ">Disability</td>
                 <td>: None</td>

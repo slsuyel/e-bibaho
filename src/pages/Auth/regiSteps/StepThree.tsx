@@ -31,15 +31,15 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           </select>
         </div>
         <div className="form-group mb-2">
-          <label htmlFor="educationDetails" className="my-1">
+          <label htmlFor="collegeName" className="my-1">
             Education Details
           </label>
-          <textarea
-            id="educationDetails"
-            name="educationDetails"
-            placeholder="Please enter education details"
+          <input
+            id="collegeName"
+            name="collegeName"
+            placeholder="  College/university name"
             className="form-control rounded-0"
-            value={formData.educationDetails}
+            value={formData.collegeName}
             onChange={handleInputChange}
           />
         </div>
@@ -82,6 +82,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             <option value="doctor">Doctor</option>
             <option value="teacher">Teacher</option>
             <option value="manager">Manager</option>
+            <option value="other">other</option>
           </select>
         </div>
         <div className="form-group mb-2">
@@ -112,11 +113,11 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
               --- Select Your Monthly Income ---
             </option>
             <option value="private">Keep it private</option>
-            <option value="0-500">0 - 500</option>
-            <option value="501-1000">501 - 1000</option>
-            <option value="1001-2000">1001 - 2000</option>
-            <option value="2001-5000">2001 - 5000</option>
-            <option value="5001+">5001+</option>
+            <option value="0-5000">0 - 5000</option>
+            <option value="5001-10000">5001 - 10000</option>
+            <option value="10001-20000">10001 - 20000</option>
+            <option value="20001-50000">20001 - 50000</option>
+            <option value="50001+">5001+</option>
           </select>
         </div>
       </form>
