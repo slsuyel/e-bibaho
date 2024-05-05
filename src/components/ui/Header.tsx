@@ -6,13 +6,9 @@ import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
-import UserDropdownMenu from "../reusable/UserDropdownMenu";
-import UpgrateBtn from "../reusable/UpgrateBtn";
-
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
   const [MobileMenu, setMobileMenu] = useState(false);
 
   const showDrawer = () => {
@@ -47,36 +43,20 @@ const Header = () => {
       link: "/login",
     },
     {
-      id: 2,
-      label: "Register",
-      link: "/register",
-    },
-    {
       id: 3,
       label: "Help",
       link: "/help",
     },
-    {
-      id: 4,
-      label: "Search result",
-      link: "/search-res",
-    },
-    // {
-    //   id: 4,
-    //   label: "Profile",
-    //   link: "/profile",
-    // },
   ];
 
   return (
     <>
       <Navbar
-        style={{ backgroundColor: "#be93b6" }}
         expand="lg"
         fixed={isFixed ? "top" : undefined}
-        className={`border-bottom p-0 py-2 font-maven ${isFixed ? "" : ""} ${
-          isMobile ? "d-none" : "d-block"
-        }`}
+        className={`border-bottom p-0 py-2 font-maven bg-grad ${
+          isFixed ? "" : ""
+        } ${isMobile ? "d-none" : "d-block"}`}
       >
         <Container>
           <Navbar.Brand href="/" className="p-0 ">
@@ -92,17 +72,13 @@ const Header = () => {
                 {item.label}
               </NavLink>
             ))}
-
-            <UpgrateBtn />
-
-            <UserDropdownMenu />
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       {isMobile && (
         <>
-          <div className="align-items-center d-flex justify-content-between p-2 bg-dark">
+          <div className="align-items-center d-flex justify-content-between p-2 bg-grad">
             <Navbar.Brand href="/" className="p-1 ">
               <img src={logo} alt="" width={120} />
             </Navbar.Brand>
@@ -122,10 +98,6 @@ const Header = () => {
                 {item.label}
               </NavLink>
             ))}
-
-            <UpgrateBtn />
-            <br />
-            <UserDropdownMenu />
           </Drawer>
         </>
       )}

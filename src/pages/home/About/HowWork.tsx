@@ -3,8 +3,8 @@ import { Card } from "antd";
 const HowWork = () => {
   return (
     <div className="container text-center pb-5 ">
-      <h1 className="mt-5 font-maven">
-        How <span className="fw-medium text-info-emphasis">We Works</span>
+      <h1 className="mt-5 font-maven typewriter">
+        How <span className="fw-medium text-info-emphasis ">We Works</span>
       </h1>
       <div className="row mt-5">
         <div className="col-md-4 my-2 ">

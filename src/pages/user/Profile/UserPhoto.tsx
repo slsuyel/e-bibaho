@@ -5,11 +5,11 @@ import { UploadChangeParam } from "antd/lib/upload";
 
 const UserPhoto: React.FC = () => {
   const [fakeImages, setFakeImages] = useState<string[]>([
-    "https://via.placeholder.com/250",
-    "https://via.placeholder.com/250",
-    "https://via.placeholder.com/250",
-    "https://via.placeholder.com/250",
-    "https://via.placeholder.com/250",
+    "https://via.placeholder.com/200",
+    "https://via.placeholder.com/200",
+    "https://via.placeholder.com/200",
+    "https://via.placeholder.com/200",
+    "https://via.placeholder.com/200",
   ]);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
