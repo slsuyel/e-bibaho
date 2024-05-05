@@ -76,7 +76,7 @@ const BannerSlider = () => {
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>
-              <div className="row mx-auto py-2 font-bn">
+              <div className="row mx-auto font-bn">
                 <div className="col-md-6 my-auto">
                   <h4
                     className={`fs-1 text-center ${
@@ -93,7 +93,7 @@ const BannerSlider = () => {
                     {slide.description}
                   </p>
                 </div>
-                <div className="col-md-6 d-flex align-items-center justify-content-center">
+                <div className="col-md-6 d-flex  justify-content-center">
                   <img
                     className={`img-fluid ${
                       index === currentSlide ? "animate-right" : "animate-zoom"

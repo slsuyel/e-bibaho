@@ -6,7 +6,7 @@ const SearchBox = () => {
 
   return (
     <div className="row search-box mx-auto font-maven fw-medium">
-      <div className=" mt-5">
+      <div className="">
         <div className="bg-white col-md-10 mx-auto p-4  rounded row shadow-lg">
           <h3 className="fw-bold mb-4 mt-1 text-center ">
             Find <span className="text-info-emphasis">Your Soulmate</span>
