@@ -2,11 +2,11 @@ import { Card } from "antd";
 /* bg-danger-subtle mb-2 p-4 rounded-circle shadow-lg text-warning-emphasis */
 const HowWork = () => {
   return (
-    <div className="container text-center pb-5 ">
-      <h1 className="mt-5 font-maven typewriter">
+    <div className="container text-center pb-5">
+      <h1 className="font-maven  ">
         How <span className="fw-medium text-info-emphasis ">We Works</span>
       </h1>
-      <div className="row mt-5">
+      <div className="row mx-auto">
         <div className="col-md-4 my-2 ">
           <Card className="font-maven" hoverable>
             <i className="bg-danger-subtle mb-2 p-4 rounded-circle shadow-lg text-warning-emphasis  fs-1 fa-solid fa-user"></i>
