@@ -54,7 +54,7 @@ const Header = () => {
       <Navbar
         expand="lg"
         fixed={isFixed ? "top" : undefined}
-        className={` p-0 py-2 font-maven bg-grad ${isFixed ? "" : ""} ${
+        className={`bg-grad p-0 py-2 font-maven ${isFixed ? "" : ""} ${
           isMobile ? "d-none" : "d-block"
         }`}
       >

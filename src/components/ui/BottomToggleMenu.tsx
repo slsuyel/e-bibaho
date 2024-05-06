@@ -26,7 +26,13 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
         textAlign: "center",
       }}
     >
-      <Draggable axis="x">
+      <Draggable
+        axis="x"
+        bounds={{
+          left: -500,
+          right: 500,
+        }}
+      >
         <div>
           <button
             className={`menu menu-box p-1 ${visible ? "opened" : ""}`}
