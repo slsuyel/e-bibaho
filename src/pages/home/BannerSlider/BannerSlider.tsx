@@ -87,7 +87,7 @@ const BannerSlider = () => {
 
   return (
     <div className="bg-grad">
-      <div className="mx-auto" style={{ width: "95%" }}>
+      <div className="mx-auto" style={{ width: "92%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>

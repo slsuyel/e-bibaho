@@ -1,25 +1,31 @@
-.menu-toggle {
-    padding: 9px;
-    position: fixed;
-    bottom: -500px;
-    transition: bottom 0.3s ease;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    width: 250px;
-    border-radius: 11px;
-    margin-bottom: 24px;
-    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
-    left: "50%",
-
+.menu-box-img {
+    background: linear-gradient(to right,
+            rgb(179 148 237),
+            rgb(90 200 250),
+            rgb(244 82 240));
+    border-radius: 50%;
 }
 
+.menu-toggle {
+    left: 50%;
+    width: 250px;
+    margin-bottom: 28px;
+    padding: 28px 17px;
+    transition: bottom 0.3s ease 0s;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgb(179, 148, 237), rgb(244, 82, 240));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add your box shadow properties here */
+}
+
+
 .menu-toggle.open {
-    bottom: 50px;
+    bottom: 55px;
     transition: bottom 0.3s ease;
 }
 
 .menu-toggle li {
+    /* color: rgb(2, 3, 1); */
     color: rgb(2, 3, 1);
     font-weight: 500;
     transform: scale(1);
@@ -28,4 +34,9 @@
 
 .menu-toggle li:hover {
     transform: scale(1.04);
+}
+
+.tgl-menu-srch:focus-visible {
+    outline: none;
+    border: none;
 }

@@ -27,7 +27,7 @@ const BottomToggleMenu = () => {
         style={{
           width: 70,
           position: "fixed",
-          bottom: 0,
+          bottom: 5,
           left: "50%",
           transform: "translateX(-50%)",
           zIndex: 1,
@@ -45,13 +45,20 @@ const BottomToggleMenu = () => {
           transform: "translateX(-50%)",
         }}
       >
+        <form className="align-items-center bg-body d-flex gap-2 px-2 rounded">
+          <i className="fas fa-search text-info-emphasis" />
+          <input
+            className="border-0 py-1 text-center w-100 tgl-menu-srch text-info-emphasis"
+            type="search"
+            placeholder="Search "
+          />
+        </form>
+
         <Menu.Item key="models">Our Models</Menu.Item>
         <Menu.Item key="specialties">Specialties</Menu.Item>
         <Menu.Item key="about">About</Menu.Item>
         <Menu.Item key="blog">Blog</Menu.Item>
-        <Menu.Item key="contact" className="kbutton-nav">
-          Contact
-        </Menu.Item>
+        <Menu.Item key="contact">Contact</Menu.Item>
       </Menu>
     </div>
   );
