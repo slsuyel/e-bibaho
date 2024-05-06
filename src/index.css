@@ -27,15 +27,20 @@ body {
 }
 
 
+
 .sticky-image-container {
   position: sticky;
-  top: 0;
-  padding-top: 50px;
+  top: calc(50% - 270px);
+
+
 }
 
 .sticky-image {
   width: 100%;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
 }
+
+
 
 
 
