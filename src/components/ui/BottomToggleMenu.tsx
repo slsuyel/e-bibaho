@@ -19,7 +19,7 @@ const BottomToggleMenu = () => {
         textAlign: "center",
       }}
     >
-      <Draggable>
+      <Draggable axis="x">
         <div>
           <img
             className="menu-box-img"
