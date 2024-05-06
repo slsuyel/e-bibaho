@@ -1,13 +1,20 @@
 import Draggable from "react-draggable";
 import { useState } from "react";
 import { Menu } from "antd";
-import icon from "../../assets/icons/menubtn.png";
+
 import "../Styles/Components.css";
-const BottomToggleMenu = () => {
-  const [visible, setVisible] = useState(false);
+
+interface BottomToggleMenuProps {}
+
+const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
+  const [visible, setVisible] = useState<boolean>(false);
 
   const handleMenuClick = () => {
     setVisible(!visible);
+    const menuElement = document.querySelector(".menu");
+    if (menuElement) {
+      menuElement.classList.toggle("opened");
+    }
   };
 
   return (
@@ -21,20 +28,31 @@ const BottomToggleMenu = () => {
     >
       <Draggable axis="x">
         <div>
-          <img
-            className="menu-box-img"
-            src={icon}
-            alt=""
+          <button
+            className={`menu menu-box p-1 ${visible ? "opened" : ""}`}
             onClick={handleMenuClick}
+            aria-label="Main Menu"
             style={{
-              width: 70,
               position: "fixed",
               bottom: 5,
               left: "50%",
               transform: "translateX(-50%)",
               zIndex: 1,
             }}
-          />
+          >
+            <svg width="60" height="60" viewBox="0 0 100 100">
+              <path
+                className="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              />
+              <path className="line line2" d="M 20,50 H 80" />
+              <path
+                className="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              />
+            </svg>
+          </button>
+
           <Menu
             className="menu-toggle font-maven fs-5"
             mode="vertical"
@@ -55,11 +73,12 @@ const BottomToggleMenu = () => {
               />
             </form>
 
-            <Menu.Item key="models">Our Models</Menu.Item>
-            <Menu.Item key="specialties">Specialties</Menu.Item>
-            <Menu.Item key="about">About</Menu.Item>
-            <Menu.Item key="blog">Blog</Menu.Item>
-            <Menu.Item key="contact">Contact</Menu.Item>
+            <Menu.Item key="models">Home</Menu.Item>
+            <Menu.Item key="About Us">About Us</Menu.Item>
+            <Menu.Item key="E Bibaho Blog">E Bibaho Blog</Menu.Item>
+            <Menu.Item key="Careers">Careers</Menu.Item>
+            <Menu.Item key="Contact Us">Contact Us</Menu.Item>
+            <Menu.Item key="mediator">mediator</Menu.Item>
           </Menu>
         </div>
       </Draggable>

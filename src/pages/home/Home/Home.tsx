@@ -1,5 +1,6 @@
 import HowWork from "../About/HowWork";
-import SuccessStory from "../About/SuccessStory";
+import Success from "../About/Success";
+// import SuccessStory from "../About/SuccessStory";
 import BannerSlider from "../BannerSlider/BannerSlider";
 import ContactCard from "../Contact/ContactCard";
 import Faq from "../Faq/Faq";
@@ -11,7 +12,8 @@ const Home = () => {
       <BannerSlider />
       <HeroSection />
       <HowWork />
-      <SuccessStory />
+      <Success />
+      {/* <SuccessStory /> */}
       <Faq />
       <ContactCard />
     </div>

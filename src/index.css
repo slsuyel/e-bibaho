@@ -25,6 +25,15 @@ body {
 }
 
 
+.sticky-image-container {
+  position: sticky;
+  top: 0;
+  padding-top: 50px;
+}
+
+.sticky-image {
+  width: 100%;
+}
 
 
 
