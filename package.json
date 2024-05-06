@@ -17,6 +17,7 @@
     "antd": "^5.14.1",
     "bootstrap": "^5.3.2",
     "chart.js": "^4.4.1",
+    "framer-motion": "^11.1.8",
     "go-to-top-react": "^0.0.1",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",

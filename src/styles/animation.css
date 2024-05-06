@@ -124,3 +124,30 @@
         transform: scale(1);
     }
 }
+
+
+/* ------------ */
+
+/* Mediator.css */
+
+.mediator-item {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+.mediator-item:hover img {
+    transform: scale(0.97);
+    border: 2px solid rgb(225, 237, 227) !important;
+}
+
+.mediator-item p {
+    color: rgb(255, 255, 255);
+}
+
+.mediator-item:hover p {
+    color: rgba(255, 255, 255, 0.887);
+}
+
+
+
+/* ------------- */

@@ -8,6 +8,7 @@ import img10 from "../../../assets/sliders/10.png";
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -84,15 +85,15 @@ const BannerSlider = () => {
   const handleBeforeChange = (newIndex: number) => {
     setCurrentSlide(newIndex);
   };
-
+  const isMobile = useIsMobile();
   return (
-    <div className="bg-grad">
-      <div className="mx-auto" style={{ width: "92%" }}>
+    <div className="bg-grad ">
+      <div className="mx-auto" style={{ width: isMobile ? "80%" : "90%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>
               <div className="row mx-auto font-bn">
-                <div className="col-md-6 my-auto">
+                <div className="col-md-6 my-auto d-none d-md-block">
                   <h4
                     className={`fs-1 text-center border  ${
                       index === currentSlide

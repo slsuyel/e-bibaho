@@ -5,6 +5,7 @@ import BannerSlider from "../BannerSlider/BannerSlider";
 import ContactCard from "../Contact/ContactCard";
 import Faq from "../Faq/Faq";
 import HeroSection from "../HeroSection/HeroSection";
+import Mediator from "../Mediator/Mediator";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <HeroSection />
       <HowWork />
       <Success />
+      <Mediator />
       {/* <SuccessStory /> */}
       <Faq />
       <ContactCard />
