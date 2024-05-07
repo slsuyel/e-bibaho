@@ -1,48 +1,158 @@
 const Footer = () => {
   return (
-    <footer className="footer mt-auto py-3 bg-light">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <h5>About</h5>
-            <p>
-              This project aims to develop a comprehensive Food Distribution and
-              Supplies Management System to efficiently manage the distribution
-              of food and supplies to those in need.
-            </p>
+    <footer className="new_footer_area bg_color">
+      <div className="new_footer_top">
+        {/* <div className="container">
+          <div className="row mx-auto ">
+            <div className="col-lg-3 col-md-6">
+              <div
+                className="f_widget company_widget wow fadeInLeft"
+                data-wow-delay="0.2s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.2s",
+                  animationName: "fadeInLeft",
+                }}
+              >
+                <h3 className="f-title f_600 t_color f_size_18">
+                  Get in Touch
+                </h3>
+                <p>
+                  Don’t miss any updates of our new templates and extensions.!
+                </p>
+                <form action="#" className="f_subscribe_two mailchimp">
+                  <input
+                    type="text"
+                    name="EMAIL"
+                    className="form-control memail"
+                    placeholder="Email"
+                  />
+                  <button className="btn btn_get btn_get_two" type="submit">
+                    Subscribe
+                  </button>
+                  <p
+                    className="mchimp-errmessage"
+                    style={{ display: "none" }}
+                  />
+                  <p
+                    className="mchimp-sucmessage"
+                    style={{ display: "none" }}
+                  />
+                </form>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <div
+                className="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.4s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.4s",
+                  animationName: "fadeInLeft",
+                }}
+              >
+                <h3 className="f-title f_600 t_color f_size_18">Download</h3>
+                <ul className="list-unstyled f_list">
+                  <li>
+                    <a href="#">Company</a>
+                  </li>
+                  <li>
+                    <a href="#">Android App</a>
+                  </li>
+                  <li>
+                    <a href="#">ios App</a>
+                  </li>
+                  <li>
+                    <a href="#">Desktop</a>
+                  </li>
+                  <li>
+                    <a href="#">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#">My tasks</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <div
+                className="f_widget about-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.6s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.6s",
+                  animationName: "fadeInLeft",
+                }}
+              >
+                <h3 className="f-title f_600 t_color f_size_18">Help</h3>
+                <ul className="list-unstyled f_list">
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">Term &amp; conditions</a>
+                  </li>
+                  <li>
+                    <a href="#">Reporting</a>
+                  </li>
+                  <li>
+                    <a href="#">Documentation</a>
+                  </li>
+                  <li>
+                    <a href="#">Support Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6">
+              <div
+                className="f_widget social-widget pl_70 wow fadeInLeft"
+                data-wow-delay="0.8s"
+                style={{
+                  visibility: "visible",
+                  animationDelay: "0.8s",
+                  animationName: "fadeInLeft",
+                }}
+              >
+                <h3 className="f-title f_600 t_color f_size_18">
+                  Team Solutions
+                </h3>
+                <div className="f_social_icon">
+                  <a href="#" className="fab fa-facebook" />
+                  <a href="#" className="fab fa-twitter" />
+                  <a href="#" className="fab fa-linkedin" />
+                  <a href="#" className="fab fa-pinterest" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-md-4">
-            <h5>Contact Us</h5>
-            <p>Email: info@example.com</p>
-            <p>Phone: +1 (123) 456-7890</p>
-          </div>
-          <div className="col-md-4">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about">About Us</a>
-              </li>
-              <li>
-                <a href="/services">Our Services</a>
-              </li>
-              <li>
-                <a href="/contact">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+        </div> */}
+        <div className="footer_bg">
+          <div className="footer_bg_one" />
+          <div className="footer_bg_two" />
         </div>
       </div>
-      <div className="container text-center">
-        <span className="text-muted">
-          Developed by{" "}
-          <a target="_blank" href="https://zsi.ai/">
-            ZSI.Ai
-          </a>{" "}
-          &copy; {new Date().getFullYear()}
-        </span>
+      <div className="footer_bottom">
+        <div className="container">
+          <div className="row mx-auto w-100 align-items-center">
+            <div className="col-lg-6 col-sm-7">
+              <p className="mb-0 f_400">
+                © e-bibaho.com 2024 All rights reserved.
+              </p>
+            </div>
+            <div className="col-lg-6 col-sm-5 text-right">
+              <p>
+                Made with <i className="icon_heart" /> in{" "}
+                <a href="" target="_blank">
+                  Zsi.Ai
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
