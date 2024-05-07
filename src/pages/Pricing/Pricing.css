@@ -12,6 +12,16 @@
 
 
 
+.pricing-container {
+    background: linear-gradient(to right,
+            rgb(179 148 237),
+            rgb(90 200 250),
+            rgb(244 82 240));
+}
+
+
+
+
 .price_table {
     margin: 0 auto;
     display: grid;

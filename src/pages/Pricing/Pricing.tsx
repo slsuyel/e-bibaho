@@ -1,11 +1,12 @@
-import { Card } from "antd";
 import "./Pricing.css";
 import Slider from "react-slick";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Pricing = () => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   const [packages, setPackages] = useState([
     {
       id: 1,
@@ -65,6 +66,7 @@ const Pricing = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    arrows: isMobile ? true : false,
     responsive: [
       {
         breakpoint: 1024,
@@ -93,34 +95,35 @@ const Pricing = () => {
   };
 
   console.log(setPackages);
-
   return (
-    <div className="price_table" style={{ width: "90%", margin: "auto" }}>
-      <Slider {...settings}>
-        {packages.map((pack, index) => (
-          <Card key={index}>
-            <div className="package package_free">
-              {pack.name === "Bronze" && (
-                <div className="banner">Most Popular</div>
-              )}
-              <h2>{pack.name}</h2>
-              <div className="price">${pack.price}/mo</div>
-              <p>
-                Includes everything in our {packages[index - 1]?.name || "Free"}{" "}
-                package plus:
-              </p>
-              <ul>
-                {pack.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-              <button onClick={() => navigate(`/user/cart/${pack.id}`)}>
-                Continue
-              </button>
+    <div className="pricing-container py-5">
+      <div className="mx-auto" style={{ width: isMobile ? "80%" : "99%" }}>
+        <Slider {...settings}>
+          {packages.map((pack, index) => (
+            <div key={index} className="px-3">
+              <div className="package package_free">
+                {pack.name === "Bronze" && (
+                  <div className="banner">Most Popular</div>
+                )}
+                <h2>{pack.name}</h2>
+                <div className="price">${pack.price}/mo</div>
+                <p>
+                  Includes everything in our{" "}
+                  {packages[index - 1]?.name || "Free"} package plus:
+                </p>
+                <ul>
+                  {pack.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+                <button onClick={() => navigate(`/user/cart/${pack.id}`)}>
+                  Continue
+                </button>
+              </div>
             </div>
-          </Card>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
