@@ -14,7 +14,7 @@ const Pricing = () => {
       id: 1,
       name: "Bronze",
       price: 123,
-      duration: 4,
+      duration: "4 month",
       discount: 20,
       featuresAllow: [
         "View up to 180 Contact Details",
@@ -36,7 +36,7 @@ const Pricing = () => {
       id: 2,
       name: "Gold",
       price: 231,
-      duration: 6,
+      duration: "6 month",
       discount: 40,
       featuresAllow: [
         "View up to 350 Contact Details",
@@ -58,7 +58,7 @@ const Pricing = () => {
       id: 3,
       name: "Platinum",
       price: 437,
-      duration: 12,
+      duration: "1 year",
       discount: 60,
       featuresAllow: [
         "View up to 700 Contact Details",
@@ -123,12 +123,13 @@ const Pricing = () => {
               <div className="package package_free">
                 {index === 1 && <div className="banner">Most Popular</div>}
                 <h2>{pack.name}</h2>
-                <div className="price">
-                  <span>Discount: {pack.discount}%</span>$
-                  {pack.price - (pack.price * pack.discount) / 100}/mo
+                <div className="price position-relative ">
+                  <p className="discount m-0 position-absolute">
+                    Discount: {pack.discount}%
+                  </p>
+                  ${pack.price - (pack.price * pack.discount) / 100}/
+                  {pack.duration}
                 </div>
-
-                <div className="duration">Duration: {pack.duration} months</div>
 
                 <ul>
                   {pack.featuresAllow.map((feature, index) => (

@@ -26,15 +26,3 @@ Our E-Bibaho offers a modern approach to traditional matchmaking. Powered by Rea
 To explore our E-Bibaho, simply click on the provided link and start browsing profiles or create your own. Here are a few steps to guide you:
 
 1. **Register an Account**: If you're new to the platform, click on the registration link and follow the
-
-Authorized Sign (License) with Seal
-
-সংযুক্ত করুন
-
-০১. এক কপি পাসপোর্ট সাইজ রঙ্গিন ছবি।
-
-০২. এন আই ডি কার্ড-এর কপি।
-
-০৩. লাইসেন্সের নবায়িত কপি।
-
-বিঃদ্রঃ ফরম জমা দেওয়ার সময় অবশ্যই কার্ডের ফি বাবদ ১,৫০০/-নির্ধারিত মূল্য জমা করুন।

@@ -82,6 +82,17 @@
     position: relative;
 }
 
+.discount {
+    width: 107px;
+    font-size: 13px;
+    top: -7px;
+    left: 109px;
+    border-radius: 15px;
+    background: rebeccapurple;
+    color: yellow;
+}
+
+
 .package h2::after {
     content: "";
     position: absolute;
@@ -92,18 +103,17 @@
 }
 
 .package .price {
-    padding: 0.2rem 1rem;
+    padding: 11px 2px;
     background: linear-gradient(45deg, var(--col-secondary) 0%, var(--col-dark) 100%);
     color: white;
     text-shadow: 0 4px 0 var(--col-dark);
 }
 
-.package p {
-    padding: 1rem;
-}
+
 
 .package .price {
-    font-size: 1.2em;
+    margin-top: -8px;
+    font-size: 23px;
     font-weight: normal;
     text-align: center;
     box-shadow: inset 0 10px 4px -6px rgba(0, 0, 0, 0.1);
