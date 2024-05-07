@@ -27,44 +27,14 @@ To explore our E-Bibaho, simply click on the provided link and start browsing pr
 
 1. **Register an Account**: If you're new to the platform, click on the registration link and follow the
 
-Owner:
+Authorized Sign (License) with Seal
 
-Company Name
+সংযুক্ত করুন
 
-AIN
+০১. এক কপি পাসপোর্ট সাইজ রঙ্গিন ছবি।
 
-NID Number
+০২. এন আই ডি কার্ড-এর কপি।
 
-Date of Birth
+০৩. লাইসেন্সের নবায়িত কপি।
 
-Personal TIN
-
-Basic Information:
-
-Name
-
-Designation
-
-Father Name
-
-Mother Name
-
-Religion
-
-Blood Group
-
-Educational Qualification
-
-Owner Signature
-
-Contract:
-
-Mobile Number
-
-Email ID
-
-Telephone Number
-
-Present Address
-
-Permanent Address
+বিঃদ্রঃ ফরম জমা দেওয়ার সময় অবশ্যই কার্ডের ফি বাবদ ১,৫০০/-নির্ধারিত মূল্য জমা করুন।

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "./Pricing.css";
 import Slider from "react-slick";
 import { useState } from "react";
@@ -7,57 +8,73 @@ import useIsMobile from "../../hooks/useIsMobile";
 const Pricing = () => {
   const navigate = useNavigate();
   const isMobile = useIsMobile();
+
   const [packages, setPackages] = useState([
     {
       id: 1,
       name: "Bronze",
-
-      price: 0,
-      features: [
-        "Send unlimited Messages",
-        "View up to 600 Contact Numbers",
-        "12 Shaadi Live passes worth BDT6600",
+      price: 123,
+      duration: 4,
+      discount: 20,
+      featuresAllow: [
+        "View up to 180 Contact Details",
+        "Unlimited Private Chatting",
+        "Basic customer support",
+      ],
+      featuresNotAllow: [
+        "Priority Listing",
+        "Advance Search Option",
+        "Full Profile access",
+        "Premium member badge",
+        "Matches Suggestions",
+        "Send your interest",
+        "Trusted badge access",
+        "Translation option",
       ],
     },
     {
       id: 2,
       name: "Gold",
-
-      price: 5,
-      features: [
-        "Send unlimited Messages",
-        "View up to 600 Contact Numbers",
-        "12 Shaadi Live passes worth BDT6600",
-        "Stand out from other Profiles",
-        "Let Matches contact you directly",
+      price: 231,
+      duration: 6,
+      discount: 40,
+      featuresAllow: [
+        "View up to 350 Contact Details",
+        "Unlimited Private Chatting",
+        "Enhanced customer support",
+        "Priority Listing",
+        "Advance Search Option",
+        "Full Profile access",
+      ],
+      featuresNotAllow: [
+        "Premium member badge",
+        "Matches Suggestions",
+        "Send your interest",
+        "Trusted badge access",
+        "Translation option",
       ],
     },
     {
       id: 3,
       name: "Platinum",
-
-      price: 10,
-      features: [
-        "Send unlimited Messages",
-        "View up to 600 Contact Numbers",
-        "12 Shaadi Live passes worth BDT6600",
-        "Stand out from other Profiles",
-        "Let Matches contact you directly",
+      price: 437,
+      duration: 12,
+      discount: 60,
+      featuresAllow: [
+        "View up to 700 Contact Details",
+        "Unlimited Private Chatting",
+        "Enhanced customer support",
+        "Priority Listing",
+        "Advance Search Option",
+        "Full Profile access",
+        "Premium member badge",
+        "Matches Suggestions",
+        "Send your interest",
+        "Trusted badge access",
+        "Translation option",
       ],
+      featuresNotAllow: [],
     },
-    // {
-    //   id: 4,
-    //   name: "Signature",
-
-    //   price: 19,
-    //   features: [
-    //     "Send unlimited Messages",
-    //     "View up to 600 Contact Numbers",
-    //     "12 Shaadi Live passes worth BDT6600",
-    //     "Stand out from other Profiles",
-    //     "Let Matches contact you directly",
-    //   ],
-    // },
   ]);
 
   const settings = {
@@ -94,9 +111,8 @@ const Pricing = () => {
     ],
   };
 
-  console.log(setPackages);
   return (
-    <div className="pricing-container py-5  ">
+    <div className="pricing-container py-5">
       <div
         className="mx-auto pricing-slick container"
         style={{ width: isMobile ? "80%" : "99%" }}
@@ -105,18 +121,25 @@ const Pricing = () => {
           {packages.map((pack, index) => (
             <div key={index} className="px-3">
               <div className="package package_free">
-                {pack.name === "Bronze" && (
-                  <div className="banner">Most Popular</div>
-                )}
+                {index === 1 && <div className="banner">Most Popular</div>}
                 <h2>{pack.name}</h2>
-                <div className="price">${pack.price}/mo</div>
-                <p>
-                  Includes everything in our{" "}
-                  {packages[index - 1]?.name || "Free"} package plus:
-                </p>
+                <div className="price">
+                  <span>Discount: {pack.discount}%</span>$
+                  {pack.price - (pack.price * pack.discount) / 100}/mo
+                </div>
+
+                <div className="duration">Duration: {pack.duration} months</div>
+
                 <ul>
-                  {pack.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
+                  {pack.featuresAllow.map((feature, index) => (
+                    <li key={index}>
+                      <i className="fa-regular fa-square-check"></i> {feature}
+                    </li>
+                  ))}
+                  {pack.featuresNotAllow.map((feature, index) => (
+                    <li key={index}>
+                      <i className="fa-solid fa-square-xmark"></i> {feature}
+                    </li>
                   ))}
                 </ul>
                 <button onClick={() => navigate(`/user/cart/${pack.id}`)}>
