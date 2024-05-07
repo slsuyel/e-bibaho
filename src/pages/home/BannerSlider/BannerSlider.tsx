@@ -87,13 +87,8 @@ const BannerSlider = () => {
   };
   const isMobile = useIsMobile();
   return (
-<<<<<<< HEAD
     <div className="bg-grad ">
-      <div className="mx-auto" style={{ width: isMobile ? "80%" : "90%" }}>
-=======
-    <div className="bg-grad">
-      <div className="mx-auto" style={{ width: "90%" }}>
->>>>>>> 1b08034104938095f707ff8664cc58fd8573edca
+      <div className="mx-auto" style={{ width: isMobile ? "85%" : "90%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>
