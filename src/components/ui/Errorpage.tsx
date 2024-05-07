@@ -1,6 +1,6 @@
 import { Button, Result } from "antd";
 import { ResultStatusType } from "antd/es/result";
-import React from "react";
+
 import { useNavigate, useRouteError } from "react-router-dom";
 
 interface ErrorpageProps {

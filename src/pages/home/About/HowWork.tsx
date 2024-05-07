@@ -2,7 +2,7 @@ import { Card } from "antd";
 /* bg-danger-subtle mb-2 p-4 rounded-circle shadow-lg text-warning-emphasis */
 const HowWork = () => {
   return (
-    <div className="container text-center pb-5">
+    <div className="container text-center pb-5 ">
       <h1 className="font-maven  ">
         How <span className="fw-medium text-info-emphasis ">We Works</span>
       </h1>

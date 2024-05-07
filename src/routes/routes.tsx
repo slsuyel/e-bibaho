@@ -39,7 +39,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <OutSideLayout />,
-    errorElement: <Errorpage />,
+    errorElement: <Errorpage status={500} />,
     children: [
       {
         path: "/",
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
         <UserLoggedLayout />
       </UserPrivate>
     ),
-    errorElement: <Errorpage />,
+    errorElement: <Errorpage status={500} />,
     children: [
       {
         path: "profile",

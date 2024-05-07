@@ -4,12 +4,13 @@ import Slider from "react-slick";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useIsMobile from "../../hooks/useIsMobile";
+import SpecialPrice from "./SpecialPrice";
 
 const Pricing = () => {
   const navigate = useNavigate();
   const isMobile = useIsMobile();
 
-  const [packages, setPackages] = useState([
+  const [packages] = useState([
     {
       id: 1,
       name: "Bronze",
@@ -122,35 +123,50 @@ const Pricing = () => {
             <div key={index} className="px-3">
               <div className="package package_free">
                 {index === 1 && <div className="banner">Most Popular</div>}
-                <h2>{pack.name}</h2>
-                <div className="price position-relative ">
-                  <p className="discount m-0 position-absolute">
-                    Discount: {pack.discount}%
-                  </p>
-                  ${pack.price - (pack.price * pack.discount) / 100}/
-                  {pack.duration}
-                </div>
+                <h2>
+                  {pack.name} <span className="fs-6"> {pack.duration}</span>{" "}
+                </h2>
 
+                <div className="price position-relative ">
+                  <span className="discount m-0 position-absolute">
+                    Discount: {pack.discount}%
+                  </span>
+                  ${pack.price - (pack.price * pack.discount) / 100}{" "}
+                  <span className="fs-6">only</span>
+                </div>
+                <button
+                  className="package-btn"
+                  onClick={() => navigate(`/user/cart/${pack.id}`)}
+                >
+                  Continue
+                </button>
                 <ul>
                   {pack.featuresAllow.map((feature, index) => (
-                    <li key={index}>
-                      <i className="fa-regular fa-square-check"></i> {feature}
+                    <li
+                      key={index}
+                      className="fs-6 ms-2 d-flex align-align-items-center gap-2"
+                    >
+                      <i className="fa-regular fa-square-check text-success fs-5 my-auto"></i>{" "}
+                      <span> {feature}</span>
                     </li>
                   ))}
+
                   {pack.featuresNotAllow.map((feature, index) => (
-                    <li key={index}>
-                      <i className="fa-solid fa-square-xmark"></i> {feature}
+                    <li
+                      key={index}
+                      className="fs-6 ms-2 d-flex align-align-items-center gap-2"
+                    >
+                      <i className="fa-solid fa-square-xmark text-danger fs-5 my-auto"></i>{" "}
+                      <span> {feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => navigate(`/user/cart/${pack.id}`)}>
-                  Continue
-                </button>
               </div>
             </div>
           ))}
         </Slider>
       </div>
+      <SpecialPrice />
     </div>
   );
 };

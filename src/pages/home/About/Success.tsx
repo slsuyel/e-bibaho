@@ -17,7 +17,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div className=" my-5 bg-cng p-3 py-5">
+    <div className=" my-5 bg-cng p-3 py-5 success-page">
       <div className="row mx-auto ">
         {data.map((item, index) => (
           <>

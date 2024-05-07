@@ -41,7 +41,7 @@
     top: -50%;
     /* left: -40%; */
     width: 100%;
-    height: 190%;
+    height: 266%;
     background: linear-gradient(to right, rgb(179, 148, 237), rgb(90, 200, 250), rgb(244, 82, 240));
     clip-path: polygon(100% 0, 0% 100%, 0 100%, 100% 0, 100% 42%, 0 100%, 0 78%, 0% 43%, 0 0);
     z-index: -1;
@@ -72,24 +72,28 @@
 }
 
 .package h2 {
+    padding: 13px 0px;
     margin: 0;
-    padding: 1rem;
     background: var(--col-primary);
-    font-size: 1.2em;
+    font-size: 34px;
     text-align: center;
-    font-weight: normal;
-    color: white;
+    font-weight: 400;
+    color: #f2f5fa;
     position: relative;
+    margin-top: -4px;
 }
 
 .discount {
-    width: 107px;
-    font-size: 13px;
+    width: 116px;
+    font-size: 15px;
     top: -7px;
-    left: 109px;
+    padding: 2px;
+    right: 0;
     border-radius: 15px;
-    background: rebeccapurple;
-    color: yellow;
+    background: #b87168;
+    color: #ffff40;
+    text-shadow: none;
+
 }
 
 
@@ -102,18 +106,14 @@
     bottom: 0;
 }
 
+
 .package .price {
-    padding: 11px 2px;
+    padding: 4px 0px;
     background: linear-gradient(45deg, var(--col-secondary) 0%, var(--col-dark) 100%);
     color: white;
     text-shadow: 0 4px 0 var(--col-dark);
-}
-
-
-
-.package .price {
     margin-top: -8px;
-    font-size: 23px;
+    font-size: 41px;
     font-weight: normal;
     text-align: center;
     box-shadow: inset 0 10px 4px -6px rgba(0, 0, 0, 0.1);
@@ -141,36 +141,35 @@
     background: var(--col-light);
 }
 
-.package button {
+.package-btn {
     cursor: pointer;
     padding: 7px 14px;
     display: block;
     color: white;
     margin: 1rem auto;
-    border: none;
     border-radius: 5px;
-    background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-primary) 100%);
+    background: linear-gradient(to right, rgb(179 148 237),
+            /* rgb(90 200 250), */
+            rgb(244 82 240));
     transition: all 0.2s;
     font-size: 18px;
+    border: 1px solid royalblue;
 }
 
-.package button:hover,
-.package button:focus {
-    background: linear-gradient(0deg, var(--col-secondary) 0%, var(--col-dark) 100%);
-    box-shadow: 0 0 0 4px white, 0 0 0 8px var(--col-primary);
-    outline: 0;
-}
+
 
 .package .banner {
-    background: linear-gradient(90deg, #33a530 0%, #4eee49 50%, #33a530 100%);
+    /* background: linear-gradient(90deg, #33a530 0%, #4eee49 50%, #33a530 100%); */
+    background: linear-gradient(to right, rgb(95 196 249), rgb(255 229 254));
     transform: rotate(-45deg);
     position: absolute;
     z-index: 1;
-    padding: 0.5rem 4rem;
+    padding: 3px 44px;
     top: 2rem;
-    left: -4rem;
-    border: 2px solid #91ff69;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    left: -3rem;
+    border: 2px solid #a89bef;
+    box-shadow: 4px 4px 4px rgb(252 236 236 / 24%);
+    color: red;
 }
 
 .package_free h2::after {
@@ -180,4 +179,26 @@
 
 .input-group-append {
     margin-left: -1px;
+}
+
+
+/* SpecialPrice */
+
+.special-card-1 {
+    background: #ffa60024;
+    /* padding: 8px; */
+}
+
+.special-card-2 {
+    background: #ffa60063;
+    padding: 11px 14px;
+}
+
+.special-package-p {
+    top: -2px;
+    right: 0;
+    left: 102px;
+
+    font-size: 18px;
+    color: red;
 }

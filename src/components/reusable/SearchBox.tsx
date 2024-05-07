@@ -8,9 +8,10 @@ const SearchBox = () => {
     <div className="row search-box mx-auto font-maven fw-medium">
       <div className="mb-5">
         <div className="bg-white col-md-10 mx-auto p-4  rounded row shadow-lg">
-          <h3 className="fw-bold mb-4 mt-1 text-center ">
-            Find <span className="text-info-emphasis">Your Soulmate</span>
-          </h3>
+          <h1 className="font-maven mb-4 mt-1 text-center ">
+            Find Your
+            <span className="fw-medium text-info-emphasis "> Soulmate</span>
+          </h1>
           <div className="col-md-2">
             <div className="form-group my-1">
               <input

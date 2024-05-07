@@ -151,3 +151,26 @@
 
 
 /* ------------- */
+
+.package-btn:hover,
+.package-btn:focus {
+    background: linear-gradient(to right, rgb(179 148 237),
+            /* rgb(90 200 250), */
+            rgb(244 82 240));
+    /* Adjust hover/focus background color as needed */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    animation: pulse 0.5s ease infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* ------------ */

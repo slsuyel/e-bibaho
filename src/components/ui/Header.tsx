@@ -47,6 +47,11 @@ const Header = () => {
       label: "Help",
       link: "/help",
     },
+    {
+      id: 2,
+      label: "Pricing",
+      link: "/pricing",
+    },
   ];
 
   return (

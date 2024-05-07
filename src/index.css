@@ -29,6 +29,13 @@ body {
 
 
 
+.success-page {
+  background: linear-gradient(to right, rgb(179 148 237 / 36%), rgb(90 200 250 / 0%), rgb(244 82 240 / 46%));
+}
+
+
+
+
 .sticky-image-container {
   position: sticky;
   top: calc(50% - 270px);
