@@ -26,3 +26,45 @@ Our E-Bibaho offers a modern approach to traditional matchmaking. Powered by Rea
 To explore our E-Bibaho, simply click on the provided link and start browsing profiles or create your own. Here are a few steps to guide you:
 
 1. **Register an Account**: If you're new to the platform, click on the registration link and follow the
+
+Owner:
+
+Company Name
+
+AIN
+
+NID Number
+
+Date of Birth
+
+Personal TIN
+
+Basic Information:
+
+Name
+
+Designation
+
+Father Name
+
+Mother Name
+
+Religion
+
+Blood Group
+
+Educational Qualification
+
+Owner Signature
+
+Contract:
+
+Mobile Number
+
+Email ID
+
+Telephone Number
+
+Present Address
+
+Permanent Address

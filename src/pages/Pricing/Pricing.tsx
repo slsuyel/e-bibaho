@@ -10,7 +10,7 @@ const Pricing = () => {
   const [packages, setPackages] = useState([
     {
       id: 1,
-      name: "Free",
+      name: "Bronze",
 
       price: 0,
       features: [
@@ -21,7 +21,7 @@ const Pricing = () => {
     },
     {
       id: 2,
-      name: "Bronze",
+      name: "Gold",
 
       price: 5,
       features: [
@@ -34,7 +34,7 @@ const Pricing = () => {
     },
     {
       id: 3,
-      name: "Silver",
+      name: "Platinum",
 
       price: 10,
       features: [
@@ -45,26 +45,26 @@ const Pricing = () => {
         "Let Matches contact you directly",
       ],
     },
-    {
-      id: 4,
-      name: "Gold",
+    // {
+    //   id: 4,
+    //   name: "Signature",
 
-      price: 19,
-      features: [
-        "Send unlimited Messages",
-        "View up to 600 Contact Numbers",
-        "12 Shaadi Live passes worth BDT6600",
-        "Stand out from other Profiles",
-        "Let Matches contact you directly",
-      ],
-    },
+    //   price: 19,
+    //   features: [
+    //     "Send unlimited Messages",
+    //     "View up to 600 Contact Numbers",
+    //     "12 Shaadi Live passes worth BDT6600",
+    //     "Stand out from other Profiles",
+    //     "Let Matches contact you directly",
+    //   ],
+    // },
   ]);
 
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     arrows: isMobile ? true : false,
     responsive: [
@@ -96,8 +96,11 @@ const Pricing = () => {
 
   console.log(setPackages);
   return (
-    <div className="pricing-container py-5">
-      <div className="mx-auto" style={{ width: isMobile ? "80%" : "99%" }}>
+    <div className="pricing-container py-5  ">
+      <div
+        className="mx-auto pricing-slick container"
+        style={{ width: isMobile ? "80%" : "99%" }}
+      >
         <Slider {...settings}>
           {packages.map((pack, index) => (
             <div key={index} className="px-3">
