@@ -33,7 +33,9 @@ body {
   background: linear-gradient(to right, rgb(179 148 237 / 36%), rgb(90 200 250 / 0%), rgb(244 82 240 / 46%));
 }
 
-
+.somoy-shaow {
+  box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
+}
 
 
 .sticky-image-container {

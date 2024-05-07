@@ -60,7 +60,7 @@ const Mediator = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className="my-5">
+    <div className="my-5 somoy-shaow ">
       <h1 className="font-maven  text-center mb-3 ">
         Our Valuable
         <span className="fw-medium text-info-emphasis "> Mediators</span>

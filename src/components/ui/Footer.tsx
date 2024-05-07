@@ -1,6 +1,9 @@
+import FooterTop from "./FooterTop";
+
 const Footer = () => {
   return (
     <footer className="new_footer_area bg_color">
+      <FooterTop />
       <div className="new_footer_top">
         {/* <div className="container">
           <div className="row mx-auto ">
