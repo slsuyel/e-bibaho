@@ -158,35 +158,47 @@
     animation: myfirst 30s linear infinite;
 }
 
+.footer_waling_men {
+    background: url("../../assets/images/1.gif") no-repeat center center;
+    width: 164px;
+    height: 120px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: men-walk 60s linear infinite;
+    animation: men-walk 60s linear infinite;
+}
 
 
-@-moz-keyframes myfirst {
+
+@-moz-keyframes men-walk {
     0% {
-        left: -25%;
+        left: 100%;
     }
 
     100% {
-        left: 100%;
+        left: -25%;
     }
 }
 
-@-webkit-keyframes myfirst {
+@-webkit-keyframes men-walk {
     0% {
-        left: -25%;
+        left: 100%;
     }
 
     100% {
-        left: 100%;
+        left: -25%;
     }
 }
 
-@keyframes myfirst {
+@keyframes men-walk {
     0% {
-        left: -25%;
+        left: 100%;
     }
 
     100% {
-        left: 100%;
+        left: -25%;
     }
 }
 

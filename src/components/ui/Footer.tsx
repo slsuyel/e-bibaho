@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="footer_bg">
           <div className="footer_bg_one" />
           <div className="footer_bg_two" />
+          <div className="footer_waling_men" />
         </div>
       </div>
       <div className="footer_bottom">

@@ -12,7 +12,7 @@ const OutSideLayout = () => {
       <Outlet />
 
       <Footer />
-      <BottomToggleMenu />
+      {/* <BottomToggleMenu /> */}
       <GoToTop />
     </ScrollToTop>
   );
