@@ -190,8 +190,38 @@ a {
   opacity: 0.8;
 }
 
-/* why us */
+/* ---------Top 5 start */
 
+.contain {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.result-card {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right,
+      rgb(179 148 237),
+      rgb(90 200 250),
+      rgb(244 82 240));
+
+  padding: 20px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.result-card.visible {
+  opacity: 1;
+}
+
+
+/* Top 5 end */
 
 /* WhyUs.css */
 .scroll-container {

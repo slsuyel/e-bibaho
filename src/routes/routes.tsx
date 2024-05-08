@@ -35,6 +35,7 @@ import Help from "../pages/Help/Help";
 
 import EditProfileInfo from "../pages/user/Profile/Edit/EditProfileInfo";
 import WhyUs from "../pages/home/About/WhyUs";
+import TopFive from "../pages/TopFive/TopFive";
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/top",
+        element: <TopFive />,
       },
 
       // {
