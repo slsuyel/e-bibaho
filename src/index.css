@@ -189,3 +189,27 @@ a {
   top: 10px;
   opacity: 0.8;
 }
+
+/* why us */
+
+
+/* WhyUs.css */
+.scroll-container {
+  overflow-x: hidden;
+  display: flex;
+}
+
+.hr-content {
+  height: 80vh;
+  min-width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4ch;
+}
+
+
+.hr-content:nth-child(even) {
+  background-color: teal;
+  color: white;
+}
