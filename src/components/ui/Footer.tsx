@@ -9,6 +9,7 @@ const Footer = () => {
           <div className="footer_bg_one" />
           <div className="footer_bg_two" />
           <div className="footer_waling_men" />
+          <div className="footer_men-girl" />
         </div>
       </div>
       <div className="footer_bottom">

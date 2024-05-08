@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/newlogo2.png";
+import logo from "../../assets/images/newlogo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
@@ -52,6 +52,11 @@ const Header = () => {
       label: "Pricing",
       link: "/pricing",
     },
+    {
+      id: 4,
+      label: "Why",
+      link: "/why",
+    },
   ];
 
   return (
@@ -65,7 +70,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href="/" className="p-0 ">
-            <img src={logo} alt="" width={200} />
+            <img src={logo} alt="" width={100} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse

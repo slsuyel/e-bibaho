@@ -34,6 +34,7 @@ import Cart from "../pages/Pricing/Cart";
 import Help from "../pages/Help/Help";
 
 import EditProfileInfo from "../pages/user/Profile/Edit/EditProfileInfo";
+import WhyUs from "../pages/home/About/WhyUs";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/help",
         element: <Help />,
+      },
+      {
+        path: "/why",
+        element: <WhyUs />,
       },
       {
         path: "/pricing",
