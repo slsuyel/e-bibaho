@@ -16,56 +16,55 @@ const BannerSlider = () => {
   const slides = [
     {
       img: img1,
-      title: "যোগ্য জীবনসঙ্গী খুঁজছেন?",
+      title: "Looking for a Compatible Life Partner?",
       description:
-        "আপনি যদি কোনো যোগ্য জীবনসঙ্গী খুঁজছেন যা আপনার ক্ষেত্রে স্থিতিশীলতা ও গোপনীয়তা সুরক্ষিত করবে, তাহলে আপনি ঠিক ঠাক স্থানে এসেছেন। এখানে আপনি পাবেন আপনার সাথে মেলানোর যোগ্য প্রাতিষ্ঠানিক ব্যক্তিদের তালিকা।",
-      buttonText: "আমাদের সম্পর্কে",
+        "If you're searching for a compatible life partner who will ensure stability and privacy in your domain, then you've come to the right place. Here, you'll find a list of professionally vetted individuals suitable for you.",
+      buttonText: "About Us",
       btnSlug: "/",
       btnCss: "",
     },
     {
       img: img3,
-      title: "জীবনসঙ্গী খুঁজছেন?",
+      title: "Searching for a Life Partner?",
       description:
-        "এখানে আপনি পাবেন আপনার জীবনের সাথীকে খুঁজতে একটি অবস্থান। আপনি যদি আপনার জীবনের সাথীকে সাধারণ ম্যাচিং সাইটগুলির মত না খুঁজতে চান, আপনি আপনার পছন্দসই প্রোফাইলগুলি প্রদর্শন করতে এখানে চলে এসেছেন।",
-      buttonText: "সফল জুটি গুলো",
+        "This is the place to find a companion for your life journey. If you prefer not to search for your life partner on typical matching sites, here you can display your preferred profiles.",
+      buttonText: "Successful Matches",
       btnSlug: "/",
       btnCss: "",
     },
     {
       img: img5,
-      title: "গোপনীয়তা সুরক্ষিত রেখে জীবনসঙ্গী খুঁজতে",
+      title: "Find a Life Partner While Keeping Privacy Intact",
       description:
-        "এখানে আপনি পাবেন একটি উন্নত জন্য গোপনীয়তা এবং জীবনসঙ্গী সার্চ সাইট। এখানে আপনি আপনার স্থানীয় এলাকা এবং পছন্দসই গোপনীয়তা বিজ্ঞাপন করতে পারেন, আপনার আশঙ্কা না করে এবং আপনার প্রোফাইল গোপনীয় রাখুন।",
-      buttonText: "জীবনসঙ্গী খুঁজতে!",
+        "Here, you'll find an advanced privacy-oriented life partner search site. You can advertise your preferred privacy settings and profiles without any concerns, keeping your profile discreet.",
+      buttonText: "Find a Partner!",
       btnSlug: "/",
       btnCss: "",
     },
     {
       img: img6,
-      title: "জীবনসঙ্গী খুঁজতে গোপনীয়তা",
+      title: "Privacy-Centric Partner Search",
       description:
-        "এখানে আপনি আপনার জীবনসঙ্গীর জন্য একটি গোপনীয়তামূলক এবং অভিন্নতা সংরক্ষণ করতে একটি অনুভূতিগত ও আদর্শ প্ল্যাটফর্মে এসেছেন।",
-      buttonText: "প্রোফাইল করুন",
-
+        "You've come to a platform that prioritizes privacy and diversity for finding your life partner in a sensitive and ideal manner.",
+      buttonText: "Create Profile",
       btnSlug: "/",
       btnCss: "",
     },
     {
       img: img9,
-      title: "জীবনসঙ্গী খুঁজতে গোপনীয়তা",
+      title: "Privacy-Oriented Platform for Finding a Life Partner",
       description:
-        "এখানে আপনি আপনার জীবনসঙ্গীর জন্য একটি গোপনীয়তামূলক প্ল্যাটফর্মে এসেছেন, যেখানে আপনি আপনার সাথীর জন্য প্রতিষ্ঠানিক এবং ব্যক্তিগত প্রদান পেতে পারেন।",
-      buttonText: "সফল জুটি ",
+        "Here, you've arrived at a privacy-oriented platform where you can receive both formal and personal provisions for your partner.",
+      buttonText: "Successful Matches",
       btnSlug: "/",
       btnCss: "",
     },
     {
       img: img10,
-      title: "জীবনসঙ্গী খুঁজতে গোপনীয়তা সুরক্ষিত রেখে",
+      title: "Find a Life Partner While Preserving Privacy",
       description:
-        "এখানে আপনি পাবেন একটি সুরক্ষিত ও গোপনীয়তা ভিত্তিক জীবনসঙ্গী সার্চ সাইট, যা আপনার সুরক্ষিত তথ্য রক্ষা করে এবং আপনার প্রোফাইল বিশেষভাবে গোপন থাকবে।",
-      buttonText: "সকল জুটি একসাথে",
+        "Here, you'll find a secure and privacy-based life partner search site that safeguards your sensitive information and ensures your profile remains particularly private.",
+      buttonText: "All Matches Together",
       btnSlug: "/",
       btnCss: "",
     },
@@ -87,8 +86,11 @@ const BannerSlider = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className="bg-grad ">
-      <div className="mx-auto" style={{ width: isMobile ? "85%" : "90%" }}>
+    <div className="bg-grad">
+      <div
+        className="mx-auto py-2 "
+        style={{ width: isMobile ? "85%" : "90%" }}
+      >
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>
@@ -124,15 +126,19 @@ const BannerSlider = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="col-md-6 d-flex  justify-content-center">
-                  <img
-                    className={`img-fluid ${
-                      index === currentSlide ? "animate-right" : "animate-zoom"
-                    }`}
-                    style={{ height: "400px", width: "auto" }}
-                    src={slide.img}
-                    alt=""
-                  />
+
+                <div className="smartphone col-md-6 d-flex justify-content-end ">
+                  <div className="content text-center mx-auto">
+                    <img
+                      className={`img-fluid ${
+                        index === currentSlide
+                          ? "animate-right"
+                          : "animate-zoom"
+                      }`}
+                      src={slide.img}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
