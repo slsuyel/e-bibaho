@@ -36,3 +36,8 @@ export type MessageModel = {
   direction: string; // Add direction property
   position: number; // Add position property
 };
+
+export interface MenuBarProps {
+  visible: boolean;
+  handleMenuClick: () => void;
+}
