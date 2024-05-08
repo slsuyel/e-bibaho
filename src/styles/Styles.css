@@ -52,8 +52,8 @@
     background-image: url('https://i.pinimg.com/originals/2d/28/84/2d28849758e2090650988c272c92c495.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    transition: opacity 0.5s ease;
-    opacity: 0.8;
+    /* transition: opacity 0.5s ease; */
+    opacity: 0.7;
 }
 
 .regi-page:hover::before {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const WhyUs = () => {
   const [scrollMode, setScrollMode] = useState<"horizontal" | "vertical">(
@@ -41,23 +41,166 @@ const WhyUs = () => {
   }, [scrollMode]);
 
   return (
-    <div>
-      <h1 className="my-5 text-center ">This is Why Us page</h1>
+    <div className="bg-grad">
+      <h1 className="position-relative py-4 text-center text-white text-wrap">
+        This is Why Us page
+      </h1>
 
       <main className="scroll-container my-2 ">
-        <section className="hr-content">
-          <h1 className="hr-heading">Beep</h1>
-        </section>
-        <section className="hr-content">
-          <h1 className="hr-heading">Boop</h1>
-        </section>
+        <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
+          <div className=" col-md-6">
+            <div className="imgContainer">
+              <img
+                className="myImg"
+                src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
+                alt="Heart-shaped image"
+              />
+            </div>
+          </div>
 
-        <section className="hr-content">
-          <h1 className="hr-heading">Booosfom</h1>
+          <div className="content-wrapper col-md-6 text-end position-relative ">
+            <img
+              width={400}
+              height={400}
+              src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
+              alt=""
+              className="img-fluid "
+            />
+            <div className="content-txt">
+              <h2>Your Title</h2>
+              <p>
+                Your paragraph Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur numquam nihil minima at possimus,
+                dolorum, vel ratione harum dolores aut, corporis optio
+                blanditiis nostrum deserunt ipsum libero omnis delectus
+                mollitia?
+              </p>
+            </div>
+          </div>
         </section>
+        <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
+          <div className=" col-md-6">
+            <div className="imgContainer">
+              <img
+                className="myImg"
+                src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
+                alt="Heart-shaped image"
+              />
+            </div>
+          </div>
 
-        <section className="hr-content">
-          <h1 className="hr-heading">The End</h1>
+          <div className="content-wrapper col-md-6 text-end position-relative ">
+            <img
+              width={400}
+              height={400}
+              src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
+              alt=""
+              className="img-fluid "
+            />
+            <div className="content-txt">
+              <h2>Your Title</h2>
+              <p>
+                Your paragraph Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur numquam nihil minima at possimus,
+                dolorum, vel ratione harum dolores aut, corporis optio
+                blanditiis nostrum deserunt ipsum libero omnis delectus
+                mollitia?
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
+          <div className=" col-md-6">
+            <div className="imgContainer">
+              <img
+                className="myImg"
+                src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
+                alt="Heart-shaped image"
+              />
+            </div>
+          </div>
+
+          <div className="content-wrapper col-md-6 text-end position-relative ">
+            <img
+              width={400}
+              height={400}
+              src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
+              alt=""
+              className="img-fluid "
+            />
+            <div className="content-txt">
+              <h2>Your Title</h2>
+              <p>
+                Your paragraph Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur numquam nihil minima at possimus,
+                dolorum, vel ratione harum dolores aut, corporis optio
+                blanditiis nostrum deserunt ipsum libero omnis delectus
+                mollitia?
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
+          <div className=" col-md-6">
+            <div className="imgContainer">
+              <img
+                className="myImg"
+                src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
+                alt="Heart-shaped image"
+              />
+            </div>
+          </div>
+
+          <div className="content-wrapper col-md-6 text-end position-relative ">
+            <img
+              width={400}
+              height={400}
+              src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
+              alt=""
+              className="img-fluid "
+            />
+            <div className="content-txt">
+              <h2>Your Title</h2>
+              <p>
+                Your paragraph Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur numquam nihil minima at possimus,
+                dolorum, vel ratione harum dolores aut, corporis optio
+                blanditiis nostrum deserunt ipsum libero omnis delectus
+                mollitia?
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
+          <div className=" col-md-6">
+            <div className="imgContainer">
+              <img
+                className="myImg"
+                src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
+                alt="Heart-shaped image"
+              />
+            </div>
+          </div>
+
+          <div className="content-wrapper col-md-6 text-end position-relative ">
+            <img
+              width={400}
+              height={400}
+              src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
+              alt=""
+              className="img-fluid "
+            />
+            <div className="content-txt">
+              <h2>Your Title</h2>
+              <p>
+                Your paragraph Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Aspernatur numquam nihil minima at possimus,
+                dolorum, vel ratione harum dolores aut, corporis optio
+                blanditiis nostrum deserunt ipsum libero omnis delectus
+                mollitia?
+              </p>
+            </div>
+          </div>
         </section>
       </main>
     </div>
