@@ -41,3 +41,8 @@ export interface MenuBarProps {
   visible: boolean;
   handleMenuClick: () => void;
 }
+
+export interface DataWhyUS {
+  name: string;
+  description: string;
+}

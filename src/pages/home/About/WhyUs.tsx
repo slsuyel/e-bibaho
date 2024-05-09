@@ -54,6 +54,8 @@ const WhyUs = () => {
             <div className="col-md-6 d-flex justify-content-center">
               <div className="imgContainer">
                 <img
+                  width={400}
+                  height={400}
                   className="myImg"
                   src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
                   alt="Heart-shaped image"

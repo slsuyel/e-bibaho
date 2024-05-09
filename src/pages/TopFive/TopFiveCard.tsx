@@ -1,6 +1,6 @@
 import { Card } from "antd";
 import { Link } from "react-router-dom";
-
+import img from "../../assets/images/dr.-shamma.png";
 interface Person {
   name: string;
   photo: string;
@@ -21,13 +21,17 @@ interface TopFiveCardProps {
 const TopFiveCard = ({ people }: TopFiveCardProps) => {
   return (
     <div className="my-1 border-top border-2 ">
-      <Card hoverable className="rounded-0 " style={{ height: "100vh" }}>
+      <Card
+        hoverable
+        className="rounded-0 success_page"
+        style={{ height: "100vh" }}
+      >
         <div className="row mx-auto my-auto">
           <div className="col-md-6 m-auto text-center">
             <img
-              width={360}
+              width={450}
               className="img-fluid "
-              src="https://lasertreat.com.bd/public/images/doctors/Dr.-Shamma-Binte-Hafiz.jpeg"
+              src={img}
               // src={people.photo}
               alt={people.name}
             />
@@ -35,14 +39,13 @@ const TopFiveCard = ({ people }: TopFiveCardProps) => {
 
           <div className="col-md-6  my-auto">
             <div className="d-flex justify-content-between px-2 w-100">
-              <h6>{people.name}</h6>
-              <p className="mb-0">Online: Month before</p>
+              <h4 className="text-info-emphasis">{people.name}</h4>
             </div>
             <hr className="mt-1 text-secondary" />
 
             <div className="row">
               <div className="table-responsive col-md-10">
-                <table className="lh-lg table table-bordered  w-100">
+                <table className="lh-lg custom-table table-bordered  w-100">
                   <tbody>
                     <tr>
                       <td>

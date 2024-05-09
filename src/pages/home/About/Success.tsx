@@ -17,42 +17,38 @@ const Success = () => {
   }, []);
 
   return (
-    <div className=" my-5 bg-cng p-3 py-5 success-page">
-      <div className="row mx-auto ">
-        {data.map((item, index) => (
-          <>
-            {/* <div class="col-md-6 my-5"><div class="content"><h1>Rakib &amp; Mimi</h1><div class="d-flex fs-5 justify-content-between mb-3 px-1"><p class="my-1"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> Dhaka,Bangladesh</p><p class="my-1"><i class="fa-regular fa-calendar-days" aria-hidden="true"></i> 05 May 2024</p></div><p style="font-size: 19px; line-height: 31px;"> */}
+    <div className="container my-3 mx-auto row ">
+      {data.map((item, index) => (
+        <>
+          <div className="col-md-6 p- mb-5 success_page" key={index}>
+            <div className="p-3">
+              <h2 className="text-info-emphasis">{item.title}</h2>
+              <div className="d-flex fs-5 justify-content-between mb-3 px-1 text-info-emphasis">
+                <p className="my-1">
+                  <i className="fa-regular fa-calendar-days"></i>{" "}
+                  Dhaka,Bangladesh
+                </p>
 
-            <div className="col-md-6 my-5" key={index}>
-              <div className="">
-                <h1>{item.title}</h1>
-                <div className="d-flex fs-5 justify-content-between mb-3 px-1">
-                  <p className="my-1">
-                    <i className="fa-regular fa-calendar-days"></i>{" "}
-                    Dhaka,Bangladesh
-                  </p>
-
-                  <p className="my-1">
-                    <i className="fa-regular fa-calendar-days"></i> {item.date}
-                  </p>
-                </div>
-                <p style={{ fontSize: "19px", lineHeight: "31px" }}>
-                  {item.content}
+                <p className="my-1">
+                  <i className="fa-regular fa-calendar-days"></i> {item.date}
                 </p>
               </div>
+              <p
+                style={{
+                  fontSize: "17px",
+                  lineHeight: "26px",
+                  color: "#443b3bf7",
+                }}
+              >
+                {item.content}
+              </p>
             </div>
-            <div className="col-md-6" key={index}>
-              <div className="sticky-image-container">
-                <img
-                  className="img-fluid mt-5 sticky-image "
-                  src={item.imageSrc}
-                  alt=""
-                />
-              </div>
-            </div>
-          </>
-        ))}
-      </div>
+          </div>
+          <div className="col-md-6 p-0 mb-5" key={index}>
+            <img className="img-fluid " src={item.imageSrc} alt="" />
+          </div>
+        </>
+      ))}
     </div>
   );
 };

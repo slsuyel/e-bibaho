@@ -78,7 +78,7 @@ const Header = () => {
             <img src={logo} alt="" width={100} />
           </Navbar.Brand> */}
           <NavLink to={"/"} className=" text-decoration-none ">
-            <img src={logo} alt="" width={100} />
+            <img src={logo} alt="" width={80} />
           </NavLink>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
