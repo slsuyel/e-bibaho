@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import WhyUsCard from "./WhyUsCard";
 
 const WhyUs = () => {
   const [scrollMode, setScrollMode] = useState<"horizontal" | "vertical">(
@@ -40,49 +41,47 @@ const WhyUs = () => {
     };
   }, [scrollMode]);
 
-  const data = [1, 1, 1, 1, 11];
+  const data = [
+    {
+      title: "Personalized Matching",
+      description:
+        "At E-Bibaho, we understand that finding the right partner is about unique compatibility. Our platform uses advanced algorithms and personalized questionnaires to match you with individuals who share your values, interests, and life goals, ensuring a higher chance of meaningful connections.",
+    },
+    {
+      title: "Verified Profiles",
+      description:
+        "We prioritize your safety and trust. Each profile on E-Bibaho undergoes a stringent verification process, including ID checks and personal interviews, to ensure that all members are genuine and serious about marriage.",
+    },
+    {
+      title: "Privacy and Security",
+      description:
+        "Your privacy is paramount. E-Bibaho employs state-of-the-art security measures to protect your personal information and communication. Our privacy options allow you to control who sees your information and how they interact with you, giving you peace of mind.",
+    },
+    {
+      title: "User-Friendly Interface",
+      description:
+        "Whether you're tech-savvy or not, our platform is designed for ease of use. The intuitive design and straightforward navigation of E-Bibaho make your search for a life partner a hassle-free experience, accessible on both desktop and mobile devices.",
+    },
+    {
+      title: "Diverse Member Base",
+      description:
+        "Diversity is our strength. E-Bibaho hosts a wide array of profiles from different cultural, religious, and professional backgrounds, enriching your options and increasing the likelihood of finding someone who truly suits your personal preferences.",
+    },
+    {
+      title: "Dedicated Support",
+      description:
+        "Our commitment to your journey doesn’t stop at technology. E-Bibaho's dedicated customer service team is available to assist you with any questions or issues, providing timely and empathetic support to ensure a satisfying and successful matchmaking experience.",
+    },
+  ];
 
   return (
-    <div className="bg-grad" data-aos="fade-up">
-      <h1 className="position-relative py-4 text-center text-white text-wrap">
-        Why Us ?
+    <div className="">
+      <h1 className=" text-center mb-3 ">
+        Why <span className="fw-medium text-info-emphasis "> Us?</span>
       </h1>
-
-      <main className="scroll-container my-2 ">
-        {data.map(() => (
-          <section className="align-items-baseline hr-content justify-content-between row mx-auto px-4">
-            <div className="col-md-6 d-flex justify-content-center">
-              <div className="imgContainer">
-                <img
-                  width={400}
-                  height={400}
-                  className="myImg"
-                  src="https://bibahabd.net/wp-content/uploads/2021/11/Marriage-1.jpg"
-                  alt="Heart-shaped image"
-                />
-              </div>
-            </div>
-
-            <div className="content-wrapper col-md-6 text-end position-relative ">
-              <img
-                width={400}
-                height={400}
-                src="https://i.pinimg.com/originals/98/fc/40/98fc4058a79909e9298fb94c227adade.png"
-                alt=""
-                className="img-fluid "
-              />
-              <div className="content-txt">
-                <h2>Your Title</h2>
-                <p>
-                  Your paragraph Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Aspernatur numquam nihil minima at possimus,
-                  dolorum, vel ratione harum dolores aut, corporis optio
-                  blanditiis nostrum deserunt ipsum libero omnis delectus
-                  mollitia?
-                </p>
-              </div>
-            </div>
-          </section>
+      <main className="scroll-container">
+        {data.map((d) => (
+          <WhyUsCard data={d} />
         ))}
       </main>
     </div>

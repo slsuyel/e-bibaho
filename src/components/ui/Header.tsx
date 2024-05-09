@@ -7,7 +7,7 @@ import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
 const Header = () => {
-  const [isFixed, setIsFixed] = useState(false);
+  // const [isFixed, setIsFixed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [MobileMenu, setMobileMenu] = useState(false);
 
@@ -20,18 +20,18 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setIsFixed(offset > 0);
-    };
+    // const handleScroll = () => {
+    //   const offset = window.scrollY;
+    //   setIsFixed(offset > 0);
+    // };
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      // window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -58,10 +58,8 @@ const Header = () => {
     <>
       <Navbar
         expand="lg"
-        fixed={isFixed ? "top" : undefined}
-        className={`bg-grad p-0 py-2 font-maven  ${
-          isFixed ? "somoy-shaow " : ""
-        } ${isMobile ? "d-none" : "d-block"}`}
+        // fixed={isFixed ? "top" : undefined}
+        className={` p-0 py-2 font-maven  ${isMobile ? "d-none" : "d-block"}`}
       >
         <Container>
           {/* <Navbar.Brand href="/" className="p-0 ">

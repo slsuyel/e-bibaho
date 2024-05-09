@@ -43,6 +43,6 @@ export interface MenuBarProps {
 }
 
 export interface DataWhyUS {
-  name: string;
+  title: string;
   description: string;
 }

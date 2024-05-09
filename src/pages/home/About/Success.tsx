@@ -17,10 +17,10 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="container my-3 mx-auto row ">
+    <div className="container my-5 mx-auto row ">
       {data.map((item, index) => (
         <>
-          <div className="col-md-6 p- mb-5 success_page" key={index}>
+          <div className="col-md-6 p- mb-5 why-contents" key={index}>
             <div className="p-3">
               <h2 className="text-info-emphasis">{item.title}</h2>
               <div className="d-flex fs-5 justify-content-between mb-3 px-1 text-info-emphasis">

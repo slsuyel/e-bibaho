@@ -82,7 +82,7 @@ const BannerSlider = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className="bg-grad">
+    <div className="">
       <div className="mx-auto" style={{ width: isMobile ? "85%" : "90%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
@@ -99,7 +99,7 @@ const BannerSlider = () => {
                     {slide.title}
                   </h4>
                   <p
-                    className={`fs-6 text-center ${
+                    className={`fs-6 text-center text-white ${
                       index === currentSlide ? "animate-right" : "animate-zoom"
                     }`}
                   >
