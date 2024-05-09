@@ -72,7 +72,7 @@ const TopBride = () => {
         <Card
           hoverable
           key={index}
-          className={`rounded-0 why_us_page my-1 border-top border-2 res-card ${
+          className={`rounded-0 my-1 border-top border-2 res-card ${
             ["one", "two", "three", "four"][index % 4]
           }`}
         >

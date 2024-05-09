@@ -263,16 +263,20 @@ a {
 
 .one {
   top: 50px;
+  background: linear-gradient(to right, #f370f629, #e6d6f0, #ffbcf6);
 }
 
 .two {
   top: 90px;
+  background: linear-gradient(to right, #f470f6, #edd8fa, #efa6e5);
 }
 
 .three {
   top: 120px;
+  background: linear-gradient(to right, #f370f629, #e6d6f0, #ffbcf6);
 }
 
 .four {
   top: 160px;
+  background: linear-gradient(to right, #f470f6, #edd8fa, #efa6e5);
 }
