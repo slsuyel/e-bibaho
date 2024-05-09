@@ -17,13 +17,13 @@ const Success = () => {
   }, []);
 
   return (
-    <div className="container my-5 mx-auto row ">
+    <div className="container-fluid  my-5 mx-auto row ">
       {data.map((item, index) => (
         <>
           <div className="col-md-6 p- mb-5 why-contents" key={index}>
             <div className="p-3">
-              <h2 className="text-info-emphasis">{item.title}</h2>
-              <div className="d-flex fs-5 justify-content-between mb-3 px-1 text-info-emphasis">
+              <h2 className="">{item.title}</h2>
+              <div className="d-flex fs-5 justify-content-between mb-3 px-1 ">
                 <p className="my-1">
                   <i className="fa-regular fa-calendar-days"></i>{" "}
                   Dhaka,Bangladesh
@@ -33,11 +33,11 @@ const Success = () => {
                   <i className="fa-regular fa-calendar-days"></i> {item.date}
                 </p>
               </div>
+              <br />
               <p
                 style={{
                   fontSize: "17px",
                   lineHeight: "26px",
-                  color: "#443b3bf7",
                 }}
               >
                 {item.content}

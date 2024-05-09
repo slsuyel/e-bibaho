@@ -85,7 +85,7 @@ const Header = () => {
 
       {isMobile && (
         <>
-          <div className="align-items-center d-flex justify-content-between p-2 bg-grad">
+          <div className="align-items-center d-flex justify-content-between">
             <Navbar.Brand href="/" className="p-1 ">
               <img src={logo} alt="" width={120} />
             </Navbar.Brand>

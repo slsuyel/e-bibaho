@@ -72,7 +72,7 @@ const TopBride = () => {
         <Card
           hoverable
           key={index}
-          className={`rounded-0 my-1 border-top border-2 res-card ${
+          className={`rounded-0 my-1 border-top border-2 res-card  ${
             ["one", "two", "three", "four"][index % 4]
           }`}
         >
@@ -86,16 +86,16 @@ const TopBride = () => {
               />
             </div>
 
-            <div className="col-md-6  my-auto">
+            <div className="col-md-6  my-auto text-white">
               <div className="d-flex justify-content-between px-2 w-100">
-                <h4 className="text-info-emphasis">{people.name}</h4>
+                <h4 className="text-dark">{people.name}</h4>
               </div>
-              <hr className="mt-1 text-secondary" />
+              <hr className="mt-1 " />
 
               <div className="row">
                 <div className="table-responsive col-md-10">
-                  <table className="lh-lg custom-table table-bordered  w-100">
-                    <tbody>
+                  <table className="lh-lg custom-table table-bordered  w-100 ">
+                    <tbody className="">
                       <tr>
                         <td>
                           {people.age}, {people.height}

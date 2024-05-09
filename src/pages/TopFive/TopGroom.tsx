@@ -67,12 +67,12 @@ const data = [
 
 const TopGroom = () => {
   return (
-    <div className="top_five_container">
+    <div className="">
       {data.map((people, index) => (
         <Card
           hoverable
           key={index}
-          className={`rounded-0 why_us_page my-1 border-top border-2 res-card ${
+          className={`rounded-0  my-1 border-top border-2 res-card ${
             ["one", "two", "three", "four"][index % 4]
           }`}
         >
@@ -88,7 +88,7 @@ const TopGroom = () => {
 
             <div className="col-md-6  my-auto">
               <div className="d-flex justify-content-between px-2 w-100">
-                <h4 className="text-info-emphasis">{people.name}</h4>
+                <h4 className="text-dark">{people.name}</h4>
               </div>
               <hr className="mt-1 text-secondary" />
 
