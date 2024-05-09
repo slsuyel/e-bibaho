@@ -245,37 +245,34 @@ a {
 
 
 
-/* ------- */
-
-.contain {
-  position: relative;
-  height: 100vh !important;
-  overflow-y: auto;
-  -ms-overflow-style: none;
-  /* Hide scrollbar in IE and Edge */
-  scrollbar-width: none;
-  /* Hide scrollbar in Firefox */
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.contain::-webkit-scrollbar {
-  display: none;
-  /* Hide scrollbar in Chrome, Safari, and Opera */
-}
-
-.result-card {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.result-card.visible {
-  opacity: 1;
-}
-
-
 
 /* -------------- */
+
+
+.res-card {
+  box-sizing: border-box;
+  min-height: 400px;
+  border-radius: 32px;
+  position: sticky;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.one {
+  top: 50px;
+}
+
+.two {
+  top: 90px;
+}
+
+.three {
+  top: 120px;
+}
+
+.four {
+  top: 160px;
+}
