@@ -74,9 +74,13 @@ const Header = () => {
         } ${isMobile ? "d-none" : "d-block"}`}
       >
         <Container>
-          <Navbar.Brand href="/" className="p-0 ">
+          {/* <Navbar.Brand href="/" className="p-0 ">
             <img src={logo} alt="" width={100} />
-          </Navbar.Brand>
+          </Navbar.Brand> */}
+          <NavLink to={"/"} className=" text-decoration-none ">
+            <img src={logo} alt="" width={100} />
+          </NavLink>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav "

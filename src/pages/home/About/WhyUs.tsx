@@ -43,7 +43,7 @@ const WhyUs = () => {
   const data = [1, 1, 1, 1, 11];
 
   return (
-    <div className="bg-grad">
+    <div className="bg-grad" data-aos="fade-up">
       <h1 className="position-relative py-4 text-center text-white text-wrap">
         Why Us ?
       </h1>

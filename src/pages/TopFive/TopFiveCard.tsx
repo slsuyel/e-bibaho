@@ -1,23 +1,41 @@
 import { Card } from "antd";
 import { Link } from "react-router-dom";
 
-const TopFiveCard = () => {
+interface Person {
+  name: string;
+  photo: string;
+  age: string;
+  height: string;
+  location: string;
+  religion: string;
+  marital_status: string;
+  education: string;
+  occupation: string;
+  religious_practice: string;
+}
+
+interface TopFiveCardProps {
+  people: Person;
+}
+
+const TopFiveCard = ({ people }: TopFiveCardProps) => {
   return (
-    <div className="my-1" style={{ height: "100vh" }}>
-      <Card hoverable>
-        <div className="row mx-auto">
+    <div className="my-1 border-top border-2 ">
+      <Card hoverable className="rounded-0 " style={{ height: "100vh" }}>
+        <div className="row mx-auto my-auto">
           <div className="col-md-6 m-auto text-center">
             <img
-              width={330}
+              width={360}
               className="img-fluid "
               src="https://lasertreat.com.bd/public/images/doctors/Dr.-Shamma-Binte-Hafiz.jpeg"
-              alt=""
+              // src={people.photo}
+              alt={people.name}
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6  my-auto">
             <div className="d-flex justify-content-between px-2 w-100">
-              <h6>AWZZ5828</h6>
+              <h6>{people.name}</h6>
               <p className="mb-0">Online: Month before</p>
             </div>
             <hr className="mt-1 text-secondary" />
@@ -27,25 +45,28 @@ const TopFiveCard = () => {
                 <table className="lh-lg table table-bordered  w-100">
                   <tbody>
                     <tr>
-                      <td>26 Years, 5ft 1in</td>
-                      <td>Dhaka</td>
+                      <td>
+                        {people.age}, {people.height}
+                      </td>
+                      <td>{people.location}</td>
                     </tr>
                     <tr>
-                      <td>Muslim</td>
-                      <td>UnMarried</td>
+                      <td>{people.religion}</td>
+                      <td>{people.marital_status}</td>
                     </tr>
                     <tr>
-                      <td>MBBS / BDS</td>
-                      <td>Doctor</td>
+                      <td>{people.education}</td>
+                      <td>{people.occupation}</td>
                     </tr>
                     <tr>
-                      <td>Average religious</td>
+                      <td>{people.religious_practice}</td>
                       <td>Not Working</td>
                     </tr>
                     <tr>
                       <td>
                         <span>
-                          I'm an MBBS doctor. Currently living in Dhaka.
+                          I'm an {people.education} doctor. Currently living in{" "}
+                          {people.location}.
                         </span>
                       </td>
                       <td>

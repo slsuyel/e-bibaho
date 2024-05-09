@@ -4,7 +4,7 @@ const { Panel } = Collapse;
 
 const Help = () => {
   return (
-    <div className="row mx-auto align-items-center">
+    <div className="row mx-auto align-items-center" data-aos="fade-up">
       <div className="col-md-6">
         <img
           src="https://static.vecteezy.com/system/resources/previews/012/706/967/original/need-help-banner-label-badge-flat-icon-megaphone-design-vector.jpg"

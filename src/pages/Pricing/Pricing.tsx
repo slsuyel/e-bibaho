@@ -113,7 +113,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="pricing-container py-5">
+    <div className="pricing-container py-5" data-aos="fade-up">
       <div
         className="mx-auto pricing-slick container"
         style={{ width: isMobile ? "80%" : "99%" }}

@@ -15,7 +15,7 @@ const Home = () => {
       <Mediator />
       <HowWork />
       <Success />
-      {/* <SuccessStory /> */}
+      {/* <SuccessStory  /> */}
       <Faq />
       <ContactCard />
     </div>

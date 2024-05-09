@@ -12,6 +12,7 @@ import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store";
 import Cursor from "./components/ui/Cursor";
+import "aos/dist/aos.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

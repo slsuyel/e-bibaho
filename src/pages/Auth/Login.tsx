@@ -16,7 +16,7 @@ const Login = () => {
   };
 
   return (
-    <div className="row mx-auto font-maven regi-page">
+    <div data-aos="fade-up" className="row mx-auto font-maven regi-page">
       <div className="col-md-4 mx-auto my-5">
         <div className="p-3 w-100 mx-auto border-0 card  shadow-lg text-info-emphasis">
           <div className="text-center">
