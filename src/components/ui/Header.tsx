@@ -52,16 +52,6 @@ const Header = () => {
       label: "Pricing",
       link: "/pricing",
     },
-    {
-      id: 4,
-      label: "Why",
-      link: "/why",
-    },
-    {
-      id: 4,
-      label: "Top 5",
-      link: "/top",
-    },
   ];
 
   return (

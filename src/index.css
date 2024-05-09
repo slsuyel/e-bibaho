@@ -215,15 +215,53 @@ a {
   opacity: 0.8;
 }
 
-/* ---------Top 5 start */
+
+
+/*  */
+.custom-table {
+  border-collapse: collapse;
+}
+
+.custom-table td,
+.custom-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: rgb(39, 5, 5);
+  font-size: 17px;
+}
+
+/* WhyUs.css */
+.scroll-container {
+  overflow-x: hidden;
+  display: flex;
+}
+
+
+
+.hr-content {
+  min-height: 80vh;
+  min-width: 100%;
+}
+
+
+
+/* ------- */
 
 .contain {
   position: relative;
-  height: 100vh;
+  height: 100vh !important;
   overflow-y: auto;
   -ms-overflow-style: none;
+  /* Hide scrollbar in IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
+  /* Hide scrollbar in Firefox */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contain::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
 .result-card {
@@ -239,30 +277,5 @@ a {
 }
 
 
-/* Top 5 end */
 
-/* WhyUs.css */
-.scroll-container {
-  overflow-x: hidden;
-  display: flex;
-}
-
-
-
-.hr-content {
-  min-height: 80vh;
-  min-width: 100%;
-}
-
-/*  */
-.custom-table {
-  border-collapse: collapse;
-}
-
-.custom-table td,
-.custom-table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  color: rgb(39, 5, 5);
-  font-size: 17px;
-}
+/* -------------- */
