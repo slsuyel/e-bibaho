@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+@font-face {
+  font-family: 'helvetica';
+  src: url('./assets/fonts/helvetica-light-587ebe5a59211.ttf') format('.ttf');
 
+}
 
 * {
   margin: 0;
@@ -9,9 +12,22 @@
 }
 
 body {
-  font-family: 'Maven Pro';
-  /* max-width: 1300px; */
+  body {
+    font-family: 'helvetica', sans-serif;
+  }
+
   margin: 0 auto;
+}
+
+.font-maven {
+  font-family: 'helvetica', sans-serif;
+}
+
+
+
+
+.ant-form-item-label {
+  font-family: 'helvetica', sans-serif;
 }
 
 /* 
@@ -50,16 +66,7 @@ body {
 }
 
 
-.font-maven {
-  font-family: 'Maven Pro';
-}
 
-
-
-
-.ant-form-item-label {
-  font-family: 'Maven Pro' !important;
-}
 
 a.nav-link.active {
   color: #dfd19b;

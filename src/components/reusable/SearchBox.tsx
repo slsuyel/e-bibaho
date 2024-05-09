@@ -28,7 +28,6 @@ const SearchBox = () => {
                 id="looking_id"
                 className="form-control"
               >
-                <option value="">looking for</option>
                 <option value={0}>Bride</option>
                 <option value={1}>Groom</option>
               </select>
@@ -41,7 +40,6 @@ const SearchBox = () => {
                 Religion
               </label>
               <select name="religion" id="community" className="form-control">
-                <option value="">Religion</option>
                 <option value={1}>Muslim</option>
                 <option value={2}>Hindu</option>
                 <option value={3}>Christian</option>
@@ -67,7 +65,9 @@ const SearchBox = () => {
           </div>
           <div className="col-md-2">
             <div className="form-group my-1">
-              <label className="control-label text-info-emphasis">Age to</label>
+              <label className="control-label text-info-emphasis">
+                Age from
+              </label>
               <select id="marital" className="form-control">
                 {[...Array(80 - 19)].map((_, index) => (
                   <option key={index + 19}>{index + 19}</option>
