@@ -48,17 +48,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('https://i.pinimg.com/originals/2d/28/84/2d28849758e2090650988c272c92c495.jpg');
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-photo/colorful-waves-geometric-shapes-background-pattern-wallpaper-with-colorful-color-gradient_737376-1846.jpg?w=826');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* transition: opacity 0.5s ease; */
-    opacity: 0.7;
+
+    z-index: -1;
 }
 
-.regi-page:hover::before {
-    opacity: 1;
-}
+
 
 .accordion-button {
     background-color: #055160;

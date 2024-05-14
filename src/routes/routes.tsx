@@ -2,8 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { routeGenerator } from "../utils/routesGenerator";
 
-import Login from "../pages/Auth/Login";
-
 import Home from "../pages/home/Home/Home";
 
 import OutSideLayout from "../components/layouts/OutSideLayout";
@@ -36,6 +34,7 @@ import Help from "../pages/Help/Help";
 import EditProfileInfo from "../pages/user/Profile/Edit/EditProfileInfo";
 import WhyUs from "../pages/home/About/WhyUs";
 import TopFive from "../pages/TopFive/TopFive";
+import NewLogin from "../pages/Auth/NewLogin";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +49,7 @@ const router = createBrowserRouter([
 
       {
         path: "/login",
-        element: <Login />,
+        element: <NewLogin />,
       },
       {
         path: "/register",
