@@ -325,3 +325,9 @@ a {
   width: 40px;
   color: #8000bd
 }
+
+/* --------- */
+
+.banner_slide_img {
+  margin-bottom: -4px !important;
+}
