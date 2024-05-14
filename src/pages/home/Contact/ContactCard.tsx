@@ -1,6 +1,10 @@
 const ContactCard = () => {
   return (
-    <div className="container border shadow my-5 py-2">
+    <div
+      className="container border  my-5 py-2 py-5 "
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div className="row mx-auto align-items-center">
         <div className="col-lg-4 my-1 text-center">
           <img

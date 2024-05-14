@@ -78,7 +78,7 @@ const Cursor = () => {
         style={{ left: position.x, top: position.y }}
       ></div>
       <div
-        className="shadow"
+        className="cursor_shadow"
         style={{ left: position.x - 10, top: position.y - 10 }}
       ></div>
     </>

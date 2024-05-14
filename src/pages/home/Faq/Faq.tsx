@@ -27,7 +27,11 @@ function Faq() {
   ];
 
   return (
-    <div className="container py-4">
+    <div
+      className="container py-4 my-3 "
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <h3 className="text-center mb-3">
         Frequently <span className="text-info-emphasis">Asked Questions</span>
       </h3>

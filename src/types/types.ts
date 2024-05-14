@@ -46,3 +46,16 @@ export interface DataWhyUS {
   title: string;
   description: string;
 }
+
+export interface Person {
+  name: string;
+  photo: string;
+  age: string;
+  height: string;
+  location: string;
+  religion: string;
+  marital_status: string;
+  education: string;
+  occupation: string;
+  religious_practice: string;
+}

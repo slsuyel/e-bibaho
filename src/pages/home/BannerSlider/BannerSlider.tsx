@@ -82,7 +82,11 @@ const BannerSlider = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className="">
+    <div
+      className="position-relative "
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <div className="mx-auto" style={{ width: isMobile ? "83%" : "90%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
@@ -90,7 +94,7 @@ const BannerSlider = () => {
               <div className="row mx-auto">
                 <div className="col-md-6 my-auto d-none d-md-block">
                   <h4
-                    className={`fs-3 text-center border  ${
+                    className={`fs-2 text-center border text-white ${
                       index === currentSlide
                         ? "animate-top "
                         : "animate-zoom text-white"
@@ -138,6 +142,12 @@ const BannerSlider = () => {
             </div>
           ))}
         </Slider>
+      </div>
+
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
       </div>
     </div>
   );

@@ -75,7 +75,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <div className="">
+    <div className="my-4" data-aos="fade-up" data-aos-duration="2000">
       <h1 className=" text-center mb-3 ">
         Why <span className="fw-medium text-info-emphasis "> Us?</span>
       </h1>

@@ -5,7 +5,7 @@ import BackBtn from "../../components/reusable/BackBtn";
 
 const SingleProfile = () => {
   return (
-    <div className="bg-dark-subtle">
+    <div className="bg-dark-subtle" data-aos="fade-up" data-aos-duration="1000">
       <div className="row mx-auto container">
         <div className="my-1 mt-4">
           <BackBtn />

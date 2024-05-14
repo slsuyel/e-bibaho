@@ -21,7 +21,6 @@ const OutSideLayout = () => {
       {
         <div className="animation-bg">
           <Header data-aos="fade-down" />
-
           {location.pathname == "/" && <BannerSlider />}
         </div>
       }

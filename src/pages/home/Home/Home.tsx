@@ -15,6 +15,7 @@ const Home = () => {
     <div>
       {/* <BannerSlider /> */}
       <HeroSection />
+
       <Mediator />
       <HowWork />
       <TopFive />

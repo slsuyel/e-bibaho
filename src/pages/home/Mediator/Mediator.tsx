@@ -60,13 +60,15 @@ const Mediator = () => {
   };
   const isMobile = useIsMobile();
   return (
-    <div className="my-5 somoy-shaow ">
-      <h1 className="font-maven  text-center mb-3 ">
+    <div className="my-5 " data-aos="fade-up" data-aos-duration="2000">
+      <br />
+      <br />
+      <h1 className="text-center mb-3 ">
         Our Valuable
         <span className="fw-medium text-info-emphasis "> Mediators</span>
       </h1>
       <div
-        className="mx-auto bg-grad py-4"
+        className="mx-auto bg-grad py-5"
         style={{ width: isMobile ? "90%" : "100%" }}
       >
         <Slider {...settings}>

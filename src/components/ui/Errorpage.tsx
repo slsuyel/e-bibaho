@@ -1,7 +1,7 @@
 import { Button, Result } from "antd";
 import { ResultStatusType } from "antd/es/result";
 
-import { useNavigate, useRouteError } from "react-router-dom";
+import { Link, useNavigate, useRouteError } from "react-router-dom";
 
 interface ErrorpageProps {
   status: ResultStatusType;
@@ -21,8 +21,9 @@ const Errorpage: React.FC<ErrorpageProps> = ({ status }) => {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
-        <div className="col-md-6">
+        <div className="col-md-6 text-center ">
           <Result
+            className="p-1"
             status={status}
             title={status}
             subTitle={
@@ -33,10 +34,13 @@ const Errorpage: React.FC<ErrorpageProps> = ({ status }) => {
             }
             extra={
               <Button type="primary" onClick={handleGoBack}>
-                Back Home
+                Back
               </Button>
             }
           />
+          <Link className="btn btn-primary " to={"/"}>
+            Back to Home
+          </Link>
         </div>
       </div>
     </div>

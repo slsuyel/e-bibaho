@@ -2,7 +2,7 @@ import SearchBox from "../../../components/reusable/SearchBox";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section position-relative my-3 ">
+    <div className="hero-section position-relative" id="wrap">
       <SearchBox />
     </div>
   );
