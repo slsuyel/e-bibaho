@@ -1,10 +1,10 @@
 import Slider from "react-slick";
+import new1 from "../../../assets/sliders/Untitled design.png";
 import img1 from "../../../assets/sliders/1.png";
-import img3 from "../../../assets/sliders/2.png";
-import img5 from "../../../assets/sliders/3.png";
-import img6 from "../../../assets/sliders/4.png";
-import img9 from "../../../assets/sliders/5.png";
-import img10 from "../../../assets/sliders/7.png";
+import img2 from "../../../assets/sliders/2.png";
+import img3 from "../../../assets/sliders/3.png";
+import img4 from "../../../assets/sliders/4.png";
+import img6 from "../../../assets/sliders/7.png";
 import { useState } from "react";
 
 // import { Link } from "react-router-dom";
@@ -15,15 +15,7 @@ const BannerSlider = () => {
 
   const slides = [
     {
-      img: img1,
-      title: "Compatible Life Partner?",
-      description: "If you're searching for a compatible life partner ",
-      buttonText: "About Us",
-      btnSlug: "/",
-      btnCss: "",
-    },
-    {
-      img: img3,
+      img: img2,
       title: "Trusted worldwide matrimony and matchmaking service",
       description:
         "This is the place to find a companion for your life journey. If you prefer not to search for ",
@@ -32,7 +24,7 @@ const BannerSlider = () => {
       btnCss: "",
     },
     {
-      img: img5,
+      img: img3,
       title: "World’s Number 1 for reliability and Fairness",
       description: "Advanced privacy-oriented ",
       buttonText: "Find a Partner!",
@@ -40,7 +32,7 @@ const BannerSlider = () => {
       btnCss: "",
     },
     {
-      img: img6,
+      img: img4,
       title: "Journey Together Towards a Shared Future-Connect here",
       description: "You've come to a platform that prioritizes privacy",
       buttonText: "Create Profile",
@@ -48,7 +40,7 @@ const BannerSlider = () => {
       btnCss: "",
     },
     {
-      img: img9,
+      img: img1,
       title: "Connecting Souls,Creating Future       ",
       description: "Here, you've arrived at a privacy-oriented platform ",
       buttonText: "Successful Matches",
@@ -56,11 +48,19 @@ const BannerSlider = () => {
       btnCss: "",
     },
     {
-      img: img10,
+      img: img6,
       title: "Discover your perfect Match",
       description:
         "Here, you'll find a secure and privacy-based life partner search site that safeguards your sensitive ",
       buttonText: "All Matches Together",
+      btnSlug: "/",
+      btnCss: "",
+    },
+    {
+      img: new1,
+      title: "Journey Together Towards a Shared Future-Connect here",
+      description: "You've come to a platform that prioritizes privacy",
+      buttonText: "Create Profile",
       btnSlug: "/",
       btnCss: "",
     },
@@ -71,7 +71,7 @@ const BannerSlider = () => {
     autoplay: true,
     fade: true,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     waitForAnimate: true,

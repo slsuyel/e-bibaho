@@ -47,17 +47,17 @@ const Success = () => {
     <div data-aos="fade-up" data-aos-duration="2000" className="my-5">
       <div className="container-fluid  my-5 mx-auto px-2 stack">
         {data.map((item, index) => (
-          <div key={index} className="row mx-2 stack__card my-2 ">
+          <div key={index} className="row mx-2 stack__card my-5 ">
             <div className="col-md-6 text-white ">
               <div className="p-3">
                 <h2 className="">{item.title}</h2>
                 <div className="d-flex fs-5 justify-content-between mb-3 px-1 ">
-                  <p className="my-1">
+                  {/* <p className="my-1">
                     <i className="fa-regular fa-calendar-days"></i>{" "}
                     Dhaka,Bangladesh
-                  </p>
+                  </p> */}
 
-                  <p className="my-1">
+                  <p className="my-0 fs-6">
                     <i className="fa-regular fa-calendar-days"></i> {item.date}
                   </p>
                 </div>

@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/newlogo.png";
+import logo from "../../assets/images/logo_new.png";
+// import logo from "../../assets/images/newlogo.png";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
@@ -65,8 +66,8 @@ const Header = () => {
           {/* <Navbar.Brand href="/" className="p-0 ">
             <img src={logo} alt="" width={100} />
           </Navbar.Brand> */}
-          <NavLink to={"/"} className=" text-decoration-none ">
-            <img src={logo} alt="" width={80} />
+          <NavLink to={"/"} className=" text-decoration-none mt-1">
+            <img src={logo} alt="" width={150} />
           </NavLink>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
