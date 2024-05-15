@@ -1,6 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Card from "./Card";
+import useIsMobile from "../../../../hooks/useIsMobile";
 
 const data = [
   {
@@ -31,6 +32,8 @@ const data = [
 ];
 
 const HorizontalScrollCarousel = () => {
+  const isMobile = useIsMobile();
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -39,15 +42,25 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-395%"]);
 
   return (
-    <section ref={targetRef} className="HorizontalScrollCarousel">
-      <div className="sticky_horizontal">
-        <motion.div style={{ x }} className="d-flex gap-5">
+    <>
+      {isMobile ? (
+        <div className="stack">
           {data.map((data) => {
             return <Card data={data} key={data.title} />;
           })}
-        </motion.div>
-      </div>
-    </section>
+        </div>
+      ) : (
+        <section ref={targetRef} className="HorizontalScrollCarousel">
+          <div className="sticky_horizontal">
+            <motion.div style={{ x }} className="d-flex gap-5">
+              {data.map((data) => {
+                return <Card data={data} key={data.title} />;
+              })}
+            </motion.div>
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 export default HorizontalScrollCarousel;

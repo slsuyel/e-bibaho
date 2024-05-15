@@ -17,6 +17,14 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
     }
   };
 
+  const handleTouchMenuClick = () => {
+    setVisible(!visible);
+    const menuElement = document.querySelector(".menu");
+    if (menuElement) {
+      menuElement.classList.toggle("opened");
+    }
+  };
+
   return (
     <div
       style={{
@@ -37,6 +45,7 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
           <button
             className={`menu menu-box p-1 ${visible ? "opened" : ""}`}
             onClick={handleMenuClick}
+            onTouchStart={handleTouchMenuClick}
             aria-label="Main Menu"
             style={{
               position: "fixed",

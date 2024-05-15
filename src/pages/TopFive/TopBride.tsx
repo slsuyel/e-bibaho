@@ -30,9 +30,7 @@ const TopBride = ({ data }: PersonProps) => {
                 <p className="br_text">
                   My name is Emma. I'm a 32-year-old Muslim woman living in
                   Dhaka. Standing at 5 feet 3 inches, I am married and work as a
-                  doctor. I hold a degree in MBBS and practice medicine with
-                  dedication and compassion. My religious practice is moderate,
-                  guiding my life and actions.
+                  doctor.
                 </p>
                 <div className="table-responsive col-md-10">
                   <table className="lh-lg table">

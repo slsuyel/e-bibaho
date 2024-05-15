@@ -25,7 +25,7 @@ const Header = () => {
       link: "/login",
     },
     {
-      id: 3,
+      id: 4,
       label: "Help",
       link: "/help",
     },

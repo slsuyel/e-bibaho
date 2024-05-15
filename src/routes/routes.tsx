@@ -32,7 +32,7 @@ import Cart from "../pages/Pricing/Cart";
 import Help from "../pages/Help/Help";
 
 import EditProfileInfo from "../pages/user/Profile/Edit/EditProfileInfo";
-import WhyUs from "../pages/home/About/WhyUs";
+
 import TopFive from "../pages/TopFive/TopFive";
 import NewLogin from "../pages/Auth/NewLogin";
 
@@ -63,10 +63,7 @@ const router = createBrowserRouter([
         path: "/help",
         element: <Help />,
       },
-      {
-        path: "/why",
-        element: <WhyUs />,
-      },
+
       {
         path: "/pricing",
         element: <Pricing />,
