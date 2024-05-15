@@ -20,7 +20,7 @@ const OutSideLayout = () => {
   return (
     <ScrollToTop>
       {
-        <div className="animation-bg">
+        <div className="animation-bg ">
           <Header data-aos="fade-down" />
           {location.pathname == "/" && <BannerSlider />}
         </div>

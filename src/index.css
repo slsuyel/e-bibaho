@@ -39,7 +39,7 @@
 
 
 .animation-bg {
-  background-image: linear-gradient(125deg, #2c3e50, #8e44ad, #e67e22, #e74c3c, #16a085);
+  background-image: linear-gradient(125deg, #2c3e50, #8e44ad, #e67e22, #4e54c8, #16a085);
   background-repeat: no-repeat;
   background-size: 400%;
   animation: bganimation 15s infinite;

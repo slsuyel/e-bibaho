@@ -144,7 +144,18 @@ const BannerSlider = () => {
           ))}
         </Slider>
       </div>
-
+      <ul className="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div className="ocean">
         <div className="wave"></div>
         <div className="wave"></div>
