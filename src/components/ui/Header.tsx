@@ -53,6 +53,11 @@ const Header = () => {
       label: "Pricing",
       link: "/pricing",
     },
+    {
+      id: 3,
+      label: "Profile",
+      link: "user/profile",
+    },
   ];
 
   return (

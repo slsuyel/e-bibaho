@@ -1,5 +1,5 @@
 .menu-box {
-    background: linear-gradient(to right, rgb(179, 148, 237), rgb(215, 136, 213));
+    background: linear-gradient(to right, #000000, #623b61);
     border-radius: 50%;
     transition: transform 0.3s ease;
     box-shadow: 0px 3px 8px 7px rgb(234 89 241 / 46%)
@@ -8,8 +8,8 @@
 .menu-box:hover {
     transform: scale(1.1);
     /* Example transformation */
-    box-shadow: 0px 5px 15px 10px rgb(234 89 241 / 60%);
-    /* Example shadow */
+    box-shadow: 0 1px 10px 6px #d26fff99
+        /* Example shadow */
 }
 
 

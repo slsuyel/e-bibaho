@@ -50,8 +50,8 @@ const FooterTop = () => {
   };
 
   return (
-    <div className="bg-grad py-3 somoy-shaow ">
-      <h4 className=" text-center text-warning-emphasis">
+    <div className="animation-bg somoy-shaow">
+      <h4 className=" text-center text-white mb-0 py-3">
         Uniting{" "}
         <span id="demo" className="change-word">
           {" "}

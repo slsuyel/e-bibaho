@@ -259,7 +259,6 @@ a {
 
 
 .hr-content {
-  /* min-height: 80vh; */
   min-width: 100%;
   text-align: start;
 }
@@ -330,4 +329,56 @@ a {
 
 .banner_slide_img {
   margin-bottom: -4px !important;
+}
+
+/* ------------ */
+
+.HorizontalScrollCarousel {
+  position: relative;
+  height: 200vh;
+}
+
+.sticky_horizontal {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.group_horizontal {
+  position: relative;
+  height: auto;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.absolute-element_horizontal {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.group_horizontal:hover .absolute-element_horizontal {
+  transform: scale(1.1);
+}
+
+.absolute-element {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+}
+
+.horizontal_background {
+  padding: 8px;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  backdrop-filter: blur(20px);
 }

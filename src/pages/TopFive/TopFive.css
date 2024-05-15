@@ -76,9 +76,12 @@
 
 .br_card img {
     width: 400px;
+    /* max-width: 100%; */
     min-width: 80px;
     box-shadow: 0 0 0 5px #FFF;
 }
+
+
 
 .br_infos {
     margin-left: 1.5rem;
@@ -123,17 +126,23 @@
 
 
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 576px) {
     .br_card {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .br_card img {
+        width: 200px;
     }
 
     .br_infos {
-        margin-left: 0;
-        margin-top: 1.5rem;
+        /* background-color: #333; */
+        width: 100%;
+        margin: 0;
     }
 
-    .br_links button {
-        min-width: 100px;
-    }
 }

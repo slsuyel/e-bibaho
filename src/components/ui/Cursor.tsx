@@ -67,7 +67,7 @@ const Cursor = () => {
     };
   }, []);
 
-  if (isMobile || !isMobile) {
+  if (isMobile) {
     return null;
   }
 

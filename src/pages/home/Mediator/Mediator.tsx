@@ -64,8 +64,8 @@ const Mediator = () => {
       <br />
       <br />
       <h1 className="text-center mb-3 ">
-        Our Valuable
-        <span className="fw-medium text-info-emphasis "> Mediators</span>
+        Our
+        <span className="fw-medium text-info-emphasis "> Ecosystem</span>
       </h1>
       <div
         className="mx-auto bg-grad py-5"

@@ -20,7 +20,7 @@ const TopBride = ({ data }: PersonProps) => {
           >
             <div className="br_card">
               <div className="br_img">
-                <img src={people.photo} />
+                <img src={people.photo} className="" />
               </div>
               <div className="br_infos">
                 <div className="br_name">
