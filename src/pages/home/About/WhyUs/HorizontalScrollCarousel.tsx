@@ -36,7 +36,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-395%"]);
 
   return (
     <section ref={targetRef} className="HorizontalScrollCarousel">

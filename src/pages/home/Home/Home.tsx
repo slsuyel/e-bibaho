@@ -2,9 +2,8 @@ import TopFive from "../../TopFive/TopFive";
 
 import HowWork from "../About/HowWork";
 import Success from "../About/Success";
-import WhyUs from "../About/WhyUs";
 // import WhyUs from "../About/WhyUs";
-// import WhyUsNew from "../About/WhyUs/WhyUsNew";
+import WhyUsNew from "../About/WhyUs/WhyUsNew";
 
 import ContactCard from "../Contact/ContactCard";
 import Faq from "../Faq/Faq";
@@ -20,9 +19,9 @@ const Home = () => {
       <HowWork />
       <TopFive />
       <Success />
-      <WhyUs />
+      {/* <WhyUs /> */}
 
-      {/* <WhyUsNew /> */}
+      <WhyUsNew />
       <Faq />
       <ContactCard />
     </div>
