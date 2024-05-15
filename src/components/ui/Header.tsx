@@ -1,16 +1,14 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../assets/images/logo_new.png";
-// import logo from "../../assets/images/newlogo.png";
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Button, Drawer } from "antd";
-import { MenuOutlined } from "@ant-design/icons";
+import { useState } from "react";
+import { Drawer } from "antd";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const Header = () => {
-  // const [isFixed, setIsFixed] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [MobileMenu, setMobileMenu] = useState(false);
+  const isMobile = useIsMobile();
 
   const showDrawer = () => {
     setMobileMenu(true);
@@ -19,23 +17,6 @@ const Header = () => {
   const onClose = () => {
     setMobileMenu(false);
   };
-
-  useEffect(() => {
-    // const handleScroll = () => {
-    //   const offset = window.scrollY;
-    //   setIsFixed(offset > 0);
-    // };
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    // window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      // window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const menuItems = [
     {
@@ -65,12 +46,9 @@ const Header = () => {
       <Navbar
         expand="lg"
         // fixed={isFixed ? "top" : undefined}
-        className={` p-0 py-2 font-maven  ${isMobile ? "d-none" : "d-block"}`}
+        className={` p-0 py-3 ${isMobile ? "d-none" : "d-block"}`}
       >
         <Container>
-          {/* <Navbar.Brand href="/" className="p-0 ">
-            <img src={logo} alt="" width={100} />
-          </Navbar.Brand> */}
           <NavLink to={"/"} className=" text-decoration-none mt-1">
             <img src={logo} alt="" width={150} />
           </NavLink>
@@ -91,13 +69,23 @@ const Header = () => {
 
       {isMobile && (
         <>
-          <div className="align-items-center d-flex justify-content-between">
-            <Navbar.Brand href="/" className="p-1 ">
+          <div className="align-items-center d-flex justify-content-between py-3 px-2">
+            <Navbar.Brand href="/" className="">
               <img src={logo} alt="" width={120} />
             </Navbar.Brand>
-            <Button type="primary" className="rounded-0 " onClick={showDrawer}>
+
+            {/* <Button type="primary" className="">
               <MenuOutlined />
-            </Button>
+            </Button> */}
+
+            <div
+              className={`hamburger ${MobileMenu ? "active" : ""}`}
+              onClick={showDrawer}
+            >
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
           </div>
 
           <Drawer
@@ -107,7 +95,7 @@ const Header = () => {
             open={MobileMenu}
           >
             {menuItems.map((item) => (
-              <NavLink key={item.id} to={item.link} className="nav-link ">
+              <NavLink key={item.id} to={item.link} className="nav-link fs-4">
                 {item.label}
               </NavLink>
             ))}

@@ -67,14 +67,14 @@ const Cursor = () => {
     };
   }, []);
 
-  if (isMobile || !isMobile) {
+  if (isMobile) {
     return null;
   }
 
   return (
     <>
       <div
-        className="cursor"
+        className="cursor_circle"
         style={{ left: position.x, top: position.y }}
       ></div>
       <div

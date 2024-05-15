@@ -81,13 +81,14 @@ const BannerSlider = () => {
     setCurrentSlide(newIndex);
   };
   const isMobile = useIsMobile();
+
   return (
     <div
       className="position-relative "
       data-aos="fade-up"
       data-aos-duration="2000"
     >
-      <div className="mx-auto" style={{ width: isMobile ? "83%" : "90%" }}>
+      <div className="mx-auto" style={{ width: isMobile ? "80%" : "90%" }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>

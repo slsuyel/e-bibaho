@@ -4,15 +4,23 @@ function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
+    function checkIsMobile() {
+      const userAgent = navigator.userAgent;
+      setIsMobile(
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          userAgent
+        )
+      );
     }
-    handleResize();
-    window.addEventListener("resize", handleResize);
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", checkIsMobile);
     };
   }, []);
+
   return isMobile;
 }
 

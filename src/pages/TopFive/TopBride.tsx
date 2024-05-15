@@ -58,7 +58,7 @@ const TopBride = ({ data }: PersonProps) => {
                     </tbody>
                   </table>
                 </div>
-                <div className="br_links d-flex gap-2">
+                <div className="br_links d-flex gap-2 flex-wrap justify-content-between  ">
                   <button className="m-0 mb-3 ">
                     <i className="fa-solid fs-5 fa-phone"></i>
                   </button>

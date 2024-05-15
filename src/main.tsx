@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store";
 import Cursor from "./components/ui/Cursor";
 import "aos/dist/aos.css";
+import { GoToTop } from "go-to-top-react";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <PersistGate loading={null} persistor={persistor}></PersistGate>
       <RouterProvider router={router} />
       <Cursor />
+      <GoToTop />
     </Provider>
   </React.StrictMode>
 );

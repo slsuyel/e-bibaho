@@ -1572,7 +1572,7 @@ globby@^11.1.0:
 
 go-to-top-react@^0.0.1:
   version "0.0.1"
-  resolved "https://registry.npmjs.org/go-to-top-react/-/go-to-top-react-0.0.1.tgz"
+  resolved "https://registry.npmjs.org/go-to-top-react/-/go-to-top-react-0.0.1.tgz#bea0d077e99833615ce9c4c556c4a7b13a73ee6d"
   integrity sha512-fi7OsmIRptIbrbnaJqNI5H8vdA8yzkmKy9SXalnd7mxp+hgI/nddYAhJh3U3JQaTTb3rhflbSvrKXqkVtgLbrQ==
   dependencies:
     react "^18.2.0"

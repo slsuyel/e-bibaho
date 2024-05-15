@@ -47,10 +47,7 @@
     z-index: -1;
 }
 
-.slick-next:before,
-.slick-prev:before {
-    color: #0540ef !important;
-}
+
 
 
 .price_table {

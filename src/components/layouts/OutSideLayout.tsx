@@ -1,8 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../ui/Header";
-// import Footer from "../ui/Footer";
 import ScrollToTop from "../../utils/ScrollToTop";
-import { GoToTop } from "go-to-top-react";
 import BottomToggleMenu from "../ui/BottomToggleMenu";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -12,11 +10,7 @@ const OutSideLayout = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
   const location = useLocation();
-
-  // console.log(location.pathname);
-
   return (
     <ScrollToTop>
       {
@@ -26,10 +20,8 @@ const OutSideLayout = () => {
         </div>
       }
       <Outlet />
-
       <Footer />
       <BottomToggleMenu />
-      <GoToTop />
     </ScrollToTop>
   );
 };
