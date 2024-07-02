@@ -1,10 +1,10 @@
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/logo_new.png";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import { Drawer } from "antd";
-import useIsMobile from "../../hooks/useIsMobile";
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import logo from '../../assets/images/newlogoupdate.png';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Drawer } from 'antd';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const Header = () => {
   const [MobileMenu, setMobileMenu] = useState(false);
@@ -21,23 +21,23 @@ const Header = () => {
   const menuItems = [
     {
       id: 1,
-      label: "Login",
-      link: "/login",
+      label: 'Login',
+      link: '/login',
     },
     {
       id: 4,
-      label: "Help",
-      link: "/help",
+      label: 'Help',
+      link: '/help',
     },
     {
       id: 2,
-      label: "Pricing",
-      link: "/pricing",
+      label: 'Pricing',
+      link: '/pricing',
     },
     {
       id: 3,
-      label: "Profile",
-      link: "user/profile",
+      label: 'Profile',
+      link: 'user/profile',
     },
   ];
 
@@ -46,10 +46,10 @@ const Header = () => {
       <Navbar
         expand="lg"
         // fixed={isFixed ? "top" : undefined}
-        className={` p-0 py-3 ${isMobile ? "d-none" : "d-block"}`}
+        className={` p-0 py-3 ${isMobile ? 'd-none' : 'd-block'}`}
       >
         <Container>
-          <NavLink to={"/"} className=" text-decoration-none mt-1">
+          <NavLink to={'/'} className=" text-decoration-none mt-1">
             <img src={logo} alt="" width={150} />
           </NavLink>
 
@@ -58,7 +58,7 @@ const Header = () => {
             id="basic-navbar-nav "
             className="justify-content-end fs-5 text-white fw-semibold gap-3"
           >
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <NavLink key={item.id} to={item.link} className="nav-link ">
                 {item.label}
               </NavLink>
@@ -79,7 +79,7 @@ const Header = () => {
             </Button> */}
 
             <div
-              className={`hamburger ${MobileMenu ? "active" : ""}`}
+              className={`hamburger ${MobileMenu ? 'active' : ''}`}
               onClick={showDrawer}
             >
               <span className="bar"></span>
@@ -89,12 +89,12 @@ const Header = () => {
           </div>
 
           <Drawer
-            style={{ backgroundColor: "#be93b6", width: "60%" }}
+            style={{ backgroundColor: '#be93b6', width: '60%' }}
             placement="left"
             onClose={onClose}
             open={MobileMenu}
           >
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <NavLink key={item.id} to={item.link} className="nav-link fs-4">
                 {item.label}
               </NavLink>

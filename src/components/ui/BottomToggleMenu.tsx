@@ -1,37 +1,45 @@
-import Draggable from "react-draggable";
-import { useState } from "react";
-import { Menu } from "antd";
-
-import "../Styles/Components.css";
+import Draggable from 'react-draggable';
+import { useState } from 'react';
+import { Menu } from 'antd';
 
 interface BottomToggleMenuProps {}
+import '../Styles/Components.css';
+import { Link } from 'react-router-dom';
 
 const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
   const [visible, setVisible] = useState<boolean>(false);
+  const menuItems = [
+    { key: 'models', title: 'Home', link: '/' },
+    { key: 'About Us', title: 'About Us', link: '/about' },
+    { key: 'E Bibaho Blog', title: 'E Bibaho Blog', link: '/blog' },
+    { key: 'Careers', title: 'Careers', link: '/careers' },
+    { key: 'Contact Us', title: 'Contact Us', link: '/contact' },
+    { key: 'mediator', title: 'Mediator', link: '/mediator' },
+  ];
 
   const handleMenuClick = () => {
     setVisible(!visible);
-    const menuElement = document.querySelector(".menu");
+    const menuElement = document.querySelector('.menu');
     if (menuElement) {
-      menuElement.classList.toggle("opened");
+      menuElement.classList.toggle('opened');
     }
   };
 
   const handleTouchMenuClick = () => {
     setVisible(!visible);
-    const menuElement = document.querySelector(".menu");
+    const menuElement = document.querySelector('.menu');
     if (menuElement) {
-      menuElement.classList.toggle("opened");
+      menuElement.classList.toggle('opened');
     }
   };
 
   return (
     <div
       style={{
-        position: "fixed",
+        position: 'fixed',
         bottom: 0,
-        width: "100%",
-        textAlign: "center",
+        width: '100%',
+        textAlign: 'center',
       }}
     >
       <Draggable
@@ -43,19 +51,19 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
       >
         <div>
           <button
-            className={`menu menu-box p-1 ${visible ? "opened" : ""}`}
+            className={`menu menu-box p-1 ${visible ? 'opened' : ''}`}
             onClick={handleMenuClick}
             onTouchStart={handleTouchMenuClick}
             aria-label="Main Menu"
             style={{
-              position: "fixed",
+              position: 'fixed',
               bottom: 5,
-              left: "50%",
-              transform: "translateX(-50%)",
+              left: '50%',
+              transform: 'translateX(-50%)',
               zIndex: 1,
             }}
           >
-            <h6 className="tgl-mnu-txt">{visible ? "Close" : "Menu"}</h6>
+            <h6 className="tgl-mnu-txt">{visible ? 'Close' : 'Menu'}</h6>
 
             {/* <svg width="60" height="60" viewBox="0 0 100 100">
               <path
@@ -75,10 +83,10 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
             mode="vertical"
             onClick={handleMenuClick}
             style={{
-              position: "fixed",
-              bottom: visible ? "50px" : "-500px",
+              position: 'fixed',
+              bottom: visible ? '50px' : '-500px',
               zIndex: 0,
-              transform: "translateX(-50%)",
+              transform: 'translateX(-50%)',
             }}
           >
             <form className="align-items-center bg-body d-flex gap-2 px-2 rounded">
@@ -90,12 +98,11 @@ const BottomToggleMenu: React.FC<BottomToggleMenuProps> = () => {
               />
             </form>
 
-            <Menu.Item key="models">Home</Menu.Item>
-            <Menu.Item key="About Us">About Us</Menu.Item>
-            <Menu.Item key="E Bibaho Blog">E Bibaho Blog</Menu.Item>
-            <Menu.Item key="Careers">Careers</Menu.Item>
-            <Menu.Item key="Contact Us">Contact Us</Menu.Item>
-            <Menu.Item key="mediator">mediator</Menu.Item>
+            {menuItems.map(item => (
+              <Menu.Item key={item.key}>
+                <Link to={item.link}>{item.title}</Link>
+              </Menu.Item>
+            ))}
           </Menu>
         </div>
       </Draggable>

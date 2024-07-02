@@ -3,77 +3,59 @@ const Contact = () => {
     <div className="container my-5">
       <div className="row">
         <div className="col-12 pb-5">
-          <form className="form-inline justify-content-center cstmsocialStyle">
+          <form className="cstmsocialStyle form-inline fs-3 justify-content-center text-center">
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Call to Skype"
+                title="Call to Skype"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/skype32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-skype fa-lg"></i>
               </span>
             </a>
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Call to WhatsApp"
+                title="Call to WhatsApp"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/whatsapp32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-whatsapp fa-lg"></i>
               </span>
             </a>
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Our Instragram Page"
+                title="Our Instagram Page"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/instragram32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-instagram fa-lg"></i>
               </span>
             </a>
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Find to Our Road Map "
+                title="Find to Our Road Map"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/viber32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-viber fa-lg"></i>
               </span>
             </a>
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Find to Our Road Map "
+                title="Find to Our Road Map"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/facebook32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-facebook fa-lg"></i>
               </span>
             </a>
             <a href="#" target="_blank">
               <span
                 className="px-2"
                 data-toggle="tooltip"
-                title=" Find to Our Road Map "
+                title="Find to Our Road Map"
               >
-                <img
-                  src="https://curesmabangladesh.org/icon/gmail32.png"
-                  width={25}
-                />{" "}
+                <i className="fab fa-google fa-lg"></i>
               </span>
             </a>
           </form>
@@ -89,17 +71,13 @@ const Contact = () => {
             </div>
             <div className="card-body pb-2 text-center">
               <p>
-                {" "}
-                154/6/4, Jhilkanan R/A, West Rampura, <br /> Dhaka-1219,
-                Bangladesh{" "}
+                74-09 37TH Avenue, Suite 203B, <br /> Jackson Heights, NY 11372
               </p>
               <p className="mb-0">
-                {" "}
-                <strong>Tel: </strong>+88 0184 111 84 86
+                <strong>Tel: </strong> +1 (888) 887 5027
               </p>
               <p className="mb-0">
-                {" "}
-                <strong>Email: </strong>info@curesmabangladesh.org
+                <strong>Email: </strong>sales@zsi.ai
               </p>
             </div>
             <div className="pb-2">
@@ -124,7 +102,7 @@ const Contact = () => {
             </div>
             <div className="card-body">
               <form>
-                <div className="form-group">
+                <div className="form-group my-2">
                   <input
                     type="name"
                     className="form-control"
@@ -132,7 +110,7 @@ const Contact = () => {
                     placeholder="Your Name"
                   />
                 </div>
-                <div className="form-group ">
+                <div className="form-group my-2 ">
                   <div className="form-row ">
                     <div className="col mb-2">
                       <input
@@ -150,7 +128,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                   <div className="form-row">
                     <div className="col">
                       <input
@@ -163,20 +141,20 @@ const Contact = () => {
                 </div>
               </form>
               <div>
-                <div className="form-group">
+                <div className="form-group my-2">
                   <textarea
                     className="form-control"
                     id="exampleFormControlTextarea1"
                     placeholder="Type your Message here"
                     rows={5}
-                    defaultValue={""}
+                    defaultValue={''}
                   />
                 </div>
                 <div className="text-right pb-2">
                   <button
                     type="button"
                     className="btn btn-success btn-block"
-                    style={{ marginTop: "8px" }}
+                    style={{ marginTop: '8px' }}
                   >
                     Send
                   </button>
