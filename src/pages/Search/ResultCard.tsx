@@ -1,5 +1,5 @@
-import { Card } from "antd";
-import { Link } from "react-router-dom";
+import { Card } from 'antd';
+import { Link } from 'react-router-dom';
 
 const ResultCard = () => {
   return (
@@ -8,8 +8,9 @@ const ResultCard = () => {
         <div className="row mx-auto">
           <div className="col-md-4 m-auto text-center">
             <img
-              width={196}
-              src="https://www.bdmarriage.com/Photos/Members/l42651/no-photo-female.jpg"
+              width={300}
+              className="img-fluid object-fit-cover"
+              src="https://cdn-icons-png.freepik.com/512/9193/9193915.png"
               alt=""
             />
           </div>
@@ -48,7 +49,7 @@ const ResultCard = () => {
                         </span>
                       </td>
                       <td>
-                        <Link to={"/user/search-res/1"}>
+                        <Link to={'/user/search-res/1'}>
                           <button className="m-0 btn-default">More</button>
                         </Link>
                       </td>

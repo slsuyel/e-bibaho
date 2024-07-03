@@ -1,11 +1,11 @@
-import { Card } from "antd";
-import Details from "./Details";
-import PartnerPreferences from "../PartnerPreferences/PartnerPreferences";
-import BackBtn from "../../components/reusable/BackBtn";
+import { Card } from 'antd';
+import Details from './Details';
+import PartnerPreferences from '../PartnerPreferences/PartnerPreferences';
+import BackBtn from '../../components/reusable/BackBtn';
 
 const SingleProfile = () => {
   return (
-    <div className="bg-dark-subtle" data-aos="fade-up" data-aos-duration="1000">
+    <div className="bg-dark-subtle">
       <div className="row mx-auto container">
         <div className="my-1 mt-4">
           <BackBtn />
@@ -15,7 +15,7 @@ const SingleProfile = () => {
               <div className="col-md-4 m-auto text-center">
                 <img
                   width={250}
-                  src="https://www.bdmarriage.com/Photos/Members/l42651/no-photo-female.jpg"
+                  src="https://cdnb.artstation.com/p/assets/images/images/001/372/641/large/hamada-mabrouk-woman-avatar-hijab-3.jpg?1445282460"
                   alt=""
                 />
               </div>

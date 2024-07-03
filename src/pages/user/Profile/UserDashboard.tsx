@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { VerifiedOutlined } from "@ant-design/icons";
-import { Card } from "antd";
+import { Link } from 'react-router-dom';
+import { VerifiedOutlined } from '@ant-design/icons';
+import { Card } from 'antd';
 
 const UserDashboard = () => {
   return (
@@ -10,16 +10,17 @@ const UserDashboard = () => {
           <div className="shadow p-3">
             <div
               className="text-center position-relative"
-              style={{ height: "210px" }}
+              style={{ height: '210px' }}
             >
               <img
                 className="img-thumbnail rounded-0"
                 style={{
-                  display: "block",
-                  width: "100%",
-                  height: "210px",
+                  display: 'block',
+                  width: '100%',
+                  height: '210px',
+                  objectFit: 'cover',
                 }}
-                src="https://img3.shaadi.com/2024/02/16/dSH62269192-1708062503871001127-Male.jpg"
+                src="https://pbs.twimg.com/profile_images/1782010160254218240/2SIboym6_400x400.jpg"
                 alt="Profile Photo"
               />
             </div>

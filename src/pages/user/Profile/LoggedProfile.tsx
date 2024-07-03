@@ -1,17 +1,17 @@
-import { Button, Card } from "antd";
-import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./../styles/User.css";
-import BasicInfoProfile from "./BasicInfoProfile";
-import ReligiousBackground from "./ReligiousBackground";
-import FamilyDetails from "./FamilyDetails";
-import Hobbies from "./Hobbies";
-import BasicInfoPartner from "./PartnerPreferences/BasicInfoPartner";
-import LocationDetails from "./PartnerPreferences/LocationDetails";
-import MyContact from "./MyContact";
-import EducationCareer from "./EducationCareer";
-import PersonalityText from "./PersonalityText";
-import OthersPreferences from "./PartnerPreferences/OthersPreferences";
+import { Button, Card } from 'antd';
+import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import './../styles/User.css';
+import BasicInfoProfile from './BasicInfoProfile';
+import ReligiousBackground from './ReligiousBackground';
+import FamilyDetails from './FamilyDetails';
+import Hobbies from './Hobbies';
+import BasicInfoPartner from './PartnerPreferences/BasicInfoPartner';
+import LocationDetails from './PartnerPreferences/LocationDetails';
+import MyContact from './MyContact';
+import EducationCareer from './EducationCareer';
+import PersonalityText from './PersonalityText';
+import OthersPreferences from './PartnerPreferences/OthersPreferences';
 
 const LoggedProfile = () => {
   return (
@@ -31,8 +31,10 @@ const LoggedProfile = () => {
               </Link>
             </div>
             <img
-              className="img-fluid img-thumbnail rounded-0"
-              src="https://img3.shaadi.com/2024/02/16/dSH62269192-1708062503871001127-Male.jpg"
+              width={300}
+              style={{ maxHeight: 300 }}
+              className="img-fluid img-thumbnail rounded-0 object-fit-cover"
+              src="https://pbs.twimg.com/profile_images/1782010160254218240/2SIboym6_400x400.jpg"
               alt="Profile Photo"
             />
           </div>
@@ -60,33 +62,33 @@ const LoggedProfile = () => {
               <div className="d-flex flex-wrap justify-content-between">
                 <ul>
                   <li>
-                    <Link to={"/user/profile/edit?sec=basic"}>
+                    <Link to={'/user/profile/edit?sec=basic'}>
                       Edit Personal Profile
                     </Link>
                   </li>
                   <li>
-                    <Link to={""}>View Profile Stats</Link>
+                    <Link to={''}>View Profile Stats</Link>
                   </li>
                   <li>
-                    <Link to={""}>Set Contact Filters</Link>
+                    <Link to={''}>Set Contact Filters</Link>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <Link to={"/user/profile/edit?sec=partner-basic"}>
+                    <Link to={'/user/profile/edit?sec=partner-basic'}>
                       Edit Partner Profile
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/user/profile/photos"}>Add Photos</Link>
+                    <Link to={'/user/profile/photos'}>Add Photos</Link>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <Link to={""}>Hide / Delete Profile</Link>
+                    <Link to={''}>Hide / Delete Profile</Link>
                   </li>
                   <li>
-                    <Link to={"/user/profile/edit?sec=my-contact"}>
+                    <Link to={'/user/profile/edit?sec=my-contact'}>
                       Edit Contact Details
                     </Link>
                   </li>
@@ -144,7 +146,7 @@ const LoggedProfile = () => {
           <div className="user-d-border p-0" id="partner-preferences">
             <div className="bg-red-500 py-2 ">
               <h5 className="m-0 ps-2 text-secondary font-maven">
-                {" "}
+                {' '}
                 Partner Preferences
               </h5>
             </div>

@@ -1,4 +1,4 @@
-import logo from '../../assets/images/newlogoupdate.png';
+import logo from '../../assets/images/main_logo.png';
 import HowWork from '../home/About/HowWork';
 
 const About = () => {

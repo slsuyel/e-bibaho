@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../assets/images/newlogoupdate.png';
+import logo from '../../assets/images/main_logo.png';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { Drawer } from 'antd';
