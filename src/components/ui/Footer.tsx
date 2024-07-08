@@ -1,41 +1,14 @@
-import FooterTop from "./FooterTop";
-import "../Styles/Components.css";
-import logo from "../../assets/images/logo_new.png";
+import FooterTop from './FooterTop';
+import '../Styles/Components.css';
+import logo from '../../assets/images/logo_new.png';
 const Footer = () => {
   return (
     <footer className="new_footer_area bg_color">
       <FooterTop />
-      {/* <div className="new_footer_top">
-        <div className="footer_bg">
-          <div className="footer_bg_one" />
-          <div className="footer_bg_two" />
-          <div className="footer_waling_men" />
-          <div className="footer_men-girl" />
-        </div>
-      </div>
-      <div className="footer_bottom">
-        <div className="container">
-          <div className="row mx-auto w-100 align-items-center">
-            <div className="col-lg-6 col-sm-7">
-              <p className="mb-0 f_400">
-                © e-bibaho.com 2024 All rights reserved.
-              </p>
-            </div>
-            <div className="col-lg-6 col-sm-5 text-right">
-              <p>
-                Made with <i className="icon_heart" /> in{" "}
-                <a href="" target="_blank">
-                  Zsi.Ai
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div
         className=" py-5 px-2 border-bottom"
-        style={{ background: "#1C1324" }}
+        style={{ background: '#1C1324' }}
       >
         <div className="row mx-auto ">
           <div className="col-md-3 px-2">
@@ -105,15 +78,13 @@ const Footer = () => {
           </div>
           <div className="col-md-3 text-white ">
             <span className="fs-4 fw-bold">Office Address</span>
-            <p>
-              House 16, 2nd floor, Road 20, Nikunjo-02, Khilkhet,
-              Dhaka-1229,&nbsp;Bangladesh
-            </p>
+
+            <p>74-09 37TH Avenue, Suite 203B,&nbsp;Jackson Heights, NY 11372</p>
             <p>
               General inquiries: <br />
-              Phone: +880 1700000000
+              Phone: +1 (888) 887 5027
               <br />
-              email: contact@e-bibaho.com1
+              email: contact@ebibaho.com
             </p>
           </div>
         </div>

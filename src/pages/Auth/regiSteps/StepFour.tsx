@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { StepFourProps } from "../../../types";
+import { useEffect } from 'react';
+import { StepFourProps } from '../../../types';
 
 const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
   useEffect(() => {
@@ -7,14 +7,14 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
   }, []);
 
   const divisions = [
-    "Dhaka",
-    "Chittagong",
-    "Rajshahi",
-    "Khulna",
-    "Barisal",
-    "Sylhet",
-    "Rangpur",
-    "Mymensingh",
+    'Dhaka',
+    'Chittagong',
+    'Rajshahi',
+    'Khulna',
+    'Barisal',
+    'Sylhet',
+    'Rangpur',
+    'Mymensingh',
   ];
 
   return (
@@ -27,7 +27,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
           <select
             id="fatherStatus"
             name="fatherStatus"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.fatherStatus}
             onChange={handleInputChange}
           >
@@ -48,7 +48,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             name="fatherOccupation"
             placeholder="Father Occupation"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.fatherOccupation}
             onChange={handleInputChange}
           />
@@ -60,7 +60,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
           <select
             id="motherStatus"
             name="motherStatus"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.motherStatus}
             onChange={handleInputChange}
           >
@@ -81,7 +81,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             name="motherOccupation"
             placeholder="Mother Occupation"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.motherOccupation}
             onChange={handleInputChange}
           />
@@ -98,7 +98,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
                 name="notMarried"
                 type="number"
                 min="0"
-                className="form-control rounded-0"
+                className="form-control "
                 value={formData.siblingsNotMarried}
                 onChange={handleInputChange}
               />
@@ -110,7 +110,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
                 name="married"
                 type="number"
                 min="0"
-                className="form-control rounded-0"
+                className="form-control "
                 value={formData.siblingsMarried}
                 onChange={handleInputChange}
               />
@@ -124,14 +124,14 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
           <select
             id="homeDivision"
             name="homeDivision"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.homeDivision}
             onChange={handleInputChange}
           >
             <option value="" disabled>
               --- Select Home Division ---
             </option>
-            {divisions.map((division) => (
+            {divisions.map(division => (
               <option key={division} value={division}>
                 {division}
               </option>
@@ -147,7 +147,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             name="currentlyLivingIn"
             placeholder="Currently Living In"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.currentlyLivingIn}
             onChange={handleInputChange}
           />
@@ -161,7 +161,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             name="cityLivingIn"
             placeholder="City Living In"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.cityLivingIn}
             onChange={handleInputChange}
           />
@@ -174,7 +174,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             id="familyDetails"
             name="familyDetails"
             placeholder="Please enter your family details"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.familyDetails}
             onChange={handleInputChange}
           ></textarea>

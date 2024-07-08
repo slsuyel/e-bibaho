@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { StepThreeProps } from "../../../types";
+import { useEffect } from 'react';
+import { StepThreeProps } from '../../../types';
 
 const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           <select
             id="highestQualification"
             name="highestQualification"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.highestQualification}
             onChange={handleInputChange}
           >
@@ -38,7 +38,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             id="collegeName"
             name="collegeName"
             placeholder="  College/university name"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.collegeName}
             onChange={handleInputChange}
           />
@@ -50,7 +50,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           <select
             id="workingSector"
             name="workingSector"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.workingSector}
             onChange={handleInputChange}
           >
@@ -71,7 +71,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           <select
             id="profession"
             name="profession"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.profession}
             onChange={handleInputChange}
           >
@@ -93,7 +93,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             id="professionDetails"
             name="professionDetails"
             placeholder="Enter your profession details"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.professionDetails}
             onChange={handleInputChange} // This should work now
           ></textarea>
@@ -105,7 +105,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           <select
             id="monthlyIncome"
             name="monthlyIncome"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.monthlyIncome}
             onChange={handleInputChange}
           >

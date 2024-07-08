@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { StepFiveProps } from "../../../types";
+import { useEffect } from 'react';
+import { StepFiveProps } from '../../../types';
 
 const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           <select
             id="height"
             name="height"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.height}
             onChange={handleInputChange}
           >
@@ -36,7 +36,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           <select
             id="weight"
             name="weight"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.weight}
             onChange={handleInputChange}
           >
@@ -56,7 +56,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           <select
             id="bodyType"
             name="bodyType"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.bodyType}
             onChange={handleInputChange}
           >
@@ -76,7 +76,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           <select
             id="complexion"
             name="complexion"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.complexion}
             onChange={handleInputChange}
           >
@@ -96,7 +96,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           <select
             id="bloodGroup"
             name="bloodGroup"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.bloodGroup}
             onChange={handleInputChange}
           >
@@ -121,7 +121,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             id="physicalAttributeDetails"
             name="physicalAttributeDetails"
             placeholder="Enter physical attribute details"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.physicalAttributeDetails}
             onChange={handleInputChange}
           ></textarea>

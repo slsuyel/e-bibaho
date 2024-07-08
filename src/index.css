@@ -14,15 +14,12 @@
   }
 }
 
-
-
 .font-maven {
   font-family: 'Segoe UI', sans-serif;
 }
 
 .ant-form-item-label {
   font-family: 'Segoe UI', sans-serif;
-
 }
 
 /* 
@@ -39,9 +36,15 @@
   background: linear-gradient(to right, #f370f6f7, #c578f4, #76b2f8);
 }
 
-
 .animation-bg {
-  background-image: linear-gradient(125deg, #2c3e50, #8e44ad, #e67e22, #4e54c8, #16a085);
+  background-image: linear-gradient(
+    125deg,
+    #2c3e50,
+    #8e44ad,
+    #e67e22,
+    #4e54c8,
+    #16a085
+  );
   background-repeat: no-repeat;
   background-size: 400%;
   animation: bganimation 15s infinite;
@@ -85,13 +88,9 @@
   }
 } */
 
-
-
-
 .somoy-shaow {
   box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
 }
-
 
 .sticky-image-container {
   position: sticky;
@@ -100,12 +99,10 @@
 
 .sticky-image {
   width: 100%;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 /*  */
-
-
 
 /*  */
 
@@ -129,7 +126,6 @@ a {
   z-index: 1;
 }
 
-
 .slick-prev:before,
 .slick-next:before {
   font-family: 'slick';
@@ -141,13 +137,9 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-
 .form-control,
 .form-select {
-  border: 1px solid #055160;
+  border: 1px solid #a9a5a5;
 }
 
 .form-control:focus,
@@ -157,10 +149,6 @@ a {
   outline: 0;
   box-shadow: 0 0 0 0rem rgb(55 4 255 / 38%);
 }
-
-
-
-
 
 .btn-default {
   height: 38px;
@@ -177,7 +165,6 @@ a {
   background: #055160;
 }
 
-
 .CardForUser .ant-card-body {
   padding: 0;
 }
@@ -190,7 +177,6 @@ a {
   border-radius: 5px;
   box-shadow: 0 0 4px #8286912e;
 }
-
 
 .count-card--number {
   display: flex;
@@ -213,7 +199,6 @@ a {
   font-weight: 700;
   line-height: 12px;
   background-color: #00bcd5;
-
 }
 
 .count-card--label {
@@ -237,8 +222,6 @@ a {
   opacity: 0.8;
 }
 
-
-
 /*  */
 .custom-table {
   border-collapse: collapse;
@@ -257,7 +240,6 @@ a {
   overflow-x: hidden;
   display: flex;
 }
-
 
 .hr-content {
   min-width: 100%;
@@ -297,8 +279,6 @@ a {
   } */
 }
 
-
-
 /* -------------- */
 .con-cen-my {
   display: flex;
@@ -307,9 +287,9 @@ a {
 }
 
 .overly_sign_up {
-  background: #FF416C;
-  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -323,7 +303,7 @@ a {
   margin: 0 5px;
   height: 40px;
   width: 40px;
-  color: #8000bd
+  color: #8000bd;
 }
 
 /* --------- */

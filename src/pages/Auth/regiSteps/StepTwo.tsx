@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { StepTwoProps } from "../../../types";
+import { useEffect } from 'react';
+import { StepTwoProps } from '../../../types';
 
 const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
   useEffect(() => {
@@ -8,8 +8,8 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
 
   return (
     <div>
-      <form>
-        <div className="form-group mb-2">
+      <form className="row mx-auto">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="gender" className="my-1">
             Gender <span className="text-danger fs-5">*</span>
           </label>
@@ -19,7 +19,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
               name="gender"
               type="radio"
               value="male"
-              checked={formData.gender === "male"}
+              checked={formData.gender === 'male'}
               onChange={handleInputChange}
             />
             <label htmlFor="male" className="mx-1">
@@ -30,7 +30,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
               name="gender"
               type="radio"
               value="female"
-              checked={formData.gender === "female"}
+              checked={formData.gender === 'female'}
               onChange={handleInputChange}
             />
             <label htmlFor="female" className="mx-1">
@@ -38,7 +38,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             </label>
           </div>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="candidateName" className="my-1">
             Candidate Name <span className="text-danger fs-5">*</span>
           </label>
@@ -47,19 +47,19 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             name="candidateName"
             placeholder="Candidate Name"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.candidateName}
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2  col-md-6">
           <label htmlFor="profileCreatedBy" className="my-1">
             Profile Created By <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="profileCreatedBy"
             name="profileCreatedBy"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.profileCreatedBy}
             onChange={handleInputChange}
           >
@@ -70,7 +70,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             <option value="relative">Relative</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="parentName" className="my-1">
             Father / Mother Name <span className="text-danger fs-5">*</span>
           </label>
@@ -79,12 +79,12 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             name="parentName"
             placeholder="Father / Mother Name"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.parentName}
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="dateOfBirth" className="my-1">
             Candidate Date of Birth <span className="text-danger fs-5">*</span>
           </label>
@@ -93,11 +93,11 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
               <select
                 id="day"
                 name="day"
-                className="form-select rounded-0"
+                className="form-select "
                 value={formData.day}
                 onChange={handleInputChange}
               >
-                {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+                {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
                   <option key={day} value={day}>
                     {day}
                   </option>
@@ -108,11 +108,11 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
               <select
                 id="month"
                 name="month"
-                className="form-select rounded-0"
+                className="form-select "
                 value={formData.month}
                 onChange={handleInputChange}
               >
-                {Array.from({ length: 12 }, (_, i) => i + 1).map((day) => (
+                {Array.from({ length: 12 }, (_, i) => i + 1).map(day => (
                   <option key={day} value={day}>
                     {day}
                   </option>
@@ -123,11 +123,11 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
               <select
                 id="year"
                 name="year"
-                className="form-select rounded-0"
+                className="form-select "
                 value={formData.year}
                 onChange={handleInputChange}
               >
-                {Array.from({ length: 26 }, (_, i) => 2005 - i).map((year) => (
+                {Array.from({ length: 26 }, (_, i) => 2005 - i).map(year => (
                   <option key={year} value={year}>
                     {year}
                   </option>
@@ -137,14 +137,15 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
           </div>
           <small>Your date of birth will not be disclosed to others.</small>
         </div>
-        <div className="form-group mb-2">
+
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="maritalStatus" className="my-1">
             Marital Status <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="maritalStatus"
             name="maritalStatus"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.maritalStatus}
             onChange={handleInputChange}
           >
@@ -157,14 +158,14 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             <option value="widowed">Widowed</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="religion" className="my-1">
             Religion <span className="text-danger fs-5">*</span>
           </label>
           <select
             id="religion"
             name="religion"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.religion}
             onChange={handleInputChange}
           >
@@ -177,7 +178,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             <option value="sikhism">Sikhism</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group mb-2 col-md-6">
           <label htmlFor="nationality" className="my-1">
             Nationality
           </label>
@@ -186,7 +187,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             name="nationality"
             placeholder="Nationality"
             type="text"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.nationality}
             onChange={handleInputChange}
           />

@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { StepOneProps } from "../../../types";
+import { useEffect } from 'react';
+import { StepOneProps } from '../../../types';
 
 const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             placeholder="Mobile Number"
             type="tel"
             required
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.mobileNumber}
             onChange={handleInputChange}
           />
@@ -33,7 +33,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             name="email"
             placeholder="Your Email"
             type="email"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -49,7 +49,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             name="password"
             placeholder="Create Password"
             type="password"
-            className="form-control rounded-0"
+            className="form-control "
             value={formData.password}
             onChange={handleInputChange}
           />
@@ -61,7 +61,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
           <select
             id="profileCreatedBy"
             name="profileCreatedBy"
-            className="form-select rounded-0"
+            className="form-select "
             value={formData.profileCreatedBy}
             onChange={handleInputChange}
           >
