@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
-import { Button, Modal, Upload } from "antd";
-import { UploadChangeParam } from "antd/lib/upload";
+import { useState } from 'react';
+import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
+import { Button, Modal, Upload } from 'antd';
+import { UploadChangeParam } from 'antd/lib/upload';
 
 const UserPhoto: React.FC = () => {
   const [fakeImages, setFakeImages] = useState<string[]>([
-    "https://via.placeholder.com/200",
-    "https://via.placeholder.com/200",
-    "https://via.placeholder.com/200",
-    "https://via.placeholder.com/200",
-    "https://via.placeholder.com/200",
+    'https://via.placeholder.com/200',
+    'https://via.placeholder.com/200',
+    'https://via.placeholder.com/200',
+    'https://via.placeholder.com/200',
+    'https://via.placeholder.com/200',
   ]);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -30,7 +30,7 @@ const UserPhoto: React.FC = () => {
   };
 
   const handleImageUpload = (info: UploadChangeParam) => {
-    if (info.file.status === "done" && info.file.originFileObj) {
+    if (info.file.status === 'done' && info.file.originFileObj) {
       setSelectedImage(info.file.originFileObj);
     }
   };
@@ -46,7 +46,7 @@ const UserPhoto: React.FC = () => {
   };
 
   return (
-    <div className="container mt-3 ">
+    <div className="container py-3 ">
       <div className="border-bottom m-0 my-4 text-center font-maven">
         <Button className="fw-bold rounded-0 text-danger border-bottom-0 font-maven">
           My Photos
@@ -100,7 +100,7 @@ const UserPhoto: React.FC = () => {
             <img
               src={URL.createObjectURL(selectedImage)}
               alt="Selected"
-              style={{ width: "100%" }}
+              style={{ width: '100%' }}
             />
           ) : (
             <div>

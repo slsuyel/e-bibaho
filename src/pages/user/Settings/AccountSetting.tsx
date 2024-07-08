@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Form, Input, Slider, Collapse, Button, Select } from "antd";
+import { useState } from 'react';
+import { Form, Input, Slider, Collapse, Button, Select } from 'antd';
 const { Option } = Select;
 
 const { Panel } = Collapse;
@@ -17,22 +17,22 @@ const AccountSetting = () => {
   };
 
   const handleEmailSubmit = (values: string) => {
-    console.log("Email submitted:", values);
+    console.log('Email submitted:', values);
   };
 
   const handleAgeSubmit = (values: number[]) => {
-    console.log("Age submitted:", values);
+    console.log('Age submitted:', values);
   };
 
   const handleHeightSubmit = (values: number[]) => {
-    console.log("Height submitted:", values);
+    console.log('Height submitted:', values);
   };
   const handleReligionSubmit = (values: string) => {
-    console.log("Email submitted:", values);
+    console.log('Email submitted:', values);
   };
 
   return (
-    <div className="container mt-3" style={{ height: "100vh" }}>
+    <div className="container py-5" style={{ height: '100vh' }}>
       <h5>Setting</h5>
 
       <div className="col-md-8 mx-auto">
@@ -43,17 +43,17 @@ const AccountSetting = () => {
                 label="Update Email Id"
                 name="email"
                 rules={[
-                  { required: true, message: "Please input your new email!" },
+                  { required: true, message: 'Please input your new email!' },
                 ]}
               >
-                <Input defaultValue={"slsuyel@gmail.com"} />
+                <Input defaultValue={'slsuyel@gmail.com'} />
               </Form.Item>
               <Button htmlType="submit">Submit</Button>
             </Form>
           </Panel>
 
           <Panel header="Contact Filters" key="2">
-            <h6>{`${ageValue[0]} to ${ageValue[1]} yrs`}</h6>{" "}
+            <h6>{`${ageValue[0]} to ${ageValue[1]} yrs`}</h6>{' '}
             <Form className="d-flex " name="ageForm" onFinish={handleAgeSubmit}>
               <Form.Item className="w-100" label="Age" name="age">
                 <Slider
@@ -97,7 +97,7 @@ const AccountSetting = () => {
                 label="Select Religion"
                 name="religion"
                 rules={[
-                  { required: true, message: "Please select your religion!" },
+                  { required: true, message: 'Please select your religion!' },
                 ]}
               >
                 <Select placeholder="Please select your religion">

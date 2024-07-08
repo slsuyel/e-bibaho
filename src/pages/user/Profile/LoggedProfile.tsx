@@ -15,7 +15,7 @@ import OthersPreferences from './PartnerPreferences/OthersPreferences';
 
 const LoggedProfile = () => {
   return (
-    <Container className="col-md-9 mx-auto logged-profile">
+    <Container className="col-md-9 mx-auto logged-profile py-5">
       <Card className="py-3">
         <div className="bg-red-500 py-2 ">
           <h1 className="fs-3 ps-2 text-secondary  font-maven fw-bold">

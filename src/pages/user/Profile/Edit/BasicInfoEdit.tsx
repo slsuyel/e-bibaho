@@ -1,4 +1,4 @@
-import { Form, Button, DatePicker, Select, Switch, Input } from "antd";
+import { Form, Button, DatePicker, Select, Switch, Input } from 'antd';
 
 const { Option } = Select;
 
@@ -13,13 +13,13 @@ interface BasicInfoFormData {
   city?: string;
 }
 
-type MaritalStatus = "single" | "married" | "divorced" | "widowed";
+type MaritalStatus = 'single' | 'married' | 'divorced' | 'widowed';
 
 const BasicInfoEdit: React.FC = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values: BasicInfoFormData) => {
-    console.log("Received values:", values);
+    console.log('Received values:', values);
   };
 
   return (
@@ -55,7 +55,7 @@ const BasicInfoEdit: React.FC = () => {
 
         <Form.Item label="Height" name="height">
           <Select>
-            {[...Array(36).keys()].map((index) => (
+            {[...Array(36).keys()].map(index => (
               <Option key={index} value={index + 48}>
                 {`${Math.floor((index + 48) / 12)}ft ${(index + 48) % 12}in - ${
                   index + 48

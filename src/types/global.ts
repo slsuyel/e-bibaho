@@ -1,5 +1,5 @@
-import { BaseQueryApi } from "@reduxjs/toolkit/query";
-import { ReactNode } from "react";
+import { BaseQueryApi } from '@reduxjs/toolkit/query';
+import { ReactNode } from 'react';
 
 export type TError = {
   data: {
@@ -35,3 +35,11 @@ export type TQueryParam = {
 export interface ScrollToTopProps {
   children?: ReactNode;
 }
+
+export type TCountry = {
+  name: string;
+  code: string;
+  emoji: string;
+  unicode: string;
+  image: string;
+};

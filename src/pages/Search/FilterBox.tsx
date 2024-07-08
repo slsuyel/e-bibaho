@@ -1,298 +1,159 @@
-import { Slider } from "antd";
-import { useState, useEffect, ChangeEvent } from "react";
-import { Accordion, Form } from "react-bootstrap";
+import { useState } from 'react';
+import { Card, Checkbox, Collapse, List } from 'antd';
+import useCountries from '../../hooks/useCountries';
+import { TCountry } from '../../types';
+import { Spinner } from 'react-bootstrap';
 
-const FilterBox = () => {
-  const [gender, setGender] = useState<string>("male");
-  const [age, setAge] = useState<number>(18);
-  const [height, setHeight] = useState("4'0\"");
+const { Panel } = Collapse;
 
-  const [division, setDivision] = useState<string>("All Division");
-  const [education, setEducation] = useState<{ [key: string]: boolean }>({
-    all: false,
-    doctorate: false,
-    professional: false,
-  });
-  const [professionalArea, setProfessionalArea] = useState<{
-    [key: string]: boolean;
-  }>({ all: false, doctorate: false, professional: false });
-  const [workingSector, setWorkingSector] = useState<{
-    [key: string]: boolean;
-  }>({ all: false, doctorate: false, professional: false });
-  const [livingCountry, setLivingCountry] = useState<{
-    [key: string]: boolean;
-  }>({ all: false, doctorate: false, professional: false });
+const ages = ['18-20', '20-25', '25-30', '30-35', '35-40', '40-45', '45-50'];
+const marital = ['Divorced', 'Single', 'Married', 'Widowed'];
+const religions = [
+  'Christianity',
+  'Islam',
+  'Hinduism',
+  'Buddhism',
+  'Judaism',
+  'Sikhism',
+  'Baháʼí Faith',
+];
 
-  const handleGenderChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setGender(event.target.value);
-  };
-  const handleAgeChange = (value: number) => {
-    setAge(value); // Update the age state with the new value
-  };
+const initialFilters = {
+  ages: [],
+  maritalStatus: [],
+  religions: [],
+  countries: [],
+};
 
-  const handleHeightChange = (value: number) => {
-    const totalInches = value / 2.54;
-    const feet = Math.floor(totalInches / 12);
-    const inches = Math.round(totalInches % 12);
-    setHeight(`${feet}'${inches}"`);
-  };
+const FilterComponent = () => {
+  const { countries, loading } = useCountries();
+  const [filters, setFilters] = useState(initialFilters);
 
-  const handleDivisionChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    setDivision(event.target.value);
-  };
+  if (loading) {
+    return <Spinner animation="border" />;
+  }
+  const countryList = countries || [];
+
   const handleCheckboxChange = (
-    event: ChangeEvent<HTMLInputElement>,
-    setState: React.Dispatch<React.SetStateAction<{ [key: string]: boolean }>>
+    category: keyof typeof initialFilters,
+    value: string,
+    checked: boolean
   ) => {
-    const { id, checked } = event.target;
-    setState((prev) => ({ ...prev, [id]: checked }));
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      [category]: checked
+        ? [...prevFilters[category], value]
+        : prevFilters[category].filter((item: string) => item !== value),
+    }));
   };
 
-  useEffect(() => {
-    console.log({
-      gender,
-      age,
-      height,
-      division,
-      education,
-      professionalArea,
-      workingSector,
-      livingCountry,
-    });
-  }, [
-    gender,
-    age,
-    height,
-    division,
-    education,
-    professionalArea,
-    workingSector,
-    livingCountry,
-  ]);
+  const applyFilters = () => {
+    const { ages, maritalStatus, religions, countries } = filters;
+
+    const queryParams = new URLSearchParams();
+    queryParams.append('ages', ages.join(','));
+    queryParams.append('maritalStatus', maritalStatus.join(','));
+    queryParams.append('religions', religions.join(','));
+    queryParams.append('countries', countries.join(','));
+
+    console.log(filters);
+    console.log(queryParams.toString());
+  };
 
   return (
-    <div>
-      <Accordion className="mb-1" defaultActiveKey="1">
-        <Accordion.Item eventKey="1">
-          <Accordion.Header className="pe-1">Gender</Accordion.Header>
-          <Accordion.Body>
-            <div className="d-flex justify-content-around">
-              <div className="align-items-center d-flex gap-1">
-                <i className="fa-solid fa-person"></i>
-                <input
-                  type="radio"
-                  id="male"
-                  name="gender"
-                  value="male"
-                  checked={gender === "male"}
-                  onChange={handleGenderChange}
-                />
-                <label htmlFor="male"> Male</label>
-              </div>
-              <div className="align-items-center d-flex gap-1">
-                <i className="fa-solid fa-child-dress"></i>
-                <input
-                  type="radio"
-                  id="female"
-                  name="gender"
-                  value="female"
-                  checked={gender === "female"}
-                  onChange={handleGenderChange}
-                />
-                <label htmlFor="female">Female</label>
-              </div>
-            </div>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+    <Card title="Filter" className="filter_sidebar">
+      <Collapse defaultActiveKey={['0', '1', '2', '3', '4']}>
+        <Panel header="Age" key="0">
+          <List
+            style={{ height: '200px', overflow: 'auto' }}
+            dataSource={ages}
+            renderItem={item => (
+              <List.Item>
+                <Checkbox
+                  onChange={e =>
+                    handleCheckboxChange('ages', item, e.target.checked)
+                  }
+                >
+                  {item}
+                </Checkbox>
+              </List.Item>
+            )}
+          />
+        </Panel>
 
-      {/* <Accordion className="mb-1" defaultActiveKey="2">
-        <Accordion.Item eventKey="2">
-          <Accordion.Header className="pe-1">Age </Accordion.Header>
-          <Accordion.Body>
-            <span>{age}</span>
-            <Form.Range min={18} max={80} onChange={handleAgeChange} />
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion> */}
+        <Panel header="Marital Status" key="1">
+          <List
+            style={{ height: '200px', overflow: 'auto' }}
+            dataSource={marital}
+            renderItem={item => (
+              <List.Item>
+                <Checkbox
+                  onChange={e =>
+                    handleCheckboxChange(
+                      'maritalStatus',
+                      item,
+                      e.target.checked
+                    )
+                  }
+                >
+                  {item}
+                </Checkbox>
+              </List.Item>
+            )}
+          />
+        </Panel>
 
-      <Accordion className="mb-1" defaultActiveKey="2">
-        <Accordion.Item eventKey="2">
-          <Accordion.Header className="pe-1">Age </Accordion.Header>
-          <Accordion.Body>
-            <span>{age}</span>
-            <Slider min={18} max={80} onChange={handleAgeChange} />
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+        <Panel header="Religions" key="2">
+          <List
+            style={{ height: '200px', overflow: 'auto' }}
+            dataSource={religions}
+            renderItem={item => (
+              <List.Item>
+                <Checkbox
+                  onChange={e =>
+                    handleCheckboxChange('religions', item, e.target.checked)
+                  }
+                >
+                  {item}
+                </Checkbox>
+              </List.Item>
+            )}
+          />
+        </Panel>
 
-      <Accordion className="mb-1" defaultActiveKey="3">
-        <Accordion.Item eventKey="3">
-          <Accordion.Header className="pe-1">Height</Accordion.Header>
-          <Accordion.Body>
-            <span>{height}</span>
-            <Slider min={123} max={250} onChange={handleHeightChange} />
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+        <Panel header="Living Country" key="3">
+          <List
+            style={{ height: '200px', overflow: 'auto' }}
+            dataSource={countryList}
+            renderItem={(item: TCountry) => (
+              <List.Item>
+                <Checkbox
+                  onChange={e =>
+                    handleCheckboxChange(
+                      'countries',
+                      item.name,
+                      e.target.checked
+                    )
+                  }
+                >
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <img src={item.image} alt="" width={20} />
+                    <span className="ms-1">{item.name}</span>
+                  </div>
+                </Checkbox>
+              </List.Item>
+            )}
+          />
+        </Panel>
+      </Collapse>
 
-      <Accordion className="mb-1" defaultActiveKey="4">
-        <Accordion.Item eventKey="4">
-          <Accordion.Header className="pe-1">Home Division</Accordion.Header>
-          <Accordion.Body>
-            <Form.Select
-              aria-label="Default select example"
-              className="rounded-0"
-              onChange={handleDivisionChange}
-            >
-              <option>All Division</option>
-              <option value="1">Dhaka</option>
-              <option value="2">Rangpur</option>
-              <option value="3">Sylhet</option>
-            </Form.Select>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-
-      <Accordion className="mb-1" defaultActiveKey="5">
-        <Accordion.Item eventKey="5">
-          <Accordion.Header className="pe-1">Education</Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="all"
-                  label="All"
-                  onChange={(e) => handleCheckboxChange(e, setEducation)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="doctorate"
-                  label="Doctorate / Phd / MPhil"
-                  onChange={(e) => handleCheckboxChange(e, setEducation)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="professional"
-                  label="Professional Degree"
-                  onChange={(e) => handleCheckboxChange(e, setEducation)}
-                />
-              </div>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-
-      <Accordion className="mb-1" defaultActiveKey="6">
-        <Accordion.Item eventKey="6">
-          <Accordion.Header className="pe-1">
-            Professional Area
-          </Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="all"
-                  label="All"
-                  onChange={(e) => handleCheckboxChange(e, setProfessionalArea)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="doctorate"
-                  label="Doctorate / Phd / MPhil"
-                  onChange={(e) => handleCheckboxChange(e, setProfessionalArea)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="professional"
-                  label="Professional Degree"
-                  onChange={(e) => handleCheckboxChange(e, setProfessionalArea)}
-                />
-              </div>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-
-      <Accordion className="mb-1" defaultActiveKey="7">
-        <Accordion.Item eventKey="7">
-          <Accordion.Header className="pe-1">Working Sector</Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="all"
-                  label="All"
-                  onChange={(e) => handleCheckboxChange(e, setWorkingSector)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="doctorate"
-                  label="Doctorate / Phd / MPhil"
-                  onChange={(e) => handleCheckboxChange(e, setWorkingSector)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="professional"
-                  label="Professional Degree"
-                  onChange={(e) => handleCheckboxChange(e, setWorkingSector)}
-                />
-              </div>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-
-      <Accordion className="mb-1" defaultActiveKey="8">
-        <Accordion.Item eventKey="8">
-          <Accordion.Header className="pe-1">Living Country</Accordion.Header>
-          <Accordion.Body>
-            <Form>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="all"
-                  label="All"
-                  onChange={(e) => handleCheckboxChange(e, setLivingCountry)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="doctorate"
-                  label="Doctorate / Phd / MPhil"
-                  onChange={(e) => handleCheckboxChange(e, setLivingCountry)}
-                />
-              </div>
-              <div>
-                <Form.Check
-                  type="checkbox"
-                  id="professional"
-                  label="Professional Degree"
-                  onChange={(e) => handleCheckboxChange(e, setLivingCountry)}
-                />
-              </div>
-            </Form>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
-    </div>
+      <div style={{ marginTop: '10px' }}>
+        <button className="btn btn-primary" onClick={applyFilters}>
+          Apply Filters
+        </button>
+      </div>
+    </Card>
   );
 };
 
-export default FilterBox;
+export default FilterComponent;

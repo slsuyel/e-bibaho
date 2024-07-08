@@ -27,14 +27,14 @@
 // };
 
 // export default PartnerPre;
-import { Card } from "antd";
-import BasicInfoPartner from "./BasicInfoPartner";
-import LocationDetails from "./LocationDetails";
-import OthersPreferences from "./OthersPreferences";
+import { Card } from 'antd';
+import BasicInfoPartner from './BasicInfoPartner';
+import LocationDetails from './LocationDetails';
+import OthersPreferences from './OthersPreferences';
 
 const PartnerPre = () => {
   return (
-    <Card className="container my-3 font-maven">
+    <Card className="container py-5 font-maven">
       <div className="text-center">
         <h1 className="mt-5 font-maven">
           Your <span className="fw-medium text-info-emphasis">Partner </span>
