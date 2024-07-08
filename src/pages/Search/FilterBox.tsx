@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Card, Checkbox, Collapse, List } from 'antd';
+import { Card, Checkbox, Collapse, Input, List } from 'antd';
 import useCountries from '../../hooks/useCountries';
 import { TCountry } from '../../types';
 import { Spinner } from 'react-bootstrap';
+import { SearchOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 
@@ -28,6 +29,12 @@ const initialFilters = {
 const FilterComponent = () => {
   const { countries, loading } = useCountries();
   const [filters, setFilters] = useState(initialFilters);
+
+  const [searchText, setSearchText] = useState('');
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchText(e.target.value);
+  };
 
   if (loading) {
     return <Spinner animation="border" />;
@@ -59,6 +66,10 @@ const FilterComponent = () => {
     console.log(filters);
     console.log(queryParams.toString());
   };
+
+  const filteredCountries = countryList.filter((item: TCountry) =>
+    item.name.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <Card title="Filter" className="filter_sidebar">
@@ -122,9 +133,15 @@ const FilterComponent = () => {
         </Panel>
 
         <Panel header="Living Country" key="3">
+          <Input
+            placeholder="Search countries"
+            prefix={<SearchOutlined />}
+            onChange={handleSearch}
+            style={{ marginBottom: '1rem' }}
+          />
           <List
             style={{ height: '200px', overflow: 'auto' }}
-            dataSource={countryList}
+            dataSource={filteredCountries}
             renderItem={(item: TCountry) => (
               <List.Item>
                 <Checkbox
