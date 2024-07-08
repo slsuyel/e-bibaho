@@ -8,8 +8,8 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
 
   return (
     <div>
-      <form>
-        <div className="form-group mb-2">
+      <form className="row mx-auto">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="height" className="my-1">
             Height <span className="text-danger fs-5">*</span>
           </label>
@@ -29,7 +29,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="5ft2in">5ft 2in</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="weight" className="my-1">
             Weight <span className="text-danger fs-5">*</span>
           </label>
@@ -49,7 +49,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="71-80kg">71 - 80kg</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="bodyType" className="my-1">
             Body Type <span className="text-danger fs-5">*</span>
           </label>
@@ -69,7 +69,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="heavy">Heavy</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="complexion" className="my-1">
             Complexion <span className="text-danger fs-5">*</span>
           </label>
@@ -89,7 +89,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="dark">Dark</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="bloodGroup" className="my-1">
             Blood Group
           </label>
@@ -113,7 +113,7 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="O-">O-</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="physicalAttributeDetails" className="my-1">
             Physical Attribute Details
           </label>

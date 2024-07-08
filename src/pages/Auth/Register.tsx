@@ -16,9 +16,7 @@ const NewRegi = () => {
     gender: '',
     candidateName: '',
     parentName: '',
-    day: '',
-    month: '',
-    year: '',
+
     maritalStatus: '',
     religion: '',
     nationality: '',

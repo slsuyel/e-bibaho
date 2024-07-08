@@ -17,9 +17,7 @@ export interface StepTwoProps {
     candidateName: string;
     profileCreatedBy: string;
     parentName: string;
-    day: string;
-    month: string;
-    year: string;
+
     maritalStatus: string;
     religion: string;
     nationality: string;
@@ -91,9 +89,7 @@ export type TRegiForm = {
   gender: string;
   candidateName: string;
   parentName: string;
-  day: string;
-  month: string;
-  year: string;
+
   maritalStatus: string;
   religion: string;
   nationality: string;

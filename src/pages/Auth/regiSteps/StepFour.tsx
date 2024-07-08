@@ -19,8 +19,8 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
 
   return (
     <div>
-      <form>
-        <div className="form-group mb-2">
+      <form className="row mx-auto">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="fatherStatus" className="my-1">
             Father Status <span className="text-danger fs-5">*</span>
           </label>
@@ -39,7 +39,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             <option value="retired">Retired</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="fatherOccupation" className="my-1">
             Father Occupation
           </label>
@@ -53,7 +53,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="motherStatus" className="my-1">
             Mother Status <span className="text-danger fs-5">*</span>
           </label>
@@ -72,7 +72,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             <option value="retired">Retired</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="motherOccupation" className="my-1">
             Mother Occupation
           </label>
@@ -86,38 +86,8 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
-          <label htmlFor="siblings" className="my-1">
-            Your Siblings
-          </label>
-          <div className="row">
-            <div className="col">
-              <label htmlFor="notMarried">Not Married</label>
-              <input
-                id="notMarried"
-                name="notMarried"
-                type="number"
-                min="0"
-                className="form-control "
-                value={formData.siblingsNotMarried}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="col">
-              <label htmlFor="married">Married</label>
-              <input
-                id="married"
-                name="married"
-                type="number"
-                min="0"
-                className="form-control "
-                value={formData.siblingsMarried}
-                onChange={handleInputChange}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="form-group mb-2">
+
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="homeDivision" className="my-1">
             Home Division <span className="text-danger fs-5">*</span>
           </label>
@@ -138,7 +108,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             ))}
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="currentlyLivingIn" className="my-1">
             Currently Living In
           </label>
@@ -152,7 +122,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="cityLivingIn" className="my-1">
             City Living In
           </label>
@@ -166,7 +136,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="familyDetails" className="my-1">
             Family Details
           </label>

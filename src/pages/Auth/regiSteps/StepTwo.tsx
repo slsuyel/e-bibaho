@@ -1,10 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { StepTwoProps } from '../../../types';
-
+import DatePicker from 'react-datepicker';
 const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const [dateOfBirth, setDateOfBirth] = useState<Date | null>(null);
+  const handleDateChange = (date: Date | null) => {
+    setDateOfBirth(date);
+
+    if (date) {
+      const formattedDate = date.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      });
+
+      handleInputChange({
+        target: { name: 'dateOfBirth', value: formattedDate },
+      } as React.ChangeEvent<HTMLInputElement>);
+    } else {
+      handleInputChange({
+        target: { name: 'dateOfBirth', value: null },
+      } as unknown as React.ChangeEvent<HTMLInputElement>);
+    }
+  };
 
   return (
     <div>
@@ -38,6 +58,26 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             </label>
           </div>
         </div>
+
+        <div className="form-group mb-2 col-md-6 date_of_birth">
+          <label htmlFor="dateOfBirth" className="my-1">
+            Date of Birth <span className="text-danger fs-5">*</span>
+          </label>
+          <br />
+          <DatePicker
+            id="dateOfBirth"
+            selected={dateOfBirth}
+            onChange={handleDateChange}
+            className="form-control "
+            dateFormat="dd/MM/yyyy"
+            showYearDropdown
+            scrollableYearDropdown
+            yearDropdownItemNumber={45}
+            placeholderText="Select Date of Birth"
+            required
+          />
+        </div>
+
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="candidateName" className="my-1">
             Candidate Name <span className="text-danger fs-5">*</span>
@@ -84,59 +124,6 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2 col-md-6">
-          <label htmlFor="dateOfBirth" className="my-1">
-            Candidate Date of Birth <span className="text-danger fs-5">*</span>
-          </label>
-          <div className="row">
-            <div className="col">
-              <select
-                id="day"
-                name="day"
-                className="form-select "
-                value={formData.day}
-                onChange={handleInputChange}
-              >
-                {Array.from({ length: 31 }, (_, i) => i + 1).map(day => (
-                  <option key={day} value={day}>
-                    {day}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="col">
-              <select
-                id="month"
-                name="month"
-                className="form-select "
-                value={formData.month}
-                onChange={handleInputChange}
-              >
-                {Array.from({ length: 12 }, (_, i) => i + 1).map(day => (
-                  <option key={day} value={day}>
-                    {day}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="col">
-              <select
-                id="year"
-                name="year"
-                className="form-select "
-                value={formData.year}
-                onChange={handleInputChange}
-              >
-                {Array.from({ length: 26 }, (_, i) => 2005 - i).map(year => (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <small>Your date of birth will not be disclosed to others.</small>
-        </div>
 
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="maritalStatus" className="my-1">
@@ -169,7 +156,9 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
             value={formData.religion}
             onChange={handleInputChange}
           >
-            <option value="">--- Please Select ---</option>
+            <option value="" disabled>
+              --- Please Select ---
+            </option>
             <option value="islam">Islam</option>
             <option value="christianity">Christianity</option>
             <option value="hinduism">Hinduism</option>

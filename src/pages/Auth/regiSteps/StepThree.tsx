@@ -8,8 +8,8 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
 
   return (
     <div>
-      <form>
-        <div className="form-group mb-2">
+      <form className="row mx-auto">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="highestQualification" className="my-1">
             Highest Qualification <span className="text-danger fs-5">*</span>
           </label>
@@ -30,7 +30,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             <option value="certificate">Certificate</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="collegeName" className="my-1">
             Education Details
           </label>
@@ -43,7 +43,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="workingSector" className="my-1">
             Working Sector <span className="text-danger fs-5">*</span>
           </label>
@@ -64,7 +64,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             <option value="unemployed">Unemployed</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="profession" className="my-1">
             Profession <span className="text-danger fs-5">*</span>
           </label>
@@ -85,7 +85,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             <option value="other">other</option>
           </select>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="professionDetails" className="my-1">
             Profession Details
           </label>
@@ -98,7 +98,7 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
             onChange={handleInputChange} // This should work now
           ></textarea>
         </div>
-        <div className="form-group mb-2">
+        <div className="form-group col-md-6 mb-2">
           <label htmlFor="monthlyIncome" className="my-1">
             Monthly Income
           </label>

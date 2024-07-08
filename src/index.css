@@ -136,6 +136,11 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.date_of_birth {
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+}
 
 .form-control,
 .form-select {
