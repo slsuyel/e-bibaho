@@ -252,7 +252,7 @@ a {
 }
 
 .why-contents {
-  animation-name: backgroundColorPalette;
+  animation-name: backgroundAnimation;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -261,27 +261,19 @@ a {
   color: white;
 }
 
-@keyframes backgroundColorPalette {
+@keyframes backgroundAnimation {
   0% {
-    background: #4d07ff;
+    background: #1b1a1f; /* Dark grayish-blue */
   }
-
   50% {
-    background: #6226f9;
+    background: #130e3ac0; /* Dark purple with some transparency */
   }
-
-  100% {
-    background: #2a0686;
-  }
-
-  /* 
   75% {
-    background: #ffd87dc0;
+    background: #241650; /* Dark purple */
   }
-
   100% {
-    background: #ff9b85b4;
-  } */
+    background: #280b6db4; /* Dark purple with more transparency */
+  }
 }
 
 /* -------------- */

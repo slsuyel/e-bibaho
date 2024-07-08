@@ -1,5 +1,5 @@
-import useIsMobile from "../../../../hooks/useIsMobile";
-import { DataWhyUS } from "../../../../types/types";
+import useIsMobile from '../../../../hooks/useIsMobile';
+import { DataWhyUS } from '../../../../types/types';
 
 const Card = ({ data }: { data: DataWhyUS }) => {
   const isMobile = useIsMobile();
@@ -7,14 +7,16 @@ const Card = ({ data }: { data: DataWhyUS }) => {
   return (
     <section
       className={`hr-content justify-content-between d-flex align-items-center why-contents ${
-        isMobile ? "stack__card " : ""
+        isMobile ? 'stack__card ' : ''
       }`}
     >
       <div className=" row mx-auto">
         <div className="col-md-6 position-relative ">
           <div className="pt-5">
             <h2 className="my-3 px-1 fw-bold">{data.title}</h2>
-            <p style={{ fontSize: "20px" }}>{data.description}</p>
+            <p className="ps-4" style={{ fontSize: '20px' }}>
+              {data.description}
+            </p>
           </div>
         </div>
 

@@ -59,7 +59,7 @@ const Header = () => {
             className="justify-content-end fs-5 text-white fw-semibold gap-3"
           >
             {menuItems.map(item => (
-              <NavLink key={item.id} to={item.link} className="nav-link ">
+              <NavLink key={item.id} to={item.link} className="nav-link fs-6">
                 {item.label}
               </NavLink>
             ))}
