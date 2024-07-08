@@ -11,6 +11,7 @@ const NewRegi = () => {
     mobileNumber: '',
     email: '',
     password: '',
+    dateOfBirth: '',
     profileCreatedBy: 'self',
     gender: '',
     candidateName: '',

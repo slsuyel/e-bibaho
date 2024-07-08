@@ -1,10 +1,34 @@
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { StepOneProps } from '../../../types';
 
 const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
+  const [dateOfBirth, setDateOfBirth] = useState<Date | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleDateChange = (date: Date | null) => {
+    setDateOfBirth(date);
+
+    if (date) {
+      const formattedDate = date.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+      });
+
+      handleInputChange({
+        target: { name: 'dateOfBirth', value: formattedDate },
+      } as React.ChangeEvent<HTMLInputElement>);
+    } else {
+      handleInputChange({
+        target: { name: 'dateOfBirth', value: null },
+      } as unknown as React.ChangeEvent<HTMLInputElement>);
+    }
+  };
 
   return (
     <div>
@@ -19,7 +43,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             placeholder="Mobile Number"
             type="tel"
             required
-            className="form-control "
+            className="form-control"
             value={formData.mobileNumber}
             onChange={handleInputChange}
           />
@@ -33,7 +57,7 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             name="email"
             placeholder="Your Email"
             type="email"
-            className="form-control "
+            className="form-control"
             value={formData.email}
             onChange={handleInputChange}
             required
@@ -49,28 +73,28 @@ const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
             name="password"
             placeholder="Create Password"
             type="password"
-            className="form-control "
+            className="form-control"
             value={formData.password}
             onChange={handleInputChange}
           />
         </div>
         <div className="form-group mb-2">
-          <label htmlFor="profileCreatedBy" className="my-1">
-            Profile Created By
+          <label htmlFor="dateOfBirth" className="my-1">
+            Date of Birth <span className="text-danger fs-5">*</span>
           </label>
-          <select
-            id="profileCreatedBy"
-            name="profileCreatedBy"
-            className="form-select "
-            value={formData.profileCreatedBy}
-            onChange={handleInputChange}
-          >
-            <option value="self">Self</option>
-            <option value="parents">Parents</option>
-            <option value="brother">Brother</option>
-            <option value="sister">Sister</option>
-            <option value="relative">Relative</option>
-          </select>
+          <br />
+          <DatePicker
+            id="dateOfBirth"
+            selected={dateOfBirth}
+            onChange={handleDateChange}
+            className="form-control"
+            dateFormat="dd/MM/yyyy"
+            showYearDropdown
+            scrollableYearDropdown
+            yearDropdownItemNumber={15}
+            placeholderText="Select Date of Birth"
+            required
+          />
         </div>
       </form>
     </div>

@@ -1,11 +1,11 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent } from 'react';
 
 export interface StepOneProps {
   formData: {
     mobileNumber: string;
     email: string;
     password: string;
-    profileCreatedBy: string;
+    dateOfBirth: string;
   };
   handleInputChange: (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
@@ -86,6 +86,7 @@ export type TRegiForm = {
   mobileNumber: string;
   email: string;
   password: string;
+  dateOfBirth: string;
   profileCreatedBy: string;
   gender: string;
   candidateName: string;
