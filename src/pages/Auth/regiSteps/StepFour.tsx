@@ -6,15 +6,24 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const divisions = [
-    'Dhaka',
-    'Chittagong',
-    'Rajshahi',
-    'Khulna',
-    'Barisal',
-    'Sylhet',
-    'Rangpur',
-    'Mymensingh',
+  const countries = [
+    'USA',
+    'Canada',
+    'UK',
+    'Australia',
+    'Italy',
+    'Saudi Arabia',
+    'United Arab Emirates',
+    'Qatar',
+    'Singapore',
+    'Malaysia',
+    'Kuwait',
+    'Oman',
+    'Bahrain',
+    'Japan',
+    'South Korea',
+    'India',
+    'Pakistan',
   ];
 
   return (
@@ -67,6 +76,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             <option value="" disabled>
               --- Please Select ---
             </option>
+            <option value="housewife">Housewife</option>
             <option value="employed">Employed</option>
             <option value="business">Business</option>
             <option value="retired">Retired</option>
@@ -88,20 +98,20 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
         </div>
 
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="homeDivision" className="my-1">
-            Home Division <span className="text-danger fs-5">*</span>
+          <label htmlFor="livingCountry" className="my-1">
+            Living Country <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="homeDivision"
-            name="homeDivision"
+            id="livingCountry"
+            name="livingCountry"
             className="form-select "
-            value={formData.homeDivision}
+            value={formData.livingCountry}
             onChange={handleInputChange}
           >
             <option value="" disabled>
-              --- Select Home Division ---
+              --- Select Living Country ---
             </option>
-            {divisions.map(division => (
+            {countries.map(division => (
               <option key={division} value={division}>
                 {division}
               </option>

@@ -48,7 +48,7 @@ interface FormData {
   motherOccupation: string;
   siblingsNotMarried: number;
   siblingsMarried: number;
-  homeDivision: string;
+  livingCountry: string;
   currentlyLivingIn: string;
   cityLivingIn: string;
   familyDetails: string;
@@ -89,7 +89,6 @@ export type TRegiForm = {
   gender: string;
   candidateName: string;
   parentName: string;
-
   maritalStatus: string;
   religion: string;
   nationality: string;
@@ -105,7 +104,7 @@ export type TRegiForm = {
   motherOccupation: string;
   siblingsNotMarried: number;
   siblingsMarried: number;
-  homeDivision: string;
+  livingCountry: string;
   currentlyLivingIn: string;
   cityLivingIn: string;
   familyDetails: string;

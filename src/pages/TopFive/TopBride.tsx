@@ -1,11 +1,11 @@
-import { Person } from "../../types/types";
-import "./TopFive.css";
+import { Person } from '../../types/types';
+import './TopFive.css';
 interface PersonProps {
   data: Person[];
 }
 const TopBride = ({ data }: PersonProps) => {
   return (
-    <div className="row mx-auto " style={{ background: "#ADE5F9" }}>
+    <div className="row mx-auto " style={{ background: '#ADE5F9' }}>
       <div
         className="col-md-10 mx-auto "
         data-aos="fade-up"
@@ -15,12 +15,15 @@ const TopBride = ({ data }: PersonProps) => {
           <div
             key={index}
             className={` my-1  res-card mb-3 ${
-              ["one", "two", "three", "four"][index % 4]
+              ['one', 'two', 'three', 'four'][index % 4]
             }`}
           >
             <div className="br_card">
               <div className="br_img">
-                <img src={people.photo} className="" />
+                <img
+                  src={people.photo}
+                  className="img-fluid object-fit-cover"
+                />
               </div>
               <div className="br_infos">
                 <div className="br_name">

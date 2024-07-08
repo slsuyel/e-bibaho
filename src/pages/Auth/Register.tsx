@@ -32,7 +32,7 @@ const NewRegi = () => {
     motherOccupation: '',
     siblingsNotMarried: 0,
     siblingsMarried: 0,
-    homeDivision: '',
+    livingCountry: '',
     currentlyLivingIn: '',
     cityLivingIn: '',
     familyDetails: '',
