@@ -11,6 +11,10 @@ const Card = ({ data }: { data: DataWhyUS }) => {
       }`}
     >
       <div className=" row mx-auto">
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
+        <div className="content"></div>
         <div className="col-md-6 position-relative ">
           <div className="pt-5">
             <h2 className="my-3 px-1 fw-bold">{data.title}</h2>
