@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const FamilyDetails = () => {
   return (
@@ -22,7 +22,7 @@ const FamilyDetails = () => {
               </tr>
               <tr>
                 <td className="text-secondary">Family Location</td>
-                <td>: Dhaka, Bangladesh</td>
+                <td>: Jackson Heights, Bangladesh</td>
               </tr>
               <tr>
                 <td className="text-secondary">Family Values</td>

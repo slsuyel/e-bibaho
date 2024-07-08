@@ -28,7 +28,7 @@ const ResultCard = () => {
                   <tbody>
                     <tr>
                       <td>26 Years, 5ft 1in</td>
-                      <td>Dhaka</td>
+                      <td>Jackson Heights</td>
                     </tr>
                     <tr>
                       <td>Muslim</td>
@@ -44,9 +44,7 @@ const ResultCard = () => {
                     </tr>
                     <tr>
                       <td>
-                        <span>
-                          I'm an MBBS doctor. Currently living in Dhaka.
-                        </span>
+                        <span>I'm an MBBS doctor. Currently living in Uk.</span>
                       </td>
                       <td>
                         <Link to={'/user/search-res/1'}>

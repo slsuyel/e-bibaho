@@ -368,3 +368,15 @@ a {
   color: white;
   backdrop-filter: blur(20px);
 }
+
+.fil_ter {
+  background: #055160;
+  color: white;
+}
+
+.fil_ter {
+  .ant-collapse-header {
+    color: white !important;
+    font-size: 18px;
+  }
+}

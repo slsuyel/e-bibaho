@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const BasicInfoProfile = () => {
   return (
@@ -48,7 +48,7 @@ const BasicInfoProfile = () => {
             <tbody>
               <tr>
                 <td className="text-secondary ">Location</td>
-                <td>: Dhaka</td>
+                <td>: Jackson Heights</td>
               </tr>
 
               <tr>

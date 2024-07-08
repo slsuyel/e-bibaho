@@ -18,18 +18,26 @@ const religions = [
   'Sikhism',
   'Baháʼí Faith',
 ];
+const educations = [
+  { label: 'High School Diploma', value: 'high_school_diploma' },
+  { label: 'Associate Degree', value: 'associate_degree' },
+  { label: "Bachelor's Degree", value: 'bachelors_degree' },
+  { label: "Master's Degree", value: 'masters_degree' },
+  { label: 'Doctorate', value: 'doctorate' },
+  { label: 'Other', value: 'other' },
+];
 
 const initialFilters = {
   ages: [],
   maritalStatus: [],
   religions: [],
+  education: [],
   countries: [],
 };
 
 const FilterComponent = () => {
   const { countries, loading } = useCountries();
   const [filters, setFilters] = useState(initialFilters);
-
   const [searchText, setSearchText] = useState('');
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,12 +63,13 @@ const FilterComponent = () => {
   };
 
   const applyFilters = () => {
-    const { ages, maritalStatus, religions, countries } = filters;
+    const { ages, maritalStatus, religions, education, countries } = filters;
 
     const queryParams = new URLSearchParams();
     queryParams.append('ages', ages.join(','));
     queryParams.append('maritalStatus', maritalStatus.join(','));
     queryParams.append('religions', religions.join(','));
+    queryParams.append('education', education.join(','));
     queryParams.append('countries', countries.join(','));
 
     console.log(filters);
@@ -73,7 +82,10 @@ const FilterComponent = () => {
 
   return (
     <Card title="Filter" className="filter_sidebar">
-      <Collapse defaultActiveKey={['0', '1', '2', '3', '4']}>
+      <Collapse
+        className="fil_ter"
+        defaultActiveKey={['0', '1', '2', '3', '4']}
+      >
         <Panel header="Age" key="0">
           <List
             style={{ height: '200px', overflow: 'auto' }}
@@ -145,6 +157,7 @@ const FilterComponent = () => {
             renderItem={(item: TCountry) => (
               <List.Item>
                 <Checkbox
+                  className="align-items-center"
                   onChange={e =>
                     handleCheckboxChange(
                       'countries',
@@ -162,13 +175,34 @@ const FilterComponent = () => {
             )}
           />
         </Panel>
-      </Collapse>
+        <Panel header="Education" key="4">
+          <List
+            style={{ height: '200px', overflow: 'auto' }}
+            dataSource={educations}
+            renderItem={item => (
+              <List.Item>
+                <Checkbox
+                  onChange={e =>
+                    handleCheckboxChange(
+                      'education',
+                      item.value,
+                      e.target.checked
+                    )
+                  }
+                >
+                  {item.label}
+                </Checkbox>
+              </List.Item>
+            )}
+          />
+        </Panel>
 
-      <div style={{ marginTop: '10px' }}>
-        <button className="btn btn-primary" onClick={applyFilters}>
-          Apply Filters
-        </button>
-      </div>
+        <div className="bg-white border-bottom mb-2 py-2 rounded-bottom text-center">
+          <button className=" btn-default" onClick={applyFilters}>
+            Apply Filters
+          </button>
+        </div>
+      </Collapse>
     </Card>
   );
 };

@@ -34,25 +34,25 @@ const Details = () => {
             <li>
               <strong>
                 <i className="me-2 fa-regular fa-envelope"></i>
-              </strong>{" "}
+              </strong>{' '}
               example@example.com
             </li>
             <li>
               <strong>
                 <i className="me-2 fa-brands fa-whatsapp"></i>
-              </strong>{" "}
+              </strong>{' '}
               +1234567890
             </li>
             <li>
               <strong>
                 <i className="me-2 fa-solid fa-phone-volume"></i>
-              </strong>{" "}
+              </strong>{' '}
               +1234567890
             </li>
             <li>
               <strong>
                 <i className="me-2 fa-solid fa-location-dot"></i>
-              </strong>{" "}
+              </strong>{' '}
               123 Main St, City, Country
             </li>
           </ul>
@@ -94,11 +94,11 @@ const Details = () => {
           <ul className="list-unstyled">
             <li>
               Muslim, Bengali Sunni Fasts on ramadan, doesn't practise Zakat
-              Lives in Dhaka, Bangladesh (Permanent Resident)
+              Lives in Jackson Heights, USA (Permanent Resident)
             </li>
             <li>
-              Muslim, Bengali Sunni Fasts on ramadan, Lives in Dhaka, Bangladesh
-              (Permanent Resident)
+              Muslim, Bengali Sunni Fasts on ramadan, Lives in Jackson Heights,
+              Bangladesh (Permanent Resident)
             </li>
             <li> doesn't practise Zakat</li>
 

@@ -26,14 +26,15 @@ const TopBride = ({ data }: PersonProps) => {
                 />
               </div>
               <div className="br_infos">
-                <div className="br_name">
+                <div className="br_name d-flex justify-content-between">
                   <h2>{people.name}</h2>
                   <h4>20241123</h4>
                 </div>
                 <p className="br_text">
-                  My name is Emma. I'm a 32-year-old Muslim woman living in
-                  Dhaka. Standing at 5 feet 3 inches, I am married and work as a
-                  doctor.
+                  My name is {people.name}. I'm a 32-year-old {people.religion}{' '}
+                  woman living in {people.location} . Standing at{' '}
+                  {people.height}, I am {people.marital_status} and work as a{' '}
+                  {people.occupation}.
                 </p>
                 <div className="table-responsive col-md-10">
                   <table className="lh-lg table">

@@ -1,6 +1,6 @@
-import { Card } from "antd";
+import { Card } from 'antd';
 
-import Slider from "react-slick";
+import Slider from 'react-slick';
 
 const arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 
@@ -40,11 +40,11 @@ const SuccessStory = () => {
   };
 
   return (
-    <div style={{ background: "#F5F5F5" }}>
+    <div style={{ background: '#F5F5F5' }}>
       <div className="row mx-auto container py-5 ">
         <div className="col-md-4 font-maven fw-medium ">
           <h2>
-            Success{" "}
+            Success{' '}
             <span className="fw-medium text-info-emphasis">Stories</span>
           </h2>
           <p>
@@ -69,7 +69,7 @@ const SuccessStory = () => {
         <div className="col-md-8 mx-auto">
           <div className="slider-container">
             <Slider {...settings}>
-              {arr.map((index) => (
+              {arr.map(index => (
                 <div key={index} className="d-flex justify-content-center p-3">
                   <Card
                     hoverable
@@ -91,7 +91,7 @@ const SuccessStory = () => {
                     </p>
 
                     <div>
-                      <h6>Dhaka,Bangladesh</h6>
+                      <h6>Jackson Heights,Usa</h6>
                     </div>
                   </Card>
                 </div>

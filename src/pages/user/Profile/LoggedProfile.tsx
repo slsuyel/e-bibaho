@@ -48,7 +48,7 @@ const LoggedProfile = () => {
             </div>
             <div className="col-md-6">
               <p className="mb-0">Religion / Community: Muslim, Sunni Hanafi</p>
-              <p className="mb-0">Location: Dhaka</p>
+              <p className="mb-0">Location: Jackson Heights</p>
               <p className="mb-0">Mother Tongue: Bengali</p>
             </div>
 

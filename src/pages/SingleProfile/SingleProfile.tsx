@@ -33,7 +33,7 @@ const SingleProfile = () => {
                       <tbody>
                         <tr>
                           <td>26 Years, 5ft 1in</td>
-                          <td>Dhaka</td>
+                          <td>Jackson Heights</td>
                         </tr>
                         <tr>
                           <td>Muslim</td>
@@ -50,7 +50,7 @@ const SingleProfile = () => {
                         <tr>
                           <td>
                             <span>
-                              I'm an MBBS doctor. Currently living in Dhaka.
+                              I'm an MBBS doctor. Currently living in germany.
                             </span>
                           </td>
                           <td></td>

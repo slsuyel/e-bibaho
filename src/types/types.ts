@@ -6,7 +6,7 @@ export type TUser = {
 
 /* sidebar */
 
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export type TRoute = {
   path: string;
@@ -58,4 +58,5 @@ export interface Person {
   education: string;
   occupation: string;
   religious_practice: string;
+  description?: string;
 }
