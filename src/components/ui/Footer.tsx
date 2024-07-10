@@ -1,6 +1,7 @@
 import FooterTop from './FooterTop';
 import '../Styles/Components.css';
-import logo from '../../assets/images/logo_new.png';
+import logo from '../../assets/images/main_logo.png';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="new_footer_area bg_color">
@@ -19,30 +20,30 @@ const Footer = () => {
               worldwide.
             </p>
           </div>
-          <div className="col-md-3 text-white ">
-            <ul className="nav flex-column ">
+          <div className="col-md-3 text-white">
+            <ul className="nav flex-column">
               <li className="nav-item">
                 <span className="fs-4 fw-bold">Useful links</span>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
-                  Product 1
-                </a>
+                <Link className="nav-link text-white" to="/login">
+                  Login
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
-                  Product 2
-                </a>
+                <Link className="nav-link text-white" to="/register">
+                  Sign up
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
+                <Link className="nav-link text-white" to="/pricing">
                   Plans & Prices
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
+                <Link className="nav-link text-white" to="/help">
                   Frequently asked questions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -55,24 +56,24 @@ const Footer = () => {
                 </span>
               </li>
               <li className="nav-item">
-                <span className="nav-link text-white ">
+                <span className="nav-link text-white">
                   <i className="me-1 fas fa-phone"></i>+47 45 80 80 80
                 </span>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
+                <Link className="nav-link text-white" to="/">
                   <i className="me-1 fas fa-comments"></i>Live chat
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
+                <Link className="nav-link text-white" to="/">
                   <i className="me-1 fas fa-envelope"></i>Contact us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white " href="#">
+                <Link className="nav-link text-white" to="/">
                   <i className="me-1 fas fa-star"></i>Give feedback
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

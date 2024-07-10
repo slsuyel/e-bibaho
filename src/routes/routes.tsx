@@ -7,31 +7,14 @@ import Home from '../pages/home/Home/Home';
 import OutSideLayout from '../components/layouts/OutSideLayout';
 
 import Register from '../pages/Auth/Register';
-import { userPaths } from './userRoute';
-import SearchPage from '../pages/Search/SearchPage';
-import SingleProfile from '../pages/SingleProfile/SingleProfile';
-import Errorpage from '../components/ui/Errorpage';
-import LoggedProfile from '../pages/user/Profile/LoggedProfile';
-import UserDashboard from '../pages/user/Profile/UserDashboard';
-import UserLoggedLayout from '../components/layouts/UserLoggedLayout';
-import UserPhoto from '../pages/user/Profile/UserPhoto';
-import PartnerPre from '../pages/user/Profile/PartnerPreferences/PartnerPre';
 import UserPrivate from './privateRoute/userPrivate';
+import { adminPaths } from './adminRoute';
+import SearchPage from '../pages/Search/SearchPage';
+import UserLoggedLayout from '../components/layouts/UserLoggedLayout';
+import Errorpage from '../components/ui/Errorpage';
 
-import NewMatches from '../pages/Matches/NewMatches';
-import TodayMatches from '../pages/Matches/TodayMatches';
-import MyMatches from '../pages/Matches/MyMatches';
-import NearMe from '../pages/Matches/NearMe';
-import MoreMatches from '../pages/Matches/MoreMatches';
-import RecentlyViewed from '../pages/Matches/RecentlyViewed';
-import MessageLayout from '../pages/Message/MessageLayout';
-import AccountSetting from '../pages/user/Settings/AccountSetting';
-import Notification from '../pages/user/Notification/Notification';
-import Pricing from '../pages/Pricing/Pricing';
-import Cart from '../pages/Pricing/Cart';
 import Help from '../pages/Help/Help';
-
-import EditProfileInfo from '../pages/user/Profile/Edit/EditProfileInfo';
+import Pricing from '../pages/Pricing/Pricing';
 
 import TopFive from '../pages/TopFive/TopFive';
 import NewLogin from '../pages/Auth/NewLogin';
@@ -41,6 +24,7 @@ import Careers from '../pages/About/Careers';
 
 import Contact from './../pages/home/Contact/Contact';
 import OurMediator from '../pages/About/OurMediator';
+import { userRoute } from './userRoutes';
 
 const router = createBrowserRouter([
   {
@@ -98,15 +82,6 @@ const router = createBrowserRouter([
         path: '/mediator',
         element: <OurMediator />,
       },
-
-      // {
-      //   path: "/profile",
-      //   element: <LoggedProfile />,
-      // },
-      // {
-      //   path: "/profile/dashboard",
-      //   element: <UserDashboard />,
-      // },
     ],
   },
 
@@ -118,89 +93,12 @@ const router = createBrowserRouter([
       </UserPrivate>
     ),
     errorElement: <Errorpage status={500} />,
-    children: [
-      {
-        path: 'profile',
-        element: <UserDashboard />,
-      },
-      {
-        path: 'cart/:id',
-        element: <Cart />,
-      },
-      {
-        path: 'profile/messages',
-        element: <MessageLayout />,
-      },
-      {
-        path: 'profile/notifications',
-        element: <Notification />,
-      },
-      {
-        path: 'profile/my-profile',
-        element: <LoggedProfile />,
-      },
-      {
-        path: 'profile/edit/',
-        element: <EditProfileInfo />,
-      },
-      {
-        path: 'profile/dashboard',
-        element: <UserDashboard />,
-      },
-      {
-        path: 'profile/photos',
-        element: <UserPhoto />,
-      },
-      {
-        path: 'profile/acc-settings',
-        element: <AccountSetting />,
-      },
-      {
-        path: 'profile/partner-preferences',
-        element: <PartnerPre />,
-      },
-      {
-        path: 'search-res',
-        element: <SearchPage />,
-      },
-
-      {
-        path: 'search-res/:id',
-        element: <SingleProfile />,
-      },
-
-      {
-        path: 'matches/new-matches',
-        element: <NewMatches />,
-      },
-      {
-        path: 'matches/todays-matches',
-        element: <TodayMatches />,
-      },
-
-      {
-        path: 'matches/my-matches',
-        element: <MyMatches />,
-      },
-      {
-        path: 'matches/near-me',
-        element: <NearMe />,
-      },
-      {
-        path: 'matches/recently-viewed',
-        element: <RecentlyViewed />,
-      },
-      {
-        path: 'matches/more-matches',
-        element: <MoreMatches />,
-      },
-    ],
+    children: userRoute,
   },
-
   {
     path: '/dashboard',
     element: <App />,
-    children: routeGenerator(userPaths),
+    children: routeGenerator(adminPaths),
   },
 ]);
 

@@ -50,7 +50,7 @@ const Header = () => {
       >
         <Container>
           <NavLink to={'/'} className=" text-decoration-none mt-1">
-            <img src={logo} alt="" width={150} />
+            <img src={logo} alt="" width={130} />
           </NavLink>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

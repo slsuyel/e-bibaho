@@ -1,6 +1,6 @@
-import { Layout, Menu } from "antd";
-import { sidebarItemsGenerator } from "../../utils/sidebarItemsGenerator";
-import { userPaths } from "../../routes/userRoute";
+import { Layout, Menu } from 'antd';
+import { sidebarItemsGenerator } from '../../utils/sidebarItemsGenerator';
+import { adminPaths } from '../../routes/adminRoute';
 const { Sider } = Layout;
 
 const Sidebar = () => {
@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   switch (user.token) {
     case true:
-      sidebarItems = sidebarItemsGenerator(userPaths);
+      sidebarItems = sidebarItemsGenerator(adminPaths);
       break;
 
     default:
@@ -23,15 +23,15 @@ const Sidebar = () => {
     <Sider
       breakpoint="lg"
       collapsedWidth="0"
-      style={{ height: "100vh", position: "sticky", top: "0", left: "0" }}
+      style={{ height: '100vh', position: 'sticky', top: '0', left: '0' }}
     >
       <div
         style={{
-          color: "white",
-          height: "4rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          color: 'white',
+          height: '4rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
         <h3> Dashboard</h3>
@@ -39,7 +39,7 @@ const Sidebar = () => {
       <Menu
         theme="dark"
         mode="vertical"
-        defaultSelectedKeys={["4"]}
+        defaultSelectedKeys={['4']}
         items={sidebarItems}
       />
     </Sider>
