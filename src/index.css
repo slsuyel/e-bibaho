@@ -8,9 +8,16 @@
   cursor: pointer;
 }
 
+.m_form_container {
+  height: 350px;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     cursor: default;
+  }
+  .m_form_container {
+    height: auto;
   }
 }
 

@@ -30,33 +30,32 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
     <div>
       <form className="row mx-auto">
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="gender" className="my-1">
-            Gender <span className="text-danger fs-5">*</span>
+          <label htmlFor="first_name" className="my-1">
+            First Name <span className="text-danger fs-5">*</span>
           </label>
-          <div>
-            <input
-              id="male"
-              name="gender"
-              type="radio"
-              value="male"
-              checked={formData.gender === 'male'}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="male" className="mx-1">
-              Male
-            </label>
-            <input
-              id="female"
-              name="gender"
-              type="radio"
-              value="female"
-              checked={formData.gender === 'female'}
-              onChange={handleInputChange}
-            />
-            <label htmlFor="female" className="mx-1">
-              Female
-            </label>
-          </div>
+          <input
+            id="first_name"
+            name="first_name"
+            placeholder="First Name"
+            type="text"
+            className="form-control "
+            value={formData.first_name}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="form-group mb-2 col-md-6">
+          <label htmlFor="last_name" className="my-1">
+            Last Name <span className="text-danger fs-5">*</span>
+          </label>
+          <input
+            id="last_name"
+            name="last_name"
+            placeholder="Last Name"
+            type="text"
+            className="form-control "
+            value={formData.last_name}
+            onChange={handleInputChange}
+          />
         </div>
 
         <div className="form-group mb-2 col-md-6 date_of_birth">
@@ -79,48 +78,30 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
 
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="candidateName" className="my-1">
-            Candidate Name <span className="text-danger fs-5">*</span>
+          <label htmlFor="father_name" className="my-1">
+            Father Name <span className="text-danger fs-5">*</span>
           </label>
           <input
-            id="candidateName"
-            name="candidateName"
-            placeholder="Candidate Name"
+            id="father_name"
+            name="father_name"
+            placeholder="Father Name"
             type="text"
             className="form-control "
-            value={formData.candidateName}
+            value={formData.father_name}
             onChange={handleInputChange}
           />
         </div>
-        <div className="form-group mb-2  col-md-6">
-          <label htmlFor="profileCreatedBy" className="my-1">
-            Profile Created By <span className="text-danger fs-5">*</span>
-          </label>
-          <select
-            id="profileCreatedBy"
-            name="profileCreatedBy"
-            className="form-select "
-            value={formData.profileCreatedBy}
-            onChange={handleInputChange}
-          >
-            <option value="self">Self</option>
-            <option value="parents">Parents</option>
-            <option value="brother">Brother</option>
-            <option value="sister">Sister</option>
-            <option value="relative">Relative</option>
-          </select>
-        </div>
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="parentName" className="my-1">
-            Father / Mother Name <span className="text-danger fs-5">*</span>
+          <label htmlFor="mother_name" className="my-1">
+            Mother Name <span className="text-danger fs-5">*</span>
           </label>
           <input
-            id="parentName"
-            name="parentName"
-            placeholder="Father / Mother Name"
+            id="mother_name"
+            name="mother_name"
+            placeholder=" Mother Name"
             type="text"
             className="form-control "
-            value={formData.parentName}
+            value={formData.mother_name}
             onChange={handleInputChange}
           />
         </div>

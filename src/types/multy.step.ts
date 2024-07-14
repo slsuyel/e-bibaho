@@ -2,6 +2,8 @@ import { ChangeEvent } from 'react';
 
 export interface StepOneProps {
   formData: {
+    profile_for: string;
+    gender: string;
     mobileNumber: string;
     email: string;
     password: string;
@@ -13,10 +15,11 @@ export interface StepOneProps {
 }
 export interface StepTwoProps {
   formData: {
-    gender: string;
-    candidateName: string;
-    profileCreatedBy: string;
-    parentName: string;
+    first_name: string;
+    last_name: string;
+
+    father_name: string;
+    mother_name: string;
 
     maritalStatus: string;
     religion: string;
@@ -81,14 +84,17 @@ export interface StepFiveProps {
 
 export type TRegiForm = {
   [key: string]: string | number;
+  profile_for: string;
   mobileNumber: string;
   email: string;
   password: string;
   dateOfBirth: string;
-  profileCreatedBy: string;
+
   gender: string;
-  candidateName: string;
-  parentName: string;
+  first_name: string;
+  last_name: string;
+  father_name: string;
+  mother_name: string;
   maritalStatus: string;
   religion: string;
   nationality: string;
