@@ -10,14 +10,14 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
     <div>
       <form className="row mx-auto">
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="highestQualification" className="my-1">
+          <label htmlFor="highest_qualification" className="my-1">
             Highest Qualification <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="highestQualification"
-            name="highestQualification"
+            id="highest_qualification"
+            name="highest_qualification"
             className="form-select "
-            value={formData.highestQualification}
+            value={formData.highest_qualification}
             onChange={handleInputChange}
           >
             <option value="" disabled>
@@ -31,27 +31,27 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="collegeName" className="my-1">
+          <label htmlFor="college_name" className="my-1">
             Education Details
           </label>
           <input
-            id="collegeName"
-            name="collegeName"
+            id="college_name"
+            name="college_name"
             placeholder="  College/university name"
             className="form-control "
-            value={formData.collegeName}
+            value={formData.college_name}
             onChange={handleInputChange}
           />
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="workingSector" className="my-1">
+          <label htmlFor="working_sector" className="my-1">
             Working Sector <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="workingSector"
-            name="workingSector"
+            id="working_sector"
+            name="working_sector"
             className="form-select "
-            value={formData.workingSector}
+            value={formData.working_sector}
             onChange={handleInputChange}
           >
             <option value="" disabled>
@@ -86,27 +86,27 @@ const StepThree = ({ formData, handleInputChange }: StepThreeProps) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="professionDetails" className="my-1">
+          <label htmlFor="profession_details" className="my-1">
             Profession Details
           </label>
           <textarea
-            id="professionDetails"
-            name="professionDetails"
+            id="profession_details"
+            name="profession_details"
             placeholder="Enter your profession details"
             className="form-control "
-            value={formData.professionDetails}
+            value={formData.profession_details}
             onChange={handleInputChange} // This should work now
           ></textarea>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="monthlyIncome" className="my-1">
+          <label htmlFor="monthly_income" className="my-1">
             Monthly Income
           </label>
           <select
-            id="monthlyIncome"
-            name="monthlyIncome"
+            id="monthly_income"
+            name="monthly_income"
             className="form-select "
-            value={formData.monthlyIncome}
+            value={formData.monthly_income}
             onChange={handleInputChange}
           >
             <option value="" disabled>

@@ -30,35 +30,16 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
     <div>
       <form className="row mx-auto">
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="fatherStatus" className="my-1">
-            Father Status <span className="text-danger fs-5">*</span>
-          </label>
-          <select
-            id="fatherStatus"
-            name="fatherStatus"
-            className="form-select "
-            value={formData.fatherStatus}
-            onChange={handleInputChange}
-          >
-            <option value="" disabled>
-              --- Please Select ---
-            </option>
-            <option value="employed">Employed</option>
-            <option value="business">Business</option>
-            <option value="retired">Retired</option>
-          </select>
-        </div>
-        <div className="form-group col-md-6 mb-2">
-          <label htmlFor="fatherOccupation" className="my-1">
+          <label htmlFor="father_occupation" className="my-1">
             Father Occupation
           </label>
           <input
-            id="fatherOccupation"
-            name="fatherOccupation"
+            id="father_occupation"
+            name="father_occupation"
             placeholder="Father Occupation"
             type="text"
             className="form-control "
-            value={formData.fatherOccupation}
+            value={formData.father_occupation}
             onChange={handleInputChange}
           />
         </div>
@@ -83,29 +64,29 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="motherOccupation" className="my-1">
+          <label htmlFor="mother_occupation" className="my-1">
             Mother Occupation
           </label>
           <input
-            id="motherOccupation"
-            name="motherOccupation"
+            id="mother_occupation"
+            name="mother_occupation"
             placeholder="Mother Occupation"
             type="text"
             className="form-control "
-            value={formData.motherOccupation}
+            value={formData.mother_occupation}
             onChange={handleInputChange}
           />
         </div>
 
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="livingCountry" className="my-1">
+          <label htmlFor="living_country" className="my-1">
             Living Country <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="livingCountry"
-            name="livingCountry"
+            id="living_country"
+            name="living_country"
             className="form-select "
-            value={formData.livingCountry}
+            value={formData.living_country}
             onChange={handleInputChange}
           >
             <option value="" disabled>
@@ -119,43 +100,43 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="currentlyLivingIn" className="my-1">
+          <label htmlFor="currently_living_in" className="my-1">
             Currently Living In
           </label>
           <input
-            id="currentlyLivingIn"
-            name="currentlyLivingIn"
+            id="currently_living_in"
+            name="currently_living_in"
             placeholder="Currently Living In"
             type="text"
             className="form-control "
-            value={formData.currentlyLivingIn}
+            value={formData.currently_living_in}
             onChange={handleInputChange}
           />
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="cityLivingIn" className="my-1">
+          <label htmlFor="city_living_in" className="my-1">
             City Living In
           </label>
           <input
-            id="cityLivingIn"
-            name="cityLivingIn"
+            id="city_living_in"
+            name="city_living_in"
             placeholder="City Living In"
             type="text"
             className="form-control "
-            value={formData.cityLivingIn}
+            value={formData.city_living_in}
             onChange={handleInputChange}
           />
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="familyDetails" className="my-1">
+          <label htmlFor="family_details" className="my-1">
             Family Details
           </label>
           <textarea
-            id="familyDetails"
-            name="familyDetails"
+            id="family_details"
+            name="family_details"
             placeholder="Please enter your family details"
             className="form-control "
-            value={formData.familyDetails}
+            value={formData.family_details}
             onChange={handleInputChange}
           ></textarea>
         </div>

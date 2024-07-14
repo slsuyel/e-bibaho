@@ -1,74 +1,73 @@
-import { Form, Input, Select, Button } from "antd";
-import { SetStateAction, useState } from "react";
+import { Form, Input, Select, Button } from 'antd';
+import { SetStateAction, useState } from 'react';
 
 const { Option } = Select;
 interface PartnerInfo {
   age?: string;
-  maritalStatus?: string;
+  marital_status?: string;
   religion?: string;
   community?: string;
   motherTongue?: string;
 }
 
 const EditPartnerInfo = () => {
-  const [selectedReligion, setSelectedReligion] = useState("");
-  const [selectedCommunity, setSelectedCommunity] = useState("");
+  const [selectedReligion, setSelectedReligion] = useState('');
+  const [selectedCommunity, setSelectedCommunity] = useState('');
 
   const religionsData = [
     {
-      religion: "Islam",
+      religion: 'Islam',
       communities: [
-        "Sunni Hanafi",
+        'Sunni Hanafi',
         "Sunni Shafi'i",
-        "Sunni Maliki",
-        "Sunni Hanbali",
-        "Shia Twelver",
-        "Shia Ismaili",
-        "Shia Zaidi",
-        "Sufism",
+        'Sunni Maliki',
+        'Sunni Hanbali',
+        'Shia Twelver',
+        'Shia Ismaili',
+        'Shia Zaidi',
+        'Sufism',
       ],
     },
     {
-      religion: "Christianity",
+      religion: 'Christianity',
       communities: [
-        "Catholicism",
-        "Protestantism",
-        "Eastern Orthodoxy",
-        "Oriental Orthodoxy",
+        'Catholicism',
+        'Protestantism',
+        'Eastern Orthodoxy',
+        'Oriental Orthodoxy',
       ],
     },
     {
-      religion: "Hinduism",
-      communities: ["Vaishnavism", "Shaivism", "Shaktism", "Smartism"],
+      religion: 'Hinduism',
+      communities: ['Vaishnavism', 'Shaivism', 'Shaktism', 'Smartism'],
     },
     {
-      religion: "Buddhism",
-      communities: ["Theravada", "Mahayana", "Vajrayana"],
+      religion: 'Buddhism',
+      communities: ['Theravada', 'Mahayana', 'Vajrayana'],
     },
     {
-      religion: "Judaism",
+      religion: 'Judaism',
       communities: [
-        "Orthodox Judaism",
-        "Conservative Judaism",
-        "Reform Judaism",
+        'Orthodox Judaism',
+        'Conservative Judaism',
+        'Reform Judaism',
       ],
     },
     {
-      religion: "Sikhism",
-      communities: ["Sikhism"],
+      religion: 'Sikhism',
+      communities: ['Sikhism'],
     },
   ];
 
   const handleReligionChange = (value: SetStateAction<string>) => {
     setSelectedReligion(value);
     setSelectedCommunity(
-      religionsData.find((data) => data.religion === value)?.communities[0] ||
-        ""
+      religionsData.find(data => data.religion === value)?.communities[0] || ''
     );
   };
 
   const onFinish = (values: PartnerInfo) => {
-    console.log("Received values:", values);
+    console.log('Received values:', values);
   };
 
   return (
@@ -82,7 +81,7 @@ const EditPartnerInfo = () => {
           <Input />
         </Form.Item>
 
-        <Form.Item label="Marital Status" name="maritalStatus">
+        <Form.Item label="Marital Status" name="marital_status">
           <Select placeholder="Marital Status">
             <Option value="single">Single</Option>
             <Option value="married">Married</Option>
@@ -97,7 +96,7 @@ const EditPartnerInfo = () => {
             onChange={handleReligionChange}
             value={selectedReligion}
           >
-            {religionsData.map((data) => (
+            {religionsData.map(data => (
               <Option key={data.religion} value={data.religion}>
                 {data.religion}
               </Option>
@@ -109,8 +108,8 @@ const EditPartnerInfo = () => {
           <Select placeholder="Community" value={selectedCommunity}>
             {selectedReligion &&
               religionsData
-                .find((data) => data.religion === selectedReligion)
-                ?.communities.map((community) => (
+                .find(data => data.religion === selectedReligion)
+                ?.communities.map(community => (
                   <Option key={community} value={community}>
                     {community}
                   </Option>

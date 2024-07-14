@@ -5,9 +5,9 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [dateOfBirth, setDateOfBirth] = useState<Date | null>(null);
+  const [date_of_birth, setdate_of_birth] = useState<Date | null>(null);
   const handleDateChange = (date: Date | null) => {
-    setDateOfBirth(date);
+    setdate_of_birth(date);
 
     if (date) {
       const formattedDate = date.toLocaleDateString('en-GB', {
@@ -17,11 +17,11 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
       });
 
       handleInputChange({
-        target: { name: 'dateOfBirth', value: formattedDate },
+        target: { name: 'date_of_birth', value: formattedDate },
       } as React.ChangeEvent<HTMLInputElement>);
     } else {
       handleInputChange({
-        target: { name: 'dateOfBirth', value: null },
+        target: { name: 'date_of_birth', value: null },
       } as unknown as React.ChangeEvent<HTMLInputElement>);
     }
   };
@@ -59,13 +59,13 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
 
         <div className="form-group mb-2 col-md-6 date_of_birth">
-          <label htmlFor="dateOfBirth" className="my-1">
+          <label htmlFor="date_of_birth" className="my-1">
             Date of Birth <span className="text-danger fs-5">*</span>
           </label>
           <br />
           <DatePicker
-            id="dateOfBirth"
-            selected={dateOfBirth}
+            id="date_of_birth"
+            selected={date_of_birth}
             onChange={handleDateChange}
             className="form-control "
             dateFormat="dd/MM/yyyy"
@@ -79,7 +79,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
 
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="father_name" className="my-1">
-            Father Name <span className="text-danger fs-5">*</span>
+            Father's Name <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="father_name"
@@ -93,7 +93,7 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="mother_name" className="my-1">
-            Mother Name <span className="text-danger fs-5">*</span>
+            Mother's Name <span className="text-danger fs-5">*</span>
           </label>
           <input
             id="mother_name"
@@ -107,14 +107,14 @@ const StepTwo = ({ formData, handleInputChange }: StepTwoProps) => {
         </div>
 
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="maritalStatus" className="my-1">
+          <label htmlFor="marital_status" className="my-1">
             Marital Status <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="maritalStatus"
-            name="maritalStatus"
+            id="marital_status"
+            name="marital_status"
             className="form-select "
-            value={formData.maritalStatus}
+            value={formData.marital_status}
             onChange={handleInputChange}
           >
             <option value="" disabled>

@@ -3,17 +3,17 @@ import { Form, Button, DatePicker, Select, Switch, Input } from 'antd';
 const { Option } = Select;
 
 interface BasicInfoFormData {
-  dateOfBirth?: Date;
-  maritalStatus?: MaritalStatus;
+  date_of_birth?: Date;
+  marital_status?: marital_status;
   height?: number;
-  bloodGroup?: string;
+  blood_group?: string;
   disability?: boolean;
   country?: string;
   state?: string;
   city?: string;
 }
 
-type MaritalStatus = 'single' | 'married' | 'divorced' | 'widowed';
+type marital_status = 'single' | 'married' | 'divorced' | 'widowed';
 
 const BasicInfoEdit: React.FC = () => {
   const [form] = Form.useForm();
@@ -40,11 +40,11 @@ const BasicInfoEdit: React.FC = () => {
           </Select>
         </Form.Item>
 
-        <Form.Item label="Date of Birth" name="dateOfBirth">
+        <Form.Item label="Date of Birth" name="date_of_birth">
           <DatePicker />
         </Form.Item>
 
-        <Form.Item label="Marital Status" name="maritalStatus">
+        <Form.Item label="Marital Status" name="marital_status">
           <Select placeholder="Marital Status">
             <Option value="single">Single</Option>
             <Option value="married">Married</Option>
@@ -65,7 +65,7 @@ const BasicInfoEdit: React.FC = () => {
           </Select>
         </Form.Item>
 
-        <Form.Item label="Blood Group" name="bloodGroup">
+        <Form.Item label="Blood Group" name="blood_group">
           <Select placeholder="Select Blood Group">
             <Option value="A+">A+</Option>
             <Option value="A-">A-</Option>

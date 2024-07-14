@@ -29,7 +29,7 @@ const educations = [
 
 const initialFilters = {
   ages: [],
-  maritalStatus: [],
+  marital_status: [],
   religions: [],
   education: [],
   countries: [],
@@ -63,11 +63,11 @@ const FilterComponent = () => {
   };
 
   const applyFilters = () => {
-    const { ages, maritalStatus, religions, education, countries } = filters;
+    const { ages, marital_status, religions, education, countries } = filters;
 
     const queryParams = new URLSearchParams();
     queryParams.append('ages', ages.join(','));
-    queryParams.append('maritalStatus', maritalStatus.join(','));
+    queryParams.append('marital_status', marital_status.join(','));
     queryParams.append('religions', religions.join(','));
     queryParams.append('education', education.join(','));
     queryParams.append('countries', countries.join(','));
@@ -113,7 +113,7 @@ const FilterComponent = () => {
                 <Checkbox
                   onChange={e =>
                     handleCheckboxChange(
-                      'maritalStatus',
+                      'marital_status',
                       item,
                       e.target.checked
                     )

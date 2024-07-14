@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './../styles/User.css';
 import BasicInfoProfile from './BasicInfoProfile';
 import ReligiousBackground from './ReligiousBackground';
-import FamilyDetails from './FamilyDetails';
+import family_details from './family_details';
 import Hobbies from './Hobbies';
 import BasicInfoPartner from './PartnerPreferences/BasicInfoPartner';
 import LocationDetails from './PartnerPreferences/LocationDetails';
@@ -134,9 +134,9 @@ const LoggedProfile = () => {
           <div className="user-d-border "></div>
           <EducationCareer />
 
-          {/* FamilyDetails */}
+          {/* family_details */}
           <div className="user-d-border "></div>
-          <FamilyDetails />
+          <family_details />
 
           <div className="user-d-border "></div>
           <Hobbies />

@@ -61,17 +61,17 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
         </div>
 
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="mobileNumber" className="my-1">
+          <label htmlFor="mobile_number" className="my-1">
             Mobile Number <span className="text-danger fs-5">*</span>
           </label>
           <input
-            id="mobileNumber"
-            name="mobileNumber"
+            id="mobile_number"
+            name="mobile_number"
             placeholder="Mobile Number"
             type="tel"
             required
             className="form-control"
-            value={formData.mobileNumber}
+            value={formData.mobile_number}
             onChange={handleInputChange}
           />
         </div>

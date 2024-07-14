@@ -4,10 +4,10 @@ export interface StepOneProps {
   formData: {
     profile_for: string;
     gender: string;
-    mobileNumber: string;
+    mobile_number: string;
     email: string;
     password: string;
-    dateOfBirth: string;
+    date_of_birth: string;
   };
   handleInputChange: (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
@@ -21,7 +21,7 @@ export interface StepTwoProps {
     father_name: string;
     mother_name: string;
 
-    maritalStatus: string;
+    marital_status: string;
     religion: string;
     nationality: string;
   };
@@ -32,12 +32,12 @@ export interface StepTwoProps {
 
 export interface StepThreeProps {
   formData: {
-    highestQualification: string;
-    collegeName: string;
-    workingSector: string;
+    highest_qualification: string;
+    college_name: string;
+    working_sector: string;
     profession: string;
-    professionDetails: string;
-    monthlyIncome: string;
+    profession_details: string;
+    monthly_income: string;
   };
   handleInputChange: (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -45,16 +45,14 @@ export interface StepThreeProps {
 }
 
 interface FormData {
-  fatherStatus: string;
-  fatherOccupation: string;
+  father_occupation: string;
   motherStatus: string;
-  motherOccupation: string;
-  siblingsNotMarried: number;
-  siblingsMarried: number;
-  livingCountry: string;
-  currentlyLivingIn: string;
-  cityLivingIn: string;
-  familyDetails: string;
+  mother_occupation: string;
+
+  living_country: string;
+  currently_living_in: string;
+  city_living_in: string;
+  family_details: string;
 }
 
 export interface StepFourProps {
@@ -70,9 +68,8 @@ interface StepFiveFormData {
   height: string;
   weight: string;
   bodyType: string;
-  complexion: string;
-  bloodGroup: string;
-  physicalAttributeDetails: string;
+  race: string;
+  blood_group: string;
 }
 
 export interface StepFiveProps {
@@ -85,39 +82,37 @@ export interface StepFiveProps {
 export type TRegiForm = {
   [key: string]: string | number;
   profile_for: string;
-  mobileNumber: string;
+  mobile_number: string;
   email: string;
   password: string;
-  dateOfBirth: string;
+  date_of_birth: string;
 
   gender: string;
   first_name: string;
   last_name: string;
   father_name: string;
   mother_name: string;
-  maritalStatus: string;
+  marital_status: string;
   religion: string;
   nationality: string;
-  highestQualification: string;
-  collegeName: string;
-  workingSector: string;
+  highest_qualification: string;
+  college_name: string;
+  working_sector: string;
   profession: string;
-  professionDetails: string;
-  monthlyIncome: string;
-  fatherStatus: string;
-  fatherOccupation: string;
+  profession_details: string;
+  monthly_income: string;
+
+  father_occupation: string;
   motherStatus: string;
-  motherOccupation: string;
-  siblingsNotMarried: number;
-  siblingsMarried: number;
-  livingCountry: string;
-  currentlyLivingIn: string;
-  cityLivingIn: string;
-  familyDetails: string;
+  mother_occupation: string;
+
+  living_country: string;
+  currently_living_in: string;
+  city_living_in: string;
+  family_details: string;
   height: string;
   weight: string;
   bodyType: string;
-  complexion: string;
-  bloodGroup: string;
-  physicalAttributeDetails: string;
+  race: string;
+  blood_group: string;
 };

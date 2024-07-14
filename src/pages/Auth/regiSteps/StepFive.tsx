@@ -70,18 +70,18 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="complexion" className="my-1">
-            Complexion <span className="text-danger fs-5">*</span>
+          <label htmlFor="race" className="my-1">
+            race <span className="text-danger fs-5">*</span>
           </label>
           <select
-            id="complexion"
-            name="complexion"
+            id="race"
+            name="race"
             className="form-select "
-            value={formData.complexion}
+            value={formData.race}
             onChange={handleInputChange}
           >
             <option value="" disabled>
-              --- Select Complexion ---
+              --- Select race ---
             </option>
             <option value="veryFair">Very Fair</option>
             <option value="fair">Fair</option>
@@ -90,14 +90,14 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
           </select>
         </div>
         <div className="form-group col-md-6 mb-2">
-          <label htmlFor="bloodGroup" className="my-1">
+          <label htmlFor="blood_group" className="my-1">
             Blood Group
           </label>
           <select
-            id="bloodGroup"
-            name="bloodGroup"
+            id="blood_group"
+            name="blood_group"
             className="form-select "
-            value={formData.bloodGroup}
+            value={formData.blood_group}
             onChange={handleInputChange}
           >
             <option value="" disabled>
@@ -112,19 +112,6 @@ const StepFive = ({ formData, handleInputChange }: StepFiveProps) => {
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select>
-        </div>
-        <div className="form-group col-md-6 mb-2">
-          <label htmlFor="physicalAttributeDetails" className="my-1">
-            Physical Attribute Details
-          </label>
-          <textarea
-            id="physicalAttributeDetails"
-            name="physicalAttributeDetails"
-            placeholder="Enter physical attribute details"
-            className="form-control "
-            value={formData.physicalAttributeDetails}
-            onChange={handleInputChange}
-          ></textarea>
         </div>
       </form>
     </div>

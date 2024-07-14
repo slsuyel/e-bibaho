@@ -1,18 +1,18 @@
-import { Button, Form, Input, Select } from "antd";
+import { Button, Form, Input, Select } from 'antd';
 
 const { Option } = Select;
 
 interface EduCrDetails {
-  highestQualification?: string;
+  highest_qualification?: string;
   collegeUniversity?: string;
-  workingSector?: string;
+  working_sector?: string;
   profession?: string;
-  monthlyIncome?: string;
+  monthly_income?: string;
 }
 
 const EducationEdit = () => {
   const onFinish = (values: EduCrDetails) => {
-    console.log("Received values:", values);
+    console.log('Received values:', values);
   };
 
   return (
@@ -26,11 +26,11 @@ const EducationEdit = () => {
       >
         <Form.Item
           label="Highest Qualification"
-          name="highestQualification"
+          name="highest_qualification"
           rules={[
             {
               required: true,
-              message: "Please select your highest qualification!",
+              message: 'Please select your highest qualification!',
             },
           ]}
         >
@@ -49,7 +49,7 @@ const EducationEdit = () => {
           rules={[
             {
               required: true,
-              message: "Please input your college(s) / university!",
+              message: 'Please input your college(s) / university!',
             },
           ]}
         >
@@ -58,9 +58,9 @@ const EducationEdit = () => {
 
         <Form.Item
           label="Working Sector"
-          name="workingSector"
+          name="working_sector"
           rules={[
-            { required: true, message: "Please select your working sector!" },
+            { required: true, message: 'Please select your working sector!' },
           ]}
         >
           <Select placeholder="Select Working Sector">
@@ -75,16 +75,16 @@ const EducationEdit = () => {
         <Form.Item
           label="Profession"
           name="profession"
-          rules={[{ required: true, message: "Please input your profession!" }]}
+          rules={[{ required: true, message: 'Please input your profession!' }]}
         >
           <Input placeholder="Enter Profession" />
         </Form.Item>
 
         <Form.Item
           label="Monthly Income"
-          name="monthlyIncome"
+          name="monthly_income"
           rules={[
-            { required: true, message: "Please select your monthly income!" },
+            { required: true, message: 'Please select your monthly income!' },
           ]}
         >
           <Select placeholder="Select Monthly Income">

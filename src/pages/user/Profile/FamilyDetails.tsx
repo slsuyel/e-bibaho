@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const FamilyDetails = () => {
+const family_details = () => {
   return (
     <>
       <div className="align-items-center my-1 mt-2  d-flex justify-content-between font-maven">
@@ -58,4 +58,4 @@ const FamilyDetails = () => {
   );
 };
 
-export default FamilyDetails;
+export default family_details;

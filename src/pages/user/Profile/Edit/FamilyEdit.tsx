@@ -1,11 +1,11 @@
-import React from "react";
-import { Card, Form, Input, Select, Button } from "antd";
+import React from 'react';
+import { Card, Form, Input, Select, Button } from 'antd';
 
 const { Option } = Select;
 
 interface familyInfo {
-  fatherStatus?: string;
-  mothersStatus?: string;
+  father_occupation?: string;
+  mother_occupation?: string;
   familyLocation?: string;
   nativePlace?: string;
   numberOfSiblings?: number;
@@ -20,7 +20,7 @@ const FamilyEdit: React.FC = () => {
   const labelColSpan = 8;
 
   const handleFormSubmit = (values: familyInfo) => {
-    console.log("Form values:", values);
+    console.log('Form values:', values);
   };
 
   return (
@@ -30,11 +30,11 @@ const FamilyEdit: React.FC = () => {
 
         <Form onFinish={handleFormSubmit}>
           <Form.Item
-            label="Father's Status"
-            name="fatherStatus"
+            label="Father's Occupation"
+            name="father_occupation"
             labelCol={{ span: labelColSpan }}
           >
-            <Select placeholder="Select Father's Status">
+            <Select placeholder="Select Father's Occupation">
               <Option value="Not Employed">Not Employed</Option>
               <Option value="Business">Business</Option>
               <Option value="Retired">Retired</Option>
@@ -43,7 +43,7 @@ const FamilyEdit: React.FC = () => {
           </Form.Item>
           <Form.Item
             label="Mother's Status"
-            name="mothersStatus"
+            name="mother_occupation"
             labelCol={{ span: labelColSpan }}
           >
             <Select placeholder="Select Mother's Status">
