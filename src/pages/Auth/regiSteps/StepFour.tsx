@@ -51,7 +51,7 @@ const StepFour: React.FC<StepFourProps> = ({ formData, handleInputChange }) => {
             id="motherStatus"
             name="motherStatus"
             className="form-select "
-            value={formData.motherStatus}
+            value={formData.mother_occupation}
             onChange={handleInputChange}
           >
             <option value="" disabled>

@@ -8,16 +8,20 @@
   cursor: pointer;
 }
 
+.m_form_modal {
+  width: 600px !important;
+}
+
 .m_form_container {
-  height: 350px;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 600px) {
   body {
     cursor: default;
   }
-  .m_form_container {
-    height: auto;
+  .m_form_modal {
+    width: auto !important;
   }
 }
 
@@ -175,6 +179,11 @@ a {
   margin-right: 2px;
   margin-left: 2px;
   background: #055160;
+}
+
+.ant-dropdown-placement-bottomRight {
+  inset: 105.574px 20px auto auto !important;
+  z-index: -1;
 }
 
 .CardForUser .ant-card-body {
@@ -475,4 +484,10 @@ a {
   .get_say_info_sec > li a:hover {
     background-color: #f85508;
   }
+}
+
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+  background: slategray !important;
 }

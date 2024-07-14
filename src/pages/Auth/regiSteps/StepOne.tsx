@@ -68,7 +68,7 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
             id="mobile_number"
             name="mobile_number"
             placeholder="Mobile Number"
-            type="tel"
+            type="number"
             required
             className="form-control"
             value={formData.mobile_number}
@@ -92,13 +92,13 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
         </div>
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="password" className="my-1">
-            Create Password <span className="text-danger fs-5">*</span>
+            Password <span className="text-danger fs-5">*</span>
           </label>
           <input
             required
             id="password"
             name="password"
-            placeholder="Create Password"
+            placeholder=" Password"
             type="password"
             className="form-control"
             value={formData.password}
@@ -106,15 +106,15 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
           />
         </div>
         <div className="form-group mb-2 col-md-6">
-          <label htmlFor="password" className="my-1">
+          <label htmlFor="re_password" className="my-1">
             Retype Password <span className="text-danger fs-5">*</span>
           </label>
           <input
             required
-            id="password"
-            name="password"
+            id="re_password"
+            name="re_password"
             placeholder="Retype Password"
-            type="password"
+            type="re_password"
             className="form-control"
           />
         </div>

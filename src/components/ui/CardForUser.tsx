@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Card, Menu } from "antd";
+import { Link } from 'react-router-dom';
+import { Card, Menu } from 'antd';
 import {
   UserOutlined,
   MailOutlined,
@@ -8,8 +8,8 @@ import {
   FilterOutlined,
   LogoutOutlined,
   DashboardOutlined,
-} from "@ant-design/icons";
-import UpgrateBtn from "../reusable/UpgrateBtn";
+} from '@ant-design/icons';
+import UpgrateBtn from '../reusable/UpgrateBtn';
 
 const CardForUser = () => {
   return (

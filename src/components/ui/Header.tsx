@@ -3,20 +3,25 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/images/main_logo.png';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import { Drawer } from 'antd';
-import useIsMobile from '../../hooks/useIsMobile';
+// import { Drawer } from 'antd';
+// import useIsMobile from '../../hooks/useIsMobile';
 
 const Header = () => {
-  const [MobileMenu, setMobileMenu] = useState(false);
-  const isMobile = useIsMobile();
+  // const [MobileMenu, setMobileMenu] = useState(false);
+  // const isMobile = useIsMobile();
 
-  const showDrawer = () => {
-    setMobileMenu(true);
+  const [navbarExpanded, setNavbarExpanded] = useState(false);
+  const closeNavbar = () => {
+    setNavbarExpanded(false);
   };
 
-  const onClose = () => {
-    setMobileMenu(false);
-  };
+  // const showDrawer = () => {
+  //   setMobileMenu(true);
+  // };
+
+  // const onClose = () => {
+  //   setMobileMenu(false);
+  // };
 
   const menuItems = [
     {
@@ -45,21 +50,30 @@ const Header = () => {
     <>
       <Navbar
         expand="lg"
+        expanded={navbarExpanded}
         // fixed={isFixed ? "top" : undefined}
-        className={` p-0 py-3 ${isMobile ? 'd-none' : 'd-block'}`}
+        className={` p-0 py-3 `}
       >
         <Container>
           <NavLink to={'/'} className=" text-decoration-none mt-1">
             <img src={logo} alt="" width={130} />
           </NavLink>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setNavbarExpanded(!navbarExpanded)}
+          />
           <Navbar.Collapse
             id="basic-navbar-nav "
             className="justify-content-end fs-5 text-white fw-semibold gap-3"
           >
             {menuItems.map(item => (
-              <NavLink key={item.id} to={item.link} className="nav-link fs-6">
+              <NavLink
+                key={item.id}
+                to={item.link}
+                className="nav-link fs-6"
+                onClick={closeNavbar}
+              >
                 {item.label}
               </NavLink>
             ))}
@@ -67,16 +81,14 @@ const Header = () => {
         </Container>
       </Navbar>
 
-      {isMobile && (
+      {/* {isMobile && (
         <>
           <div className="align-items-center d-flex justify-content-between py-3 px-2">
             <Navbar.Brand href="/" className="">
               <img src={logo} alt="" width={120} />
             </Navbar.Brand>
 
-            {/* <Button type="primary" className="">
-              <MenuOutlined />
-            </Button> */}
+           
 
             <div
               className={`hamburger ${MobileMenu ? 'active' : ''}`}
@@ -101,7 +113,7 @@ const Header = () => {
             ))}
           </Drawer>
         </>
-      )}
+      )} */}
     </>
   );
 };

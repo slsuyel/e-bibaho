@@ -46,7 +46,6 @@ export interface StepThreeProps {
 
 interface FormData {
   father_occupation: string;
-  motherStatus: string;
   mother_occupation: string;
 
   living_country: string;
@@ -103,7 +102,6 @@ export type TRegiForm = {
   monthly_income: string;
 
   father_occupation: string;
-  motherStatus: string;
   mother_occupation: string;
 
   living_country: string;

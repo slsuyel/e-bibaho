@@ -1,10 +1,18 @@
-import { Dropdown, Space } from "antd";
-import CardForUser from "../ui/CardForUser";
-import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Menu, Space } from 'antd';
+import CardForUser from '../ui/CardForUser';
+
 const UserDropdownMenu = () => {
+  const menu = (
+    <Menu>
+      <Menu.Item>
+        <CardForUser />
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
-    <Dropdown overlay={CardForUser} trigger={["click"]}>
-      <a onClick={(e) => e.preventDefault()} style={{ cursor: "pointer" }}>
+    <Dropdown overlay={menu} trigger={['click']} className="ddd-ppp">
+      <a onClick={e => e.preventDefault()} style={{ cursor: 'pointer' }}>
         <Space className="text-white gap-0">
           <img
             width={40}
@@ -12,7 +20,6 @@ const UserDropdownMenu = () => {
             alt=""
             className="border rounded-circle"
           />
-          <DownOutlined className="fs-6" />
         </Space>
       </a>
     </Dropdown>
