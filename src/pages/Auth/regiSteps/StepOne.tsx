@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import { StepOneProps } from '../../../types';
 
-const StepOne: React.FC<StepOneProps> = ({ formData, handleInputChange }) => {
+const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -7,7 +7,8 @@ import img3 from '../../assets/top/top (3).png';
 import img6 from '../../assets/top/top (6).png';
 import img7 from '../../assets/top/top (7).png';
 
-import img4 from '../../assets/top/top (4).png';
+import img4 from '../../assets/top/14.png';
+import img_rahim from '../../assets/top/13.png';
 import img5 from '../../assets/top/top (5).png';
 import img8 from '../../assets/top/top (8).png';
 import img9 from '../../assets/top/top (9).png';
@@ -101,8 +102,7 @@ const data: Person[] = [
   },
   {
     name: 'Rahim',
-    photo:
-      'https://pbs.twimg.com/profile_images/1053389078845022208/iZ2-WJzF_400x400.jpg',
+    photo: img_rahim,
     age: '33 Years',
     height: '6ft 0in',
     location: 'USA',

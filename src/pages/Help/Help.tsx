@@ -39,7 +39,7 @@ const Help = () => {
             <ul className="get_say_info_sec">
               <li>
                 <i className="fa fa-envelope" />
-                <a href="mailto:">info@stackfindover.com</a>
+                <a href="mailto:">info@ebibah.com</a>
               </li>
               <li>
                 <i className="fa fa-whatsapp" />
@@ -47,7 +47,7 @@ const Help = () => {
               </li>
               <li>
                 <i className="fa fa-skype" />
-                <a href="#">Stackfindover</a>
+                <a href="#">ebibah</a>
               </li>
             </ul>
             <ul className="get_say_social-icn">
