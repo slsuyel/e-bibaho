@@ -155,8 +155,9 @@ import StepThree from './regiSteps/StepThree';
 import StepFour from './regiSteps/StepFour';
 import StepFive from './regiSteps/StepFive';
 import { TRegiForm } from '../../types';
-import { Modal } from 'antd';
+import { message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { callApi } from '../../utils/functions';
 
 const NewRegi = () => {
   const [modal, setModal] = useState(true);
@@ -201,36 +202,27 @@ const NewRegi = () => {
 
   const [step, setStep] = useState(1);
 
-  const requiredFields: { [key: number]: string[] } = {
-    1: ['profile_for', 'mobile_number', 'email'],
-    2: ['date_of_birth', 'gender', 'first_name', 'last_name'],
-  };
-
-  const isValidStep = (step: number) => {
-    const currentStepRequiredFields = requiredFields[step];
-    return currentStepRequiredFields.every(
-      (field: string | number) => !!formData[field]
-    );
-  };
-
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
-      [name as keyof TRegiForm]: value,
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
-    // Perform form submission logic here
+    const res = await callApi('post', '/signup', formData);
+    if (res && res.code === 200) {
+      return message.success('Registration Successful');
+    }
+    return message.error(res ? res.message : 'An unexpected error occurred');
   };
 
   const handleNext = () => {
-    if (isValidStep(step)) {
+    if (step) {
       setStep(step + 1);
     } else {
       console.log('Please fill in all required fields.');
@@ -298,7 +290,6 @@ const NewRegi = () => {
                     className="btn btn-default btn-primary rounded-1"
                     type="button"
                     onClick={handleNext}
-                    disabled={!isValidStep(step)}
                   >
                     Continue
                   </button>

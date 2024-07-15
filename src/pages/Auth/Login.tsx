@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { callApi } from '../../utils/functions';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Log values after submission
-    console.log("Username:", username);
-    console.log("Password:", password);
+    console.log('hellow');
+    const res = await callApi('post', '/login', { email, password });
+    console.log(res);
     // Reset form fields
-    setUsername("");
-    setPassword("");
+    // setEmail("");
+    // setPassword("");
   };
 
   return (
@@ -38,8 +40,8 @@ const Login = () => {
                 style={{ height: 45 }}
                 type="text"
                 className="form-control"
-                value={username} // Bind value to state
-                onChange={(e) => setUsername(e.target.value)} // Update state on change
+                value={email}
+                onChange={e => setEmail(e.target.value)} // Update state on change
               />
             </div>
             <div className="form-group mb-2">
@@ -53,7 +55,7 @@ const Login = () => {
                 type="password"
                 className="form-control"
                 value={password} // Bind value to state
-                onChange={(e) => setPassword(e.target.value)} // Update state on change
+                onChange={e => setPassword(e.target.value)} // Update state on change
               />
             </div>
             <div className="d-flex justify-content-between mb-3">
@@ -70,7 +72,7 @@ const Login = () => {
                 </div>
               </div>
               <div>
-                <Link to={"reset"}> Reset password</Link>
+                <Link to={'reset'}> Reset password</Link>
               </div>
             </div>
             <div className="form-group">
@@ -78,8 +80,8 @@ const Login = () => {
                 type="submit"
                 className="btn-new justify-content-center w-100"
               >
-                {" "}
-                Login{" "}
+                {' '}
+                Login{' '}
               </button>
             </div>
           </form>

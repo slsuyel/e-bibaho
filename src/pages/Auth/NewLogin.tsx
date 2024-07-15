@@ -1,5 +1,7 @@
-import { useState, FormEvent, ChangeEvent } from "react";
-import { Link } from "react-router-dom";
+import { useState, FormEvent, ChangeEvent } from 'react';
+import { Link } from 'react-router-dom';
+import { callApi } from '../../utils/functions';
+import { message } from 'antd';
 
 interface FormData {
   phone?: string;
@@ -11,9 +13,9 @@ const NewLogin = () => {
   const [phone, setPhone] = useState<boolean>(false);
 
   const [formData, setFormData] = useState<FormData>({
-    phone: "",
-    email: "",
-    password: "",
+    phone: '',
+    email: '',
+    password: '',
   });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,11 +30,28 @@ const NewLogin = () => {
     setPhone(!phone);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (phone) {
+    if (formData.phone) {
       console.log(formData.phone);
-    } else console.log(formData.email, formData.password);
+    } else {
+      try {
+        const res = await callApi('post', '/login', {
+          email: formData.email,
+          password: formData.password,
+        });
+
+        if (res && res.code == 200) {
+          message.success('Login Successful');
+        } else if (res && res.code == 140) {
+          message.error(res.message);
+        } else {
+          message.error('An unexpected error occurred');
+        }
+      } catch (error) {
+        message.error('An unexpected error occurred');
+      }
+    }
   };
 
   return (
@@ -48,7 +67,7 @@ const NewLogin = () => {
               <i className="fab fa-apple" />
             </button>
             <button onClick={handlePhoneLogin} className="btn social mr-2">
-              <i className={phone ? "fa fa-envelope" : "fas fa-phone "} />
+              <i className={phone ? 'fa fa-envelope' : 'fas fa-phone '} />
             </button>
           </div>
           <form onSubmit={handleSubmit}>
@@ -61,12 +80,12 @@ const NewLogin = () => {
               )}
               <input
                 required
-                type={phone ? "number" : "email"}
+                type={phone ? 'number' : 'email'}
                 className="form-control mb-2"
                 placeholder={`Enter Your ${
-                  phone ? "Phone Number" : "Email Address"
+                  phone ? 'Phone Number' : 'Email Address'
                 }`}
-                name={phone ? "phone" : "email"}
+                name={phone ? 'phone' : 'email'}
                 value={phone ? formData.phone : formData.email}
                 onChange={handleChange}
               />
@@ -80,19 +99,19 @@ const NewLogin = () => {
                   onChange={handleChange}
                 />
               ) : (
-                ""
+                ''
               )}
             </div>
             <div className="align-items-center d-flex gap-4 my-3 justify-content-center">
               <button type="submit" className="btn btn-primary btn-default">
-                {phone ? "Send OTP" : "  Sign In"}
+                {phone ? 'Send OTP' : '  Sign In'}
               </button>
               {!phone ? (
-                <Link to={""} className="mb-2 d-block">
+                <Link to={''} className="mb-2 d-block">
                   Forgot your password?
                 </Link>
               ) : (
-                ""
+                ''
               )}
             </div>
           </form>
@@ -106,7 +125,7 @@ const NewLogin = () => {
               to="/register"
               className="btn btn-outline-light fw-semibold rounded-1"
             >
-              Sign Up Free{" "}
+              Sign Up Free{' '}
             </Link>
           </div>
         </div>
