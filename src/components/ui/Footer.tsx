@@ -12,7 +12,7 @@ const Footer = () => {
   ];
 
   const contactSupport = [
-    { type: 'text', icon: 'fas fa-phone', content: '+47 45 80 80 80' },
+    { type: 'text', icon: 'fas fa-phone', content: ' 888 887 5027 ' },
     { type: 'link', icon: 'fas fa-comments', name: 'Live chat', path: '/' },
     { type: 'link', icon: 'fas fa-envelope', name: 'Contact us', path: '/' },
     { type: 'link', icon: 'fas fa-star', name: 'Give feedback', path: '/' },
@@ -22,7 +22,7 @@ const Footer = () => {
     address: '74-09 37TH Avenue, Suite 203B, Jackson Heights, NY 11372',
     inquiries: {
       phone: '+1 (888) 887 5027',
-      email: 'contact@ebibaho.com',
+      email: 'contact@ebibah.com',
     },
   };
 

@@ -1,14 +1,14 @@
-# E-Bibaho.com README
+# Ebibah .com README
 
-Welcome to our E-Bibaho, built with React JS! This platform aims to connect individuals seeking life partners in a user-friendly and efficient manner. Below you'll find essential information to get started with our website.
+Welcome to our Ebibah , built with React JS! This platform aims to connect individuals seeking life partners in a user-friendly and efficient manner. Below you'll find essential information to get started with our website.
 
 ## Website Link
 
-[Matrimony Website](https://e-bibaho-suyel.netlify.app/)
+[Matrimony Website](https://e-ebibah-suyel.netlify.app/)
 
 ## Description
 
-Our E-Bibaho offers a modern approach to traditional matchmaking. Powered by React JS, it provides a seamless user experience with its intuitive interface and smooth navigation. Here are some key features and functionalities:
+Our Ebibah offers a modern approach to traditional matchmaking. Powered by React JS, it provides a seamless user experience with its intuitive interface and smooth navigation. Here are some key features and functionalities:
 
 1. **User Registration and Login**: Users can create accounts and log in securely to access the platform's full features.
 2. **Profile Creation**: Members can create detailed profiles with personal information, preferences, and photos to showcase their personality and preferences.
@@ -23,6 +23,6 @@ Our E-Bibaho offers a modern approach to traditional matchmaking. Powered by Rea
 
 ## Getting Started
 
-To explore our E-Bibaho, simply click on the provided link and start browsing profiles or create your own. Here are a few steps to guide you:
+To explore our Ebibah , simply click on the provided link and start browsing profiles or create your own. Here are a few steps to guide you:
 
 1. **Register an Account**: If you're new to the platform, click on the registration link and follow the

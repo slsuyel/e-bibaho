@@ -45,6 +45,7 @@ export interface MenuBarProps {
 export interface DataWhyUS {
   title: string;
   description: string;
+  img: string;
 }
 
 export interface Person {

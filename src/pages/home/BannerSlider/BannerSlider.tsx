@@ -1,14 +1,15 @@
-import Slider from "react-slick";
+import Slider from 'react-slick';
+import img2 from '../../../assets/images/success/2.jpg';
 // import new1 from "../../../assets/sliders/Untitled design.png";
-import img1 from "../../../assets/sliders/1.png";
-import img2 from "../../../assets/sliders/2.png";
-import img3 from "../../../assets/sliders/3.png";
-import img4 from "../../../assets/sliders/4.png";
-import img6 from "../../../assets/sliders/7.png";
-import { useState } from "react";
+import img1 from '../../../assets/sliders/1.png';
+// import img2 from '../../../assets/sliders/2.png';
+import img3 from '../../../assets/sliders/3.png';
+import img4 from '../../../assets/sliders/4.png';
+import img6 from '../../../assets/sliders/7.png';
+import { useState } from 'react';
 
 // import { Link } from "react-router-dom";
-import useIsMobile from "../../../hooks/useIsMobile";
+import useIsMobile from '../../../hooks/useIsMobile';
 
 const BannerSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,45 +17,45 @@ const BannerSlider = () => {
   const slides = [
     {
       img: img2,
-      title: "Trusted worldwide matrimony and matchmaking service",
+      title: 'Trusted worldwide matrimony and matchmaking service',
       description:
-        "This is the place to find a companion for your life journey. If you prefer not to search for ",
-      buttonText: "Successful Matches",
-      btnSlug: "/",
-      btnCss: "",
+        'This is the place to find a companion for your life journey. If you prefer not to search for ',
+      buttonText: 'Successful Matches',
+      btnSlug: '/',
+      btnCss: '',
     },
     {
       img: img3,
-      title: "World’s Number 1 for reliability and Fairness",
-      description: "Advanced privacy-oriented ",
-      buttonText: "Find a Partner!",
-      btnSlug: "/",
-      btnCss: "",
+      title: 'World’s Number 1 for reliability and Fairness',
+      description: 'Advanced privacy-oriented ',
+      buttonText: 'Find a Partner!',
+      btnSlug: '/',
+      btnCss: '',
     },
     {
       img: img4,
-      title: "Journey Together Towards a Shared Future-Connect here",
+      title: 'Journey Together Towards a Shared Future-Connect here',
       description: "You've come to a platform that prioritizes privacy",
-      buttonText: "Create Profile",
-      btnSlug: "/",
-      btnCss: "",
+      buttonText: 'Create Profile',
+      btnSlug: '/',
+      btnCss: '',
     },
     {
       img: img1,
-      title: "Connecting Souls,Creating Future       ",
+      title: 'Connecting Souls,Creating Future       ',
       description: "Here, you've arrived at a privacy-oriented platform ",
-      buttonText: "Successful Matches",
-      btnSlug: "/",
-      btnCss: "",
+      buttonText: 'Successful Matches',
+      btnSlug: '/',
+      btnCss: '',
     },
     {
       img: img6,
-      title: "Discover your perfect Match",
+      title: 'Discover your perfect Match',
       description:
         "Here, you'll find a secure and privacy-based life partner search site that safeguards your sensitive ",
-      buttonText: "All Matches Together",
-      btnSlug: "/",
-      btnCss: "",
+      buttonText: 'All Matches Together',
+      btnSlug: '/',
+      btnCss: '',
     },
     // {
     //   img: new1,
@@ -88,7 +89,7 @@ const BannerSlider = () => {
       data-aos="fade-up"
       data-aos-duration="2000"
     >
-      <div className="mx-auto" style={{ width: isMobile ? "80%" : "90%" }}>
+      <div className="mx-auto" style={{ width: isMobile ? '80%' : '90%' }}>
         <Slider {...settings} beforeChange={handleBeforeChange}>
           {slides.map((slide, index) => (
             <div key={index}>
@@ -97,15 +98,15 @@ const BannerSlider = () => {
                   <h4
                     className={`fs-2 text-center  text-white ${
                       index === currentSlide
-                        ? "animate-top "
-                        : "animate-zoom text-white"
+                        ? 'animate-top '
+                        : 'animate-zoom text-white'
                     }`}
                   >
                     {slide.title}
                   </h4>
                   <p
                     className={`fs-6 text-center text-white ${
-                      index === currentSlide ? "animate-right" : "animate-zoom"
+                      index === currentSlide ? 'animate-right' : 'animate-zoom'
                     }`}
                   >
                     {/* {slide.description} */}
@@ -131,8 +132,8 @@ const BannerSlider = () => {
                       loading="lazy"
                       className={`img-fluid banner_slide_img ${
                         index === currentSlide
-                          ? "animate-right"
-                          : "animate-zoom"
+                          ? 'animate-right'
+                          : 'animate-zoom'
                       }`}
                       width={320}
                       src={slide.img}

@@ -87,7 +87,7 @@ const Login = () => {
           </form>
           <hr />
           <div className="text-center">
-            New to E-bibaho? <Link to="/register">Sign Up Free </Link>
+            New to Ebibah ? <Link to="/register">Sign Up Free </Link>
           </div>
         </div>
       </div>

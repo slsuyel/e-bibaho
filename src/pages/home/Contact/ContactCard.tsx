@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ContactCard = () => {
   return (
     <div
@@ -26,9 +28,11 @@ const ContactCard = () => {
           </p>
 
           <div className="d-flex justify-content-center gap-3">
-            <button className="btn-new">Register Now</button>
+            <Link to="/register" className="btn-new">
+              Register Now
+            </Link>
             <button className="btn btn-outline-danger font-maven fw-semibold">
-              <i className="fa fa-phone"></i> +88 09613821331
+              <i className="fa fa-phone"></i> 888 887 5027
             </button>
           </div>
         </div>

@@ -74,22 +74,20 @@ const Contact = () => {
                 74-09 37TH Avenue, Suite 203B, <br /> Jackson Heights, NY 11372
               </p>
               <p className="mb-0">
-                <strong>Tel: </strong> +1 (888) 887 5027
+                <strong>Tel: </strong> 888 887 5027
               </p>
               <p className="mb-0">
-                <strong>Email: </strong>sales@zsi.ai
+                <strong>Email: </strong>contact@ebibah.com
               </p>
             </div>
+            {/*  */}
             <div className="pb-2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14606.924778338747!2d90.43906715106817!3d23.75696321981835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x719ecee143bb3c9a!2sBdSoft.Ltd!5e0!3m2!1sen!2sbd!4v1630442421752!5m2!1sen!2sbd"
-                width="100%"
-                height={235}
-                frameBorder={0}
-                style={{ border: 0 }}
-                aria-hidden="false"
-                tabIndex={0}
-              />
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.581838562709!2d-73.89399708770785!3d40.7492259352154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f07065ea7db%3A0xde4985f19cd0bf2f!2s74-09%2037th%20Ave%20%23203b%2C%20Flushing%2C%20NY%2011372%2C%20USA!5e0!3m2!1sen!2snl!4v1721199987513!5m2!1sen!2snl"
+                width="600"
+                height="200"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>

@@ -10,9 +10,9 @@ const Card = ({ data }: { data: DataWhyUS }) => {
         isMobile ? 'stack__card ' : ''
       }`}
     >
-      <div className=" row mx-auto">
-        <div className="col-md-6 position-relative ">
-          <div className="pt-5">
+      <div className=" row mx-auto py-5">
+        <div className="col-md-6 py-3 position-relative ">
+          <div className="pt-5 px-5">
             <h2 className="my-3 px-1 fw-bold">{data.title}</h2>
             <p className="ps-4" style={{ fontSize: '20px' }}>
               {data.description}
@@ -20,10 +20,11 @@ const Card = ({ data }: { data: DataWhyUS }) => {
           </div>
         </div>
 
-        <div className="col-md-6 p-0">
+        <div className="col-md-6 py-3  text-center">
           <img
+            width={450}
             className="myImg img-fluid "
-            src="https://cdn0.weddingwire.in/vendor/1593/3_2/960/jpg/dsc-3039-1_15_241593-159300703999970.jpeg"
+            src={data.img}
             alt="Heart-shaped image"
           />
         </div>

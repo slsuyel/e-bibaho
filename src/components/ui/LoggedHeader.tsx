@@ -1,7 +1,7 @@
-import { Menu, Button, Dropdown, Space } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-import CardForUser from "./CardForUser";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Menu, Button, Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import CardForUser from './CardForUser';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const { SubMenu } = Menu;
 
@@ -12,13 +12,13 @@ const LoggedHeader = () => {
     <Menu
       theme="dark"
       mode="horizontal"
-      style={{ position: "sticky", top: 0, zIndex: "999" }}
+      style={{ position: 'sticky', top: 0, zIndex: '999' }}
       selectedKeys={[]}
       className="fs-5 fw-bold justify-content-center font-maven"
     >
       <Menu.Item key="1">
         <NavLink to="/user/profile" className="nav-link">
-          My Shaadi
+          My Ebibah
         </NavLink>
       </Menu.Item>
       <Menu.Item key="2">
@@ -47,7 +47,7 @@ const LoggedHeader = () => {
 
       <Menu.Item key="6">
         <Button
-          onClick={() => navigate("/pricing")}
+          onClick={() => navigate('/pricing')}
           className="mb-3 ms-0 my-2 rounded-1 fw-medium"
           type="primary"
           icon={<i className="fa-solid fa-crown"></i>}
@@ -58,8 +58,8 @@ const LoggedHeader = () => {
       </Menu.Item>
 
       <Menu.Item key="7">
-        <Dropdown overlay={<CardForUser />} trigger={["click"]}>
-          <a onClick={(e) => e.preventDefault()} style={{ cursor: "pointer" }}>
+        <Dropdown overlay={<CardForUser />} trigger={['click']}>
+          <a onClick={e => e.preventDefault()} style={{ cursor: 'pointer' }}>
             <Space className="text-white gap-0">
               <img
                 width={40}

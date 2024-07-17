@@ -13,14 +13,14 @@ const About = () => {
               alt="Largest Matrimony Service"
               style={{ maxWidth: '250px' }}
             />
-            <h2 className="mt-4">Welcome to e-bibaho.com</h2>
+            <h2 className="mt-4">Welcome to Ebibah .com</h2>
           </div>
 
           <HowWork />
 
           <div className="mt-4">
             <p>
-              e-bibaho.com is an international matrimony website dedicated to
+              Ebibah .com is an international matrimony website dedicated to
               helping individuals worldwide find their life partners in a secure
               and private environment.
             </p>
@@ -71,7 +71,7 @@ const About = () => {
           </div>
 
           <div className="mt-4">
-            <h3>e-bibaho.com at a Glance:</h3>
+            <h3>Ebibah .com at a Glance:</h3>
             <table className="table table-bordered">
               <tbody>
                 <tr>
