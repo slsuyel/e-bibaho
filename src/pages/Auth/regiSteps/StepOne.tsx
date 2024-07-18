@@ -110,11 +110,11 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
             Retype Password <span className="text-danger fs-5">*</span>
           </label>
           <input
+            type="password"
             required
             id="re_password"
             name="re_password"
             placeholder="Retype Password"
-            type="re_password"
             className="form-control"
           />
         </div>

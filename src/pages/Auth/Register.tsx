@@ -5,8 +5,9 @@ import StepThree from './regiSteps/StepThree';
 import StepFour from './regiSteps/StepFour';
 import StepFive from './regiSteps/StepFive';
 import { TRegiForm } from '../../types';
-import { Modal } from 'antd';
+import { message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { callApi } from '../../utils/functions';
 
 const NewRegi = () => {
   const [modal, setModal] = useState(true);
@@ -62,9 +63,14 @@ const NewRegi = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    const res = await callApi('post', '/signup', formData);
+    if (res && res.code === 200) {
+      return message.success('Registration Successful');
+    }
+    return message.error(res ? res.message : 'An unexpected error occurred');
   };
 
   const handleNext = () => {

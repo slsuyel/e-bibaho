@@ -36,13 +36,30 @@ export interface ScrollToTopProps {
   children?: ReactNode;
 }
 
-export type TCountry = {
+interface BloodGroup {
+  id: string;
   name: string;
-  code: string;
-  emoji: string;
-  unicode: string;
-  image: string;
-};
+}
+
+interface MaritalStatus {
+  id: number | string; // Assuming id could be either number or string based on the example
+  name: string;
+}
+
+interface Religion {
+  id: number | string; // Assuming id could be either number or string based on the example
+  name: string;
+}
+
+interface ProfileFor {
+  id: number;
+  name: string;
+}
+
+interface MonthlyIncome {
+  id: number | string; // Assuming id could be either number or string based on the example
+  name: string;
+}
 
 interface Country {
   id: string;
@@ -54,9 +71,10 @@ interface Country {
 }
 
 export interface TTools {
-  blood_group: Record<string, string>;
-  marital_status: Record<string, string>;
-  religions: Record<string, string>;
-  profile_for: Record<string, string>;
+  blood_group: BloodGroup[];
+  marital_status: MaritalStatus[];
+  religions: Religion[];
+  profile_for: ProfileFor[];
+  monthly_income: MonthlyIncome[];
   countries: Country[];
 }

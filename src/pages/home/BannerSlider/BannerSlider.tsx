@@ -1,6 +1,6 @@
 import Slider from 'react-slick';
-import img2 from '../../../assets/images/success/2.jpg';
-// import new1 from "../../../assets/sliders/Untitled design.png";
+// import img2 from '../../../assets/images/success/2.jpg';
+import img2 from '../../../assets/sliders/aaaaaaaaa.png';
 import img1 from '../../../assets/sliders/1.png';
 // import img2 from '../../../assets/sliders/2.png';
 import img3 from '../../../assets/sliders/3.png';
@@ -59,11 +59,11 @@ const BannerSlider = () => {
     },
     // {
     //   img: new1,
-    //   title: "Journey Together Towards a Shared Future-Connect here",
+    //   title: 'Journey Together Towards a Shared Future-Connect here',
     //   description: "You've come to a platform that prioritizes privacy",
-    //   buttonText: "Create Profile",
-    //   btnSlug: "/",
-    //   btnCss: "",
+    //   buttonText: 'Create Profile',
+    //   btnSlug: '/',
+    //   btnCss: '',
     // },
   ];
 

@@ -36,27 +36,19 @@ const SearchBox = () => {
           <div className="form-group my-1">
             <label className="control-label text-white ">Religion</label>
             <select name="religion" id="community" className="form-control">
-              {data &&
-                data.religions &&
-                Object.entries(data.religions).map(([key, value]) => (
-                  <option key={key} value={key}>
-                    {value}
-                  </option>
-                ))}
+              {data?.religions.map(d => (
+                <option key={d.id}>{d.name}</option>
+              ))}
             </select>
           </div>
         </div>
         <div className="col-md-2">
           <div className="form-group my-1">
             <label className="control-label text-white ">Marital Status</label>
-            <select name="marital[]" id="marital" className="form-control">
-              {data &&
-                data.marital_status &&
-                Object.entries(data.marital_status).map(([key, value]) => (
-                  <option key={key} value={key}>
-                    {value}
-                  </option>
-                ))}
+            <select name="marital" id="marital" className="form-control">
+              {data?.marital_status.map(d => (
+                <option key={d.id}>{d.name}</option>
+              ))}
             </select>
           </div>
         </div>

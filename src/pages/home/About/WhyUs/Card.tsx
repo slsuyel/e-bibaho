@@ -20,7 +20,7 @@ const Card = ({ data }: { data: DataWhyUS }) => {
           </div>
         </div>
 
-        <div className="col-md-6 py-3  text-center">
+        <div className="col-md-6 py-3">
           <img
             width={450}
             className="myImg img-fluid "
