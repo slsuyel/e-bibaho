@@ -57,15 +57,16 @@ interface ProfileFor {
 }
 
 interface MonthlyIncome {
-  id: number | string; // Assuming id could be either number or string based on the example
+  id: number | string;
   name: string;
 }
 
-interface Country {
+export interface TCountry {
   id: string;
   code: string;
   name: string;
   status: string;
+  image?: string;
   created_on: string;
   updated_on: string;
 }
@@ -76,5 +77,5 @@ export interface TTools {
   religions: Religion[];
   profile_for: ProfileFor[];
   monthly_income: MonthlyIncome[];
-  countries: Country[];
+  countries: TCountry[];
 }

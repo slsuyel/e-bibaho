@@ -1,9 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import { StepOneProps } from '../../../types';
-
 const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
+  const [show, setShow] = useState(false);
+
+  const showPass = () => {
+    setShow(!show);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -94,29 +99,38 @@ const StepOne = ({ formData, handleInputChange }: StepOneProps) => {
           <label htmlFor="password" className="my-1">
             Password <span className="text-danger fs-5">*</span>
           </label>
-          <input
-            required
-            id="password"
-            name="password"
-            placeholder=" Password"
-            type="password"
-            className="form-control"
-            value={formData.password}
-            onChange={handleInputChange}
-          />
+          <div className="align-items-center d-flex">
+            <input
+              required
+              id="password"
+              name="password"
+              placeholder=" Password"
+              type={`${show ? 'text' : 'password'}`}
+              className="form-control"
+              value={formData.password}
+              onChange={handleInputChange}
+            />{' '}
+            <i
+              onClick={() => showPass()}
+              className={`fa-regular fa-eye${show ? '-slash' : ''}`}
+              style={{ marginLeft: '-24px' }}
+            ></i>
+          </div>
         </div>
         <div className="form-group mb-2 col-md-6">
           <label htmlFor="re_password" className="my-1">
             Retype Password <span className="text-danger fs-5">*</span>
           </label>
-          <input
-            type="password"
-            required
-            id="re_password"
-            name="re_password"
-            placeholder="Retype Password"
-            className="form-control"
-          />
+          <div className="align-items-center d-flex">
+            <input
+              type={`${show ? 'text' : 'password'}`}
+              required
+              id="re_password"
+              name="re_password"
+              placeholder="Retype Password"
+              className="form-control"
+            />
+          </div>
         </div>
       </form>
     </div>

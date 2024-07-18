@@ -37,6 +37,7 @@ const Sidebar = () => {
         <h3> Dashboard</h3>
       </div>
       <Menu
+        /* test */
         theme="dark"
         mode="vertical"
         defaultSelectedKeys={['4']}
