@@ -214,11 +214,12 @@ const NewRegi = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const res = await callApi('post', '/signup', formData);
-    if (res && res.code === 200) {
-      return message.success('Registration Successful');
-    }
-    return message.error(res ? res.message : 'An unexpected error occurred');
+    console.log(formData);
+    // const res = await callApi('post', '/signup', formData);
+    // if (res && res.code === 200) {
+    //   return message.success('Registration Successful');
+    // }
+    // return message.error(res ? res.message : 'An unexpected error occurred');
   };
 
   const handleNext = () => {

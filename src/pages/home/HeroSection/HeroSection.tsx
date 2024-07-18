@@ -1,4 +1,4 @@
-import SearchBox from "../../../components/reusable/SearchBox";
+import SearchBox from '../../../components/reusable/SearchBox';
 
 const HeroSection = () => {
   return (

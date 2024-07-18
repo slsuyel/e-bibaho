@@ -43,3 +43,20 @@ export type TCountry = {
   unicode: string;
   image: string;
 };
+
+interface Country {
+  id: string;
+  code: string;
+  name: string;
+  status: string;
+  created_on: string;
+  updated_on: string;
+}
+
+export interface TTools {
+  blood_group: Record<string, string>;
+  marital_status: Record<string, string>;
+  religions: Record<string, string>;
+  profile_for: Record<string, string>;
+  countries: Country[];
+}
