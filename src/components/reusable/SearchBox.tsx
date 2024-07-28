@@ -1,11 +1,11 @@
 import { Button, Skeleton } from 'antd';
 
 import { useNavigate } from 'react-router-dom';
-import useAllHooks from '../../hooks/useAllHooks';
+import useAllTools from '../../hooks/useAllTools';
 
 const SearchBox = () => {
   const navigate = useNavigate();
-  const { data, loading } = useAllHooks();
+  const { data, loading } = useAllTools();
   if (loading) {
     return <Skeleton style={{ marginTop: 15 }} />;
   }

@@ -1,23 +1,15 @@
 import { useState } from 'react';
-import { Card, Checkbox, Collapse, Input, List } from 'antd';
+import { Card, Checkbox, Collapse, Input, List, Skeleton } from 'antd';
 import useCountries from '../../hooks/useCountries';
 import { TCountry } from '../../types';
-import { Spinner } from 'react-bootstrap';
+
 import { SearchOutlined } from '@ant-design/icons';
+import useAllTools from '../../hooks/useAllTools';
 
 const { Panel } = Collapse;
 
 const ages = ['18-20', '20-25', '25-30', '30-35', '35-40', '40-45', '45-50'];
-const marital = ['Divorced', 'Single', 'Married', 'Widowed'];
-const religions = [
-  'Christianity',
-  'Islam',
-  'Hinduism',
-  'Buddhism',
-  'Judaism',
-  'Sikhism',
-  'Baháʼí Faith',
-];
+
 const educations = [
   { label: 'High School Diploma', value: 'high_school_diploma' },
   { label: 'Associate Degree', value: 'associate_degree' },
@@ -36,7 +28,9 @@ const initialFilters = {
 };
 
 const FilterComponent = () => {
-  const { countries, loading } = useCountries();
+  const { data, loading } = useAllTools();
+
+  const { countries, loading: cLoading } = useCountries();
   const [filters, setFilters] = useState(initialFilters);
   const [searchText, setSearchText] = useState('');
 
@@ -44,9 +38,16 @@ const FilterComponent = () => {
     setSearchText(e.target.value);
   };
 
-  if (loading) {
-    return <Spinner animation="border" />;
+  if (loading || cLoading) {
+    return (
+      <>
+        <Skeleton className="my-5" />
+        <Skeleton className="my-5" />
+        <Skeleton className="my-5" />
+      </>
+    );
   }
+
   const countryList = countries || [];
 
   const handleCheckboxChange = (
@@ -107,19 +108,19 @@ const FilterComponent = () => {
         <Panel header="Marital Status" key="1">
           <List
             style={{ height: '200px', overflow: 'auto' }}
-            dataSource={marital}
+            dataSource={data?.marital_status}
             renderItem={item => (
               <List.Item>
                 <Checkbox
                   onChange={e =>
                     handleCheckboxChange(
                       'marital_status',
-                      item,
+                      item.id.toString(),
                       e.target.checked
                     )
                   }
                 >
-                  {item}
+                  {item.name}
                 </Checkbox>
               </List.Item>
             )}
@@ -129,15 +130,19 @@ const FilterComponent = () => {
         <Panel header="Religions" key="2">
           <List
             style={{ height: '200px', overflow: 'auto' }}
-            dataSource={religions}
+            dataSource={data?.religions}
             renderItem={item => (
               <List.Item>
                 <Checkbox
                   onChange={e =>
-                    handleCheckboxChange('religions', item, e.target.checked)
+                    handleCheckboxChange(
+                      'religions',
+                      item.id.toString(),
+                      e.target.checked
+                    )
                   }
                 >
-                  {item}
+                  {item.name}
                 </Checkbox>
               </List.Item>
             )}

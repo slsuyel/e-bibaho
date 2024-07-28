@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { callApi } from '../utils/functions';
 import { TTools } from '../types';
 
-const useAllHooks = () => {
+const useAllTools = () => {
   const [data, setData] = useState<TTools>();
   const [loading, setLoading] = useState(false);
 
@@ -28,4 +28,4 @@ const useAllHooks = () => {
   return { data, loading };
 };
 
-export default useAllHooks;
+export default useAllTools;
