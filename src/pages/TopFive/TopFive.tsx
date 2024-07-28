@@ -1,18 +1,18 @@
 import { Person } from '../../types/types';
 import TopBride from './TopBride';
 
-import img1 from '../../assets/top/top (2).png';
+import img1 from '../../assets/top/top_2.png';
 
-import img3 from '../../assets/top/top (3).png';
-import img6 from '../../assets/top/top (6).png';
-import img7 from '../../assets/top/top (7).png';
+import img3 from '../../assets/top/top_3.png';
+import img6 from '../../assets/top/top_6.png';
+import img7 from '../../assets/top/top_7.png';
 
 import img4 from '../../assets/top/14.png';
 import img_rahim from '../../assets/top/13.png';
-import img5 from '../../assets/top/top (5).png';
-import img8 from '../../assets/top/top (8).png';
-import img9 from '../../assets/top/top (9).png';
-import img10 from '../../assets/top/top (1).png';
+import img5 from '../../assets/top/top_5.png';
+import img8 from '../../assets/top/top_8.png';
+import img9 from '../../assets/top/top_9.png';
+import img10 from '../../assets/top/top_1.png';
 
 const data: Person[] = [
   {
