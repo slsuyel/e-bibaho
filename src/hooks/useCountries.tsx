@@ -13,6 +13,7 @@ const useCountries = (): { countries: TCountry[] | null; loading: boolean } => {
           throw new Error('Failed to fetch country data');
         }
         const data: TCountry[] = await response.json();
+
         setCountries(data);
       } catch (error) {
         console.error('Error fetching country data:', error);

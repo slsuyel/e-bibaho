@@ -67,8 +67,6 @@ export interface TCountry {
   name: string;
   status: string;
   image?: string;
-  created_on: string;
-  updated_on: string;
 }
 
 export interface TTools {

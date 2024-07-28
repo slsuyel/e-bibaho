@@ -164,11 +164,7 @@ const FilterComponent = () => {
                 <Checkbox
                   className="align-items-center"
                   onChange={e =>
-                    handleCheckboxChange(
-                      'countries',
-                      item.name,
-                      e.target.checked
-                    )
+                    handleCheckboxChange('countries', item.id, e.target.checked)
                   }
                 >
                   <div style={{ display: 'flex', alignItems: 'center' }}>
