@@ -102,14 +102,9 @@ const Details = ({ profile }: DetailsProps) => {
 
           <ul className="list-unstyled">
             <li>
-              Muslim, Bengali Sunni Fasts on ramadan, doesn't practise Zakat
-              Lives in Jackson Heights, USA (Permanent Resident)
-            </li>
-            <li>
               Muslim, Bengali Sunni Fasts on ramadan, Lives in Jackson Heights,
               Bangladesh (Permanent Resident)
             </li>
-            <li> doesn't practise Zakat</li>
 
             <li> doesn't practise Zakat</li>
           </ul>

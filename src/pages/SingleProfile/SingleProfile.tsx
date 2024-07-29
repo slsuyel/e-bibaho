@@ -7,13 +7,18 @@ import useSingleProfile from '../../hooks/useSingleProfile';
 
 import Loader from '../../components/ui/Loader';
 import { calculateAge } from '../../utils/calculateAge';
+import { Container } from 'react-bootstrap';
 
 const SingleProfile = () => {
   const { id } = useParams();
   const { profile, loading } = useSingleProfile(id);
 
   if (loading) {
-    return <Loader />;
+    return (
+      <Container>
+        <Loader />
+      </Container>
+    );
   }
 
   return (
@@ -35,10 +40,9 @@ const SingleProfile = () => {
               <div className="col-md-8">
                 <div className="d-flex justify-content-between px-2 w-100">
                   <h6>
-                    {profile?.first_name}
-                    {''}
-                    {profile?.last_name}
+                    {profile?.first_name} {profile?.last_name}
                   </h6>
+
                   <p className="mb-0">Online: Month before</p>
                 </div>
                 <hr className="mt-1 text-secondary" />
@@ -106,7 +110,7 @@ const SingleProfile = () => {
                   <Details profile={profile} />
                 </div>
                 <div className="col-md-6">
-                  <PartnerPreferences />
+                  <PartnerPreferences profile={profile} />
                 </div>
               </div>
             </Card>

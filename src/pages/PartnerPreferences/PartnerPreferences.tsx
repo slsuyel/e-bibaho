@@ -1,10 +1,17 @@
-const PartnerPreferences = () => {
+import { TUserProfile } from '../../types';
+
+type DetailsProps = {
+  profile?: TUserProfile;
+};
+const PartnerPreferences = ({ profile }: DetailsProps) => {
   return (
     <div className="">
       <div className="offset-md-2">
         <div className="card">
           <div className="card-body">
-            <h2 className="card-title">Her Preferences</h2>
+            <h2 className="card-title">
+              {`${profile?.gender == 2 ? 'Her' : 'His'}`} Preferences
+            </h2>
             <p className="card-text">You match 8/10 of her Preferences</p>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">

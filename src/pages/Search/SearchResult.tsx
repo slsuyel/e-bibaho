@@ -10,6 +10,8 @@ interface TData {
 }
 
 const SearchResult = ({ data, loader }: TData) => {
+  console.log(data);
+
   if (loader) {
     return <Loader />;
   }
@@ -52,7 +54,7 @@ const SearchResult = ({ data, loader }: TData) => {
                           </tr>
                           <tr>
                             <td>{d.religions}</td>
-                            <td>UnMarried</td>
+                            <td>{d.maritalStatus}</td>
                           </tr>
                           <tr>
                             <td>MBBS / BDS</td>
