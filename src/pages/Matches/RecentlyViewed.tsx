@@ -1,4 +1,4 @@
-import SearchResult from "../Search/SearchResult";
+import SearchResult from '../Search/SearchResult';
 
 const RecentlyViewed = () => {
   return (
@@ -6,7 +6,7 @@ const RecentlyViewed = () => {
       <h6 className="text-center  mt-4">Recently Viewed Members (7)</h6>
 
       <div>
-        <SearchResult />
+        <SearchResult data={[]} loader={false} />
       </div>
     </div>
   );
