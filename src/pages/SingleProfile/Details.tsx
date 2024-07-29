@@ -1,4 +1,10 @@
-const Details = () => {
+import { TUserProfile } from '../../types';
+
+type DetailsProps = {
+  profile?: TUserProfile; // Make it optional
+};
+
+const Details = ({ profile }: DetailsProps) => {
   return (
     <div>
       <div className="row mx-auto mb-2">
@@ -9,7 +15,10 @@ const Details = () => {
           <div className="vl"></div>
         </div>
         <div className="col-md-10 my-1">
-          <h5 className="font-maven text-info-emphasis">About Rabeamoti S</h5>
+          <h5 className="font-maven text-info-emphasis">
+            About {profile?.first_name} {''}
+            {profile?.last_name}
+          </h5>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel
             obcaecati hic, suscipit odio magni voluptate modi doloremque non
@@ -35,7 +44,7 @@ const Details = () => {
               <strong>
                 <i className="me-2 fa-regular fa-envelope"></i>
               </strong>{' '}
-              example@example.com
+              {profile?.email}
             </li>
             <li>
               <strong>
@@ -47,13 +56,13 @@ const Details = () => {
               <strong>
                 <i className="me-2 fa-solid fa-phone-volume"></i>
               </strong>{' '}
-              +1234567890
+              {profile?.mobile_number}
             </li>
             <li>
               <strong>
                 <i className="me-2 fa-solid fa-location-dot"></i>
               </strong>{' '}
-              123 Main St, City, Country
+              123 Main St, City, {profile?.country}
             </li>
           </ul>
         </div>

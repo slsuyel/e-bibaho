@@ -36,6 +36,7 @@ const FilterComponent = () => {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
+    console.log(searchText);
   };
 
   if (loading || cLoading) {

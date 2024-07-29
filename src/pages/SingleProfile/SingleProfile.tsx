@@ -2,8 +2,20 @@ import { Card } from 'antd';
 import Details from './Details';
 import PartnerPreferences from '../PartnerPreferences/PartnerPreferences';
 import BackBtn from '../../components/reusable/BackBtn';
+import { useParams } from 'react-router-dom';
+import useSingleProfile from '../../hooks/useSingleProfile';
+
+import Loader from '../../components/ui/Loader';
+import { calculateAge } from '../../utils/calculateAge';
 
 const SingleProfile = () => {
+  const { id } = useParams();
+  const { profile, loading } = useSingleProfile(id);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <div className="bg-dark-subtle">
       <div className="row mx-auto container">
@@ -22,7 +34,11 @@ const SingleProfile = () => {
 
               <div className="col-md-8">
                 <div className="d-flex justify-content-between px-2 w-100">
-                  <h6>AWZZ5828</h6>
+                  <h6>
+                    {profile?.first_name}
+                    {''}
+                    {profile?.last_name}
+                  </h6>
                   <p className="mb-0">Online: Month before</p>
                 </div>
                 <hr className="mt-1 text-secondary" />
@@ -32,12 +48,15 @@ const SingleProfile = () => {
                     <table className="lh-lg table table-bordered  w-100">
                       <tbody>
                         <tr>
-                          <td>26 Years, 5ft 1in</td>
+                          <td>
+                            {calculateAge(profile?.date_of_birth)} Years, 5ft
+                            1in
+                          </td>
                           <td>Jackson Heights</td>
                         </tr>
                         <tr>
-                          <td>Muslim</td>
-                          <td>UnMarried</td>
+                          <td>{profile?.religions}</td>
+                          <td>{profile?.maritalStatus}</td>
                         </tr>
                         <tr>
                           <td>MBBS / BDS</td>
@@ -84,7 +103,7 @@ const SingleProfile = () => {
             <Card hoverable>
               <div className="row mx-auto">
                 <div className="col-md-6">
-                  <Details />
+                  <Details profile={profile} />
                 </div>
                 <div className="col-md-6">
                   <PartnerPreferences />

@@ -77,3 +77,24 @@ export interface TTools {
   monthly_income: MonthlyIncome[];
   countries: TCountry[];
 }
+
+export interface TUserProfile {
+  country?: string;
+  date_of_birth?: string;
+  email?: string;
+  first_name?: string;
+  gender?: number;
+  id?: string;
+  image?: string;
+  last_name?: string;
+  maritalStatus?: string;
+  marital_status?: number;
+  mobile_number?: string;
+  monthly_income?: number;
+  monthlyincome?: string;
+  profileFor?: string;
+  profile_for?: number;
+  profile_image?: string;
+  religion?: number;
+  religions?: string;
+}
